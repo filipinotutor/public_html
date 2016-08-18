@@ -1,0 +1,1 @@
+[29-Nov-2015 22:11:43 America/Chicago] PHP Fatal error:  Call to a member function get_applicant_list() on a non-object in /home/filipino/public_html/includes/utilities/tables/_applicant_account_table.php on line 13

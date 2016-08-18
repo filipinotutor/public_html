@@ -1,0 +1,12 @@
+      <form class="form-signin" method="post" action="http://filipinotutor.com/login.php">
+		<input type="text" class="input-block-level" placeholder="Username" name="login" size="20" value="<?php echo (isset($_POST['login'])) ? $_POST['login'] : $my_access->user; ?>">
+		
+		<input type="password"  class="input-block-level" placeholder="Password" name="password" size="8" value="<?php if (isset($_POST['password'])) echo $_POST['password']; ?>">
+        <label class="checkbox">
+          <input type="checkbox" name="remember" value="yes" <?php echo ($my_access->is_cookie == true) ? " checked" : ""; ?>> Automatic login?
+		  
+        </label>
+        <button class="btn btn-large btn-primary" type="submit" name="Submit">Sign in</button>
+		<br />No account yet? <a href="http://filipinotutor.com/register.php">Register here.</a>
+	  	<br /><a href="http://filipinotutor.com/forgot_password.php">Forgot your password?</a>
+      </form>

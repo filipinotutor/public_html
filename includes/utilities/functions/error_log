@@ -1,0 +1,2 @@
+[29-Nov-2015 22:11:24 America/Chicago] PHP Fatal error:  Call to a member function get_path() on a non-object in /home/filipino/public_html/includes/utilities/functions/pricing.php on line 2
+[29-Nov-2015 22:11:32 America/Chicago] PHP Fatal error:  Call to a member function get_path() on a non-object in /home/filipino/public_html/includes/utilities/functions/searchbar.php on line 2

@@ -1,0 +1,136 @@
+/**MOBILE**/
+
+@media only screen and (max-width: 1190px) {
+	nav ul li a {
+		padding: 0px 12px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+    #nav nav {
+		max-width: 704px;
+		padding-top: 5px;
+	}
+	nav ul li a {
+		padding: 0px 35px;
+	}
+	footer ul li {
+	    display: block;
+		background: none;
+		padding: 2px 0px;
+	}
+	
+	footer #logo-bottom {
+		margin: 19px 0px 0px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    #banner-text {
+	    text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
+	}  
+
+	#banner-text h1, 
+	#banner-text h2 {
+        color: #2072C8;
+	}
+	
+	#banner-text p.pull-left{
+	    float: none !important;
+	}
+	#banner-text p.pull-left a{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 45px;
+		width: 150px;
+	}
+	
+	#home-about {
+		font-size: 18px;
+		padding: 50px 0px;
+	}
+	
+	#cta {
+	    text-align: center;
+	}
+	
+	#cta p.pull-right{
+	    float: none !important;
+	}
+	
+	#cta p.pull-right a.cta-btn {
+		color: #2072C8;
+		border: 2px solid #2072C8;
+		margin: 36px auto 0px;
+		width: 150px;
+	}
+	
+	#cta p.pull-right a.cta-btn:hover {
+		color: #fff;
+		background: #333;
+		border: 2px solid #333;
+	}
+	
+	footer .right ul {
+		text-align: left;
+		margin-top: 50px;
+	}
+
+    #logo-bottom img {
+		float: none !important;
+		margin: 20px auto 0px;
+	}
+	footer #copyright {
+        text-align: center;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+
+}
+
+@media only screen and (max-width: 568px) {
+	#banner h2 {
+        font-size: 30px;
+	}
+	#banner h1 {
+        font-size: 40px;
+	}
+	#home-about {
+		font-size: 16px;
+		padding: 40px 0px;
+	}
+	
+	#why-us {
+	    padding: 25px 0px 35px;
+		font-size: 16px;
+	}
+	
+	#home-about br, #cta br{
+	    display: none;
+	}
+	
+	#cta h2 { 
+	    font-size: 23px;
+		line-height: 35px;
+	}
+	
+	footer {
+	    font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (max-width: 368px) {
+
+}
+
+@media only screen and (max-width: 328px) {
+
+}
+
