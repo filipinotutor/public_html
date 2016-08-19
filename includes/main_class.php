@@ -154,7 +154,7 @@ class Main_Class {
 	}
 	function connect_db() {
 		// $conn_str = mysql_connect(DB_SERVER, "root", "");
-		$conn_str = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD);
+		$conn_str = mysql_connect("localhost", "filipino_tutor", "NdZVnxahGIhZ");
 		mysql_select_db(DB_NAME); // if there are problems with the tablenames inside the config file use this row
 	}
 	// added md5 to var $password
@@ -1817,7 +1817,7 @@ function get_notification_cnt($id){
 			case 'new applicant':
 				$result['na'] += 1;
 				break;
-			case 'update schedule':
+		case 'update schedule':
 				$result['us'] += 1;
 				break;
 			}
