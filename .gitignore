@@ -3,7 +3,7 @@ materials
 audio
 jp
 resume
-WeeklyCalClas-booking-head.php
+WeeklyCalClass-booking-head.php
 pictures
 img
 images
@@ -16,4 +16,3 @@ paypal
 includes/web_settings_class.php
 includes/db_config.php
 includes/db.php
-admin/web_settings_class.php
