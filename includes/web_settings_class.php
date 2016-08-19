@@ -6,7 +6,7 @@ function admin_settings(){
 
         $url = $_SERVER['HTTP_REFERER']; 
 
-        $isProd = preg_match("/filipinotutor/", $url);
+        $isProd = preg_match("/\bfilipinotutor\b/", $url);
 
         if($isProd) {
             $user_name = "filipino_tutor";

@@ -5,7 +5,7 @@ function admin_settings(){
 
         $url = $_SERVER['HTTP_REFERER']; 
 
-        $isProd = preg_match("/filipinotutor/", $url);
+        $isProd = preg_match("/\bfilipinotutor\b/", $url);
 
         if($isProd) {
             $user_name = "filipino_tutor";
@@ -16,6 +16,7 @@ function admin_settings(){
             $database = "filipino_tutor";
             $pw = "";
         }
+
 
         $mysql_connect = @mysql_pconnect ("localhost", 
                                           $user_name, 
