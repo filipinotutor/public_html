@@ -153,7 +153,7 @@ class Main_Class {
 		}
 	}
 	function connect_db() {
-		$conn_str = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD);
+		$conn_str = mysql_connect(DB_SERVER, "filipino_tutor", "NdZVnxahGIhZ");
 		// $conn_str = mysql_connect("localhost", "filipino_tutor", "NdZVnxahGIhZ");
 		mysql_select_db(DB_NAME); // if there are problems with the tablenames inside the config file use this row
 	}
