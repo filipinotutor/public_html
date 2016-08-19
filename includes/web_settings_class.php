@@ -1,13 +1,30 @@
 <?php
-class admin_web_settings{
+class admin_web_settings {
+
+
 function admin_settings(){ 
+
+        $url = $_SERVER['HTTP_REFERER']; 
+
+        $isProd = preg_match("/filipinotutor/", $url);
+
+        if($isProd) {
+            $user_name = "filipino_tutor";
+            $database = "filipino_tutor";
+            $pw = "NdZVnxahGIhZ";
+        } else {
+            $user_name = "root";
+            $database = "filipino_tutor";
+            $pw = "";
+        }
+
         $mysql_connect = @mysql_pconnect ("localhost", 
-                                          "filipino_tutor", 
-                                          "NdZVnxahGIhZ"); 
+                                          $user_name, 
+                                          $pw); 
 
         // $mysql_db = @mysql_select_db ("filipino_tutor"); 
 
-        $mysql_db = @mysql_select_db ("filipino_tutor"); 
+        $mysql_db = @mysql_select_db ($database); 
 
         $res = mysql_query("SELECT * FROM adminsettings");
 
