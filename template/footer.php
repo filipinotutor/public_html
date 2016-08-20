@@ -5,7 +5,7 @@
 				<div class="col-sm-3">					
 					<h4>ユーザーガイド</h4>					
 					<ul>						
-						<li><a href="/guide/enrollment.php">登録ガイド</a></li>						
+						<li><a href="/guide/enrollment/">登録ガイド</a></li>						
 						<li><a href="/guide/faq.php">FAQ</a></li>						
 						<li><a href="/curriculum/courses.php">学習コース</a></li>						
 						<li><a href="/pricing.php">料金プラン</a></li>		

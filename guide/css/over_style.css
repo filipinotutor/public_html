@@ -1,0 +1,149 @@
+.navbar-inverse .navbar-nav > .active > a,
+	.navbar-inverse .navbar-nav > .active > a:hover,
+	.navbar-inverse .navbar-nav > .active > a:focus{
+color: #FFF;
+background-color: #12aaff;
+	}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+
+.guideBox {
+	background: #eee;
+	padding: 20px;
+	
+	margin-top: 20px;
+}
+
+
+a.hoverbanner{
+	display: block;
+	min-width: 369px;
+	min-height: 168px;
+
+}
+a.hovernew {
+	background: url('../images/banner-newstudent.jpg') no-repeat;
+}
+a.hoverbanner:hover {
+	background-position: 0px -168px;
+}
+a.hovertutor {
+	background: url('../images/banner-chooselesson.jpg') no-repeat;
+}
+a.hoverchat {
+	background: url('../images/banner-chatsupport.jpg') no-repeat;
+}
+a.hoverlesson {
+	background: url('../images/banner-choosetutor.jpg') no-repeat;
+}
+
+.materialsBox h5 {
+	font-size: 18px;
+	margin-top: 20px;
+
+}
+.materials-tab .panel-title {
+	font-size: 15px;
+	margin: 0px;
+}
+
+.materials-tab .panel-heading {
+	padding: 6px 15px;
+}
+
+.editform .input-group {
+	margin: 3px 0px;
+}
+
+
+.table-responsive select:disabled {
+    background: #eee;
+}
+ 
+ #pricingtb td {
+	background: #eee;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+#pricingtb .main-heading {
+	background: #317bd0;
+	color: #fff;
+	text-transform: uppercase;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	border: 0px;
+}
+#pricingtb .main-heading td {
+	vertical-align: middle;
+	background: #317bd0;
+	font-weight: bold;
+
+}
+#pricingtb .heading {
+	background: #777;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+}
+
+#pricingtb .heading td {
+	vertical-align: middle;
+	background: #777;
+}
+
+/* Sidebar headings */
+li.nav-header {
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar-nav h4 {
+	font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pagination {
+	margin: 0px;
+	margin-bottom: 10px;
+}
+.calendar-top .pagination {
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+#sched-calendar .checkbox {
+   margin: 0px !important;
+   padding: 0px !important;
+}
+#sched-calendar label {
+	margin: 0px;
+	padding: 0px;
+}
