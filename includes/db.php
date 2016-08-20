@@ -1,7 +1,7 @@
 <?php
 
 
-$url = $_SERVER['HTTP_REFERER']; 
+$url = $_SERVER['HTTP_HOST']; 
 
 $isProd = preg_match("/\bfilipinotutor\b/", $url);
 

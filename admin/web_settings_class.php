@@ -3,7 +3,7 @@ class admin_web_settings{
 function admin_settings(){ 
 
 
-        $url = $_SERVER['HTTP_REFERER']; 
+        $url = $_SERVER['HTTP_HOST']; 
 
         $isProd = preg_match("/\bfilipinotutor\b/", $url);
 
