@@ -2144,7 +2144,7 @@ function get_tutor_conversion_sup($filter,$pagelimit){
 					$output[$x]['fulldate']	=	$row[11].'-'.$row[10].'-'.$row[9] ;
 					$output[$x]['time']	=	$row[8];
 					$output[$x]['report_id']	=	$row[18];
-					$output[$x]['student_nickname']	=	$row[36];
+					$output[$x]['student_nickname']	=	$row[37];
 					$x++;
 				}
 				//$output['count'][0] = $x;
