@@ -6,8 +6,6 @@ function admin_settings(){
 
         $url = $_SERVER['HTTP_HOST'];
 
-        echo '<script>alert("'.$url.'")</script>';
-
         $isProd = preg_match("/\bfilipinotutor\b/", $url);
 
         if($isProd) {
