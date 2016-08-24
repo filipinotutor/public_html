@@ -1,6 +1,7 @@
 <?php
 
 require_once("db_config.php"); //
+include('../controllers/user.php');
 
 class WeeklyCalClass {
 
@@ -12,10 +13,6 @@ class WeeklyCalClass {
     var $isAdmin;
 
     // start database functions --------------------------------
-
-function c($msg, $d){
-    echo '<script>console.log("'.$msg.': '.$d.'");</script>';
-}
 
 function connect_db() {
     $conn_str = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD);

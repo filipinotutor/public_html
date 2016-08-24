@@ -1,41 +1,23 @@
 <?php
+
+$root = $_SERVER['DOCUMENT_ROOT'];
+require_once($root.'/config/database.php');
+
 class admin_web_settings {
 
+    public $webmaster_name = '';
+    public $webmaster_email = '';
+    public $admin_name = '';
+    public $admin_email = '';
 
-function admin_settings(){ 
+    public function __construct() {  
 
-        $url = $_SERVER['HTTP_HOST'];
+            $res = mysql_query("SELECT * FROM adminsettings");
 
-        $isProd = preg_match("/\bfilipinotutor\b/", $url);
-
-        if($isProd) {
-            $user_name = "filipino_tutor";
-            $database = "filipino_tutor";
-            $pw = "NdZVnxahGIhZ";
-        } else {
-            $user_name = "root";
-            $database = "filipino_tutor";
-            $pw = "";
-        }
-
-        $mysql_connect = @mysql_pconnect ("localhost", 
-                                          $user_name, 
-                                          $pw); 
-
-        // $mysql_db = @mysql_select_db ("filipino_tutor"); 
-
-        $mysql_db = @mysql_select_db ($database); 
-
-        $res = mysql_query("SELECT * FROM adminsettings");
-
-        $result["w_n"] = mysql_result($res,0,"webmaster_name");
-        $result["w_e"] = mysql_result($res,0,"webmaster_email");
-        $result["a_n"] = mysql_result($res,0,"admin_name");
-        $result["a_e"] = mysql_result($res,0,"admin_email");
-		
-        mysql_close();
-  
-        return $result;
+            $this->webmaster_name = mysql_result($res,0,"webmaster_name");
+            $this->webmaster_email = mysql_result($res,0,"webmaster_email");
+            $this->admin_name = mysql_result($res,0,"admin_name");
+            $this->admin_email = mysql_result($res,0,"admin_email");
     }
 }
 ?>

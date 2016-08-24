@@ -1,42 +1,21 @@
 <?php
 
+$root = $_SERVER['DOCUMENT_ROOT'];
+include($root.'/config/database.php');
+require_once($root."/includes/web_settings_class.php");
 
-$url = $_SERVER['HTTP_HOST']; 
+/* database connectivity */
+$db = new Database;
 
-$isProd = preg_match("/\bfilipinotutor\b/", $url);
-
-if($isProd) {
-    $user_name = "filipino_tutor";
-    $database = "filipino_tutor";
-    $pw = "NdZVnxahGIhZ";
-} else {
-    $user_name = "root";
-    $database = "filipino_tutor";
-    $pw = "";
-}
-
+$class = new admin_web_settings;
 
 define("DB_SERVER", "localhost");
 
-define("DB_NAME", $database);
+define("DB_NAME", $db->database);
 
-define ("DB_USER", $user_name);
+define ("DB_USER", $db->user_name);
 
-define ("DB_PASSWORD", $pw);
-
-
-/*
-define("DB_SERVER", "localhost");
-
-define("DB_NAME", "filipino");
-
-define ("DB_USER", "root");
-
-define ("DB_PASSWORD", "");
-
-*/
-
-
+define ("DB_PASSWORD", $db->pw);
 
 
 // use this pathes and/or define the pathes for the "standard" pages
@@ -105,27 +84,23 @@ define("UPDATE_PROFILE", APPLICATION_PATH."update_user_profile.php"); // if the 
 
 // change this constants to the right mail settings
 
-/*
-define("WEBMASTER_MAIL", "webmaster@email.com"); 
 
-define("WEBMASTER_NAME", "webmaster"); 
+// define("WEBMASTER_MAIL", "webmaster@email.com"); 
 
-define("ADMIN_MAIL", "admin@email.com"); 
+// define("WEBMASTER_NAME", "webmaster"); 
 
-define("ADMIN_NAME", "admin"); 
+// define("ADMIN_MAIL", "admin@email.com"); 
 
-*/
-require_once("web_settings_class.php");
-$class = new admin_web_settings;
-$result = $class->admin_settings();
+// define("ADMIN_NAME", "admin"); 
 
-define("WEBMASTER_MAIL", $result['w_e']); 
 
-define("WEBMASTER_NAME", $result['w_n']); 
+define("WEBMASTER_MAIL", $class->webmaster_email); 
 
-define("ADMIN_MAIL", $result['a_e']); 
+define("WEBMASTER_NAME", $class->webmaster_name); 
 
-define("ADMIN_NAME", $result['a_n']); 
+define("ADMIN_MAIL", $class->admin_email); 
+
+define("ADMIN_NAME", $class->admin_name); 
 
 
 

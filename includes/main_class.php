@@ -2,17 +2,12 @@
 /************************************************************************
 
 *************************************************************************/
-header("Cache-control: private"); // //IE 6 Fix
-// error_reporting (E_ALL); // this is only for testing
+header("Cache-control: private"); 
 
-$root = $_SERVER['DOCUMENT_ROOT'];
-include($root.'/vendor/autoload.php');
+include('../vendor/autoload.php');
+include("db_config.php"); 
 
-
-//require_once($_SERVER['DOCUMENT_ROOT']."/FilipinoTutor.com/includes/db_config.php"); // this path works on local server, change when on the production server
-require_once("db_config.php"); // this path works on local server, change when on the production server
-
-include($root.'/includes/user.php');
+$db = new Database;
 
 // new since version 1.92: storage of sessions in MySQL
 
@@ -59,8 +54,7 @@ class Main_Class {
 	var $admin_page = ADMIN_PAGE;
 
 	function Main_Class($redirect = true) {
-		$this->connect_db();
-		
+
 		if (empty($_SESSION['logged_in'])) {
 			$this->login_reader();
 			if ($this->is_cookie) {
@@ -153,9 +147,9 @@ class Main_Class {
 		}
 	}
 	function connect_db() {
-		$conn_str = mysql_connect(DB_SERVER, "filipino_tutor", "NdZVnxahGIhZ");
-		// $conn_str = mysql_connect("localhost", "filipino_tutor", "NdZVnxahGIhZ");
-		mysql_select_db(DB_NAME); // if there are problems with the tablenames inside the config file use this row
+		// $conn_str = mysql_connect(DB_SERVER, "filipino_tutor", "NdZVnxahGIhZ");
+		// $conn_str = mysql_connect("localhost", "root", "");
+		// mysql_select_db(DB_NAME); // if there are problems with the tablenames inside the config file use this row
 	}
 	// added md5 to var $password
 	// changed argument for req_visit to $this->user_pw

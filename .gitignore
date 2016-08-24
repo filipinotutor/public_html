@@ -1,4 +1,8 @@
 admin/error_log
+tutor/error_log
+supervisor/error_log
+student/error_log
+error_log
 materials
 audio
 jp
