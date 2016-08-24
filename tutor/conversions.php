@@ -18,8 +18,6 @@ else{
   $filter=" `date` >= '$thismonth' ";
 }
 
-echo $filter;
-
 $totalAp = $page_protect->get_tutor_conversions_count($uid,"approved",$filter);
 $totalPend = $page_protect->get_tutor_conversions_count($uid,"new",$filter);
 $totalDissapp = $page_protect->get_tutor_conversions_count($uid,"disapproved",$filter);
