@@ -4,7 +4,9 @@
 *************************************************************************/
 header("Cache-control: private"); 
 
-include('../vendor/autoload.php');
+$root = $_SERVER['DOCUMENT_ROOT'];
+
+include($root.'/vendor/autoload.php');
 include("db_config.php"); 
 
 $db = new Database;
