@@ -46,7 +46,7 @@
 						<div class="col-md-55">
 							<div class="thumbnail">
 							  <div class="image view view-first">
-								<img style="width: 100%; display: block;" src="images/media.jpg" alt="image">
+								<img style="width: 100%; display: block;" src="images/student-start-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
 									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
@@ -64,7 +64,7 @@
 						<div class="col-md-55">
 							<div class="thumbnail">
 							  <div class="image view view-first">
-								<img style="width: 100%; display: block;" src="images/media.jpg" alt="image">
+								<img style="width: 100%; display: block;" src="images/student-system-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
 									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
