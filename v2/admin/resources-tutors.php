@@ -48,7 +48,7 @@
 								<img style="width: 100%; display: block;" src="images/tutor-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Tutors_Guide.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -66,7 +66,7 @@
 								<img style="width: 100%; display: block;" src="images/what-ifs.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/#" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -84,7 +84,7 @@
 								<img style="width: 100%; display: block;" src="images/SOP-tutors.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/#" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -101,7 +101,7 @@
 								<img style="width: 100%; display: block;" src="images/tutor-requirement.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/#" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -119,7 +119,7 @@
 								<img style="width: 100%; display: block;" src="images/tutor-agreement.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Tutor_Agreement.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -137,7 +137,7 @@
 								<img style="width: 100%; display: block;" src="images/facts-japan-1.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Facts_About_Japan_1.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -155,7 +155,7 @@
 								<img style="width: 100%; display: block;" src="images/facts-japan-2.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Facts_About_Japan_2.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -173,7 +173,7 @@
 								<img style="width: 100%; display: block;" src="images/student-start-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Student_Guide_English.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -191,7 +191,7 @@
 								<img style="width: 100%; display: block;" src="images/student-system-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/#" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -209,7 +209,7 @@
 								<img style="width: 100%; display: block;" src="images/english-proficiency-1.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Tutor_English_Proficiency_Test_1.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -227,7 +227,7 @@
 								<img style="width: 100%; display: block;" src="images/english-proficiency-2.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Tutor_English_Proficiency_Test_2.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -245,7 +245,7 @@
 								<img style="width: 100%; display: block;" src="images/tutor-training-1.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/Filipinotutor.com_Tutor_Overview_Training_Part_1.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -263,7 +263,7 @@
 								<img style="width: 100%; display: block;" src="images/tutor-training-2.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/Filipinotutor.com_Tutor_Overview_Training_Part_2.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -281,7 +281,7 @@
 								<img style="width: 100%; display: block;" src="images/reading-assessment-1.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Tutor_Reading_Assessment_Test_1.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -299,7 +299,7 @@
 								<img style="width: 100%; display: block;" src="images/reading-assessment-2.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Tutor_Reading_Assessment_Test_2.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>

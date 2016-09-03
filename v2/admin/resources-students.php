@@ -49,7 +49,7 @@
 								<img style="width: 100%; display: block;" src="images/student-start-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Student_Guide_English.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
@@ -67,7 +67,7 @@
 								<img style="width: 100%; display: block;" src="images/student-system-guide.jpg" alt="image">
 								<div class="mask no-caption">
 								  <div class="tools tools-bottom">
-									<a href="#"><i class="fa fa-link"></i> <small>View</small></a>
+									<a href="../guide/pdf/FilipinoTutor.com_Student_Guide_English.pdf" target="_blank"><i class="fa fa-link"></i> <small>View</small></a>
 									
 								  </div>
 								</div>
