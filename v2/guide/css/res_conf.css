@@ -1,0 +1,45 @@
+table, span,body,input, button, textarea,.add-on,label,.control-group
+{
+	font-size:12px;
+}
+span{
+	display:inline-block;
+	white-space: nowrap;
+}
+.well{
+font-size:12px;	
+}
+
+.table td {
+  padding: 2px;
+  text-align: center;
+}
+
+
+.mini-input{
+	width:120px;
+}
+.mini-input-button{
+	width:100%;
+}
+
+ .table > thead > tr > th,
+ .table > tbody > tr > th, 
+ .table > tfoot > tr > th, 
+ .table > thead > tr > td, 
+ .table > tbody > tr > td, 
+ .table > tfoot > tr > td 
+{
+	padding: 4px;
+}
+ .form-horizontal {
+        max-width: 100%;
+        padding: 5px 5px 5px;
+      }	
+	  
+
+.guideBox {
+	background: #eee;
+	padding: 20px;
+	overflow: auto;
+}
