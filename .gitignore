@@ -1,3 +1,4 @@
+app_error.log
 admin/error_log
 tutor/error_log
 supervisor/error_log
