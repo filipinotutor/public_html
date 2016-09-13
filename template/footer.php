@@ -16,7 +16,7 @@
 					<ul>						
 						<li><a href="/about/" target="_Blank">FilipinoTutor.comとは</a></li>							
 						<li><a href="/inquire.php">お問い合わせ</a></li>						
-						<li><a href="https://careers.filipinotutor.com">チューターになる</a></li>						
+						<li><a href="https://filipinotutor.com/careers/">チューターになる</a></li>						
 						<li><a href="/sitemap.php">サイトマップ</a></li>					
 					</ul>	
 				</div>
