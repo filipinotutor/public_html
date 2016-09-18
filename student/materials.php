@@ -139,7 +139,7 @@ include('header-student.php');
 						<?php 
 							
 						//Get category list
-						$res1 = $page_protect->get_categories();
+						$res1 = $page_protect->get_categories("WHERE category_id NOT IN(29)");
 						while($row = mysql_fetch_array($res1,MYSQL_NUM)){
 							$cat[$row[0]] = $row[1];
 						}
@@ -175,8 +175,6 @@ include('header-student.php');
 								
 								echo '<div id="collapse-'.$c.'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-'.$c.'" ><div class="panel-body">';
 								
-								
-								
 								if(isset($subcat[$c])) {
 									$res4 = $page_protect->get_materials($a, $c, NULL);
 									echo "<ul>";
@@ -185,7 +183,6 @@ include('header-student.php');
 											echo "<li><a href='".$row4['content']."' target='_BLANK'>".$row4['title']."</a></li>";
 										} else {
 											echo "<li>".$row4['title']."</li>";
-											
 										}
 									}
 									echo "</ul>";
@@ -199,11 +196,8 @@ include('header-student.php');
 							} //end of else to check if answer key
 						} //end of foreach loop
 						?>
-		              
-
 		               
 		            </div>
-		         
 	  			</div>
 				
 				<div id="4D" class="tab-pane fade in <?php echo $tab=='4D' ? 'active' : '';?> col-xs-12 col-md-12">

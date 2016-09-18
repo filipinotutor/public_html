@@ -2824,7 +2824,7 @@ function get_app_training_sched($pagelimit){
 
 function get_categories($pagelimit=null){
 	if($pagelimit!=NULL){
-		$sql = "SELECT * FROM category ".pagelimit;
+		$sql = "SELECT * FROM category ".$pagelimit;
 	}else{
 		$sql = "SELECT * FROM category ";
 	}
