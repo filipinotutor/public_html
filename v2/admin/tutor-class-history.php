@@ -1,6 +1,5 @@
 <?php 
 	include('template/header.php');
-	/* push to dev */
 ?>
 
   <body class="nav-md">
