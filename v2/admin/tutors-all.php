@@ -409,7 +409,9 @@ Highest Educational Level </label>
 									</div>
 									
 									<div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-									
+										
+										<a href="#" class="btn btn-sm btn-info pull-right">Detailed Class History</a>
+										
 										<table id="datatable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
 										  <thead>
 											<tr role="row">
