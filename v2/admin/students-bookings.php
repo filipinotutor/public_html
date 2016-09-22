@@ -58,53 +58,53 @@
 
                       <tr role="row" class="odd">
                           <td class="sorting_1">July 25</td>
-                          <td>Airi_Satou</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+                          <td>yogi.shuko</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 25</td>
-                          <td>Angelica_Ramos</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Angelica Ramos</a></td>
+                          <td>tsutsui.hajime</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (5)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
-                          <td>Ashton_Cox</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Ashton Cox</a></td>
+                          <td>watanabe.hyosuke</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
                             <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (10)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 24</td>
-                          <td>Bradley_Greer</td>
+                          <td>bradley.greer</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Bradley Greer</a></td>
                             <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
-                          <td>Brenden_Wagner</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Brenden Wagner</a></td>
+                          <td>otake.takanobu</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Otake Takanobu</a></td>
 							<td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
-                          <td>Brielle_Williamson</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Brielle Williamson</a></td>
+                          <td>miyake.takao</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Miyake Takao</a></td>
                         <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 23</td>
-                          <td>Bruno_Nash</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Bruno Nash</a></td>
+                          <td>hata.toshiharu</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Hata Toshiharu</a></td>
 							<td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
-                          <td>Caesar_Vance</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Caesar Vance</a></td>
+                          <td>igarashi.hiroya</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Igarashi Hiroya</a></td>
                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 23</td>
-                          <td>Cara_Stevens</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Cara Stevens</a></td>
+                          <td>shimoda.motoyuki</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Shimoda Motoyuki</a></td>
                         <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (2)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
-                          <td>Cedric_Kelly</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Cedric Kelly</a></td>
+                          <td>yamashiro.takashi</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Yamashiro Takashi</a></td>
                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr></tbody>
                     </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
