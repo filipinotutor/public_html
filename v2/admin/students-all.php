@@ -65,8 +65,8 @@
                           <td>yogi.shuko@gmail.com</td>
                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="even">
-                          <td class="sorting_1">Tsutsui Hajime</td>
-                          <td>tsutsui.hajime</td>
+                          <td class="sorting_1">tsutsui.hajime</td>
+                          <td>Tsutsui Hajime</td>
                           <td>Male</td>
                           <td>Tsutsui Hajime</td>
                           <td>tsutsui.hajime@gmail.com</td>
@@ -150,7 +150,7 @@
 									<img src="./images/profilepic.jpg" class="img-responsive" />
 								</div>
 								<div class="col-sm-6">
-									<h4>Juan De La Cruz</h4>
+									<h4>Tsutsui Hajime</h4>
 									<p>
 										<b>Student ID:</b> F44331<br />
 										<b>Member Since:</b> August 20, 2016<br />
@@ -181,19 +181,28 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">First Name </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="Juan" />
+														<input type="text" class="form-control" disabled="disabled" value="Tsutsui" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Last Name </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="Dela Cruz" />
+														<input type="text" class="form-control" disabled="disabled" value="Hajime" />
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3 col-xs-12">Gender </label>
+													<div class="col-md-9 col-sm-9 col-xs-12">
+														<select class="form-control" disabled="disabled">
+															<option>Male</option>
+															<option>Female</option>
+														</select>
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Skype ID </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="juan.delacruz" />
+														<input type="text" class="form-control" disabled="disabled" value="tsutsui.hajime" />
 													</div>
 												</div>
 												<div class="form-group">
@@ -215,7 +224,7 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Username </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="Juan" />
+														<input type="text" class="form-control" disabled="disabled" value="tsutsui.hajime" />
 													</div>
 												</div>
 												<div class="form-group">
@@ -227,7 +236,7 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Email </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="email" class="form-control" disabled="disabled" value="johncross@gmail.com" />
+														<input type="email" class="form-control" disabled="disabled" value="tsutsui.hajime@gmail.com" />
 													</div>
 												</div>
 											</div>
