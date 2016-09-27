@@ -386,10 +386,7 @@
                   </div>
                 </div><!-- end of panel -->
 				
-				
-				
-				
-				
+		
               </div>
 		
 		
