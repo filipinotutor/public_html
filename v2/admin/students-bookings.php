@@ -35,7 +35,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><a href="#" class="btn btn-sm btn-success">New Bookings</a><!-- <a href="#" class="btn btn-sm btn-warning">Cancel Requests ( 10 )</a><a href="#" class="btn btn-sm btn-danger">Transfer Requests ( 30 )</a>--></h2>
+                    <h2><small>Recent bookings made</small></h2>
                     <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                       <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                       <span>June 30, 2016 - July 29, 2016</span> <b class="caret"></b>
@@ -60,52 +60,52 @@
                           <td class="sorting_1">July 25</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 						  <td>yogi.shuko</td>
-                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 25</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
 						  <td>tsutsui.hajime</td>
-                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (5)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (5)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
                           <td>watanabe.hyosuke</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (10)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (10)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 24</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Bradley Greer</a></td>
                           <td>bradley.greer</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Otake Takanobu</a></td>
                           <td>otake.takanobu</td>
-							<td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+							<td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Miyake Takao</a></td>
                           <td>miyake.takao</td>
-                        <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                        <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 23</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Hata Toshiharu</a></td>
                           <td>hata.toshiharu</td>
-							<td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+							<td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Igarashi Hiroya</a></td>
                           <td>igarashi.hiroya</td>
-                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 23</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Shimoda Motoyuki</a></td>
                           <td>shimoda.motoyuki</td>
-                        <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (2)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                        <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (2)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
 						  <td><a href="#"><span class="fa fa-info-circle"></span> Yamashiro Takashi</a></td>
                           <td>yamashiro.takashi</td>
-                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-calendar"></a>&nbsp;&nbsp;<a href="" class="fa fa-history"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Bookings (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
                         </tr></tbody>
                     </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
                   </div>
@@ -120,7 +120,7 @@
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                           </button>
-                          <h4 class="modal-title" id="myModalLabel">All Classes Booked on July 25, 2016</h4>
+                          <h4 class="modal-title" id="myModalLabel">All Classes Booked by Yogi Shuko on July 25, 2016</h4>
                         </div>
 						
 						
@@ -135,9 +135,7 @@
 										<th class="sorting" style="width: 80px;">Class Type</th>
 									</tr>
 								</thead>
-
-
-							  <tbody>
+								<tbody>
 
 								<tr role="row" class="odd">
 								  <td class="sorting_1">July 25</td>
