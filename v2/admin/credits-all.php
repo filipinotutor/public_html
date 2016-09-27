@@ -66,7 +66,7 @@
 								<td>4,200 JPY</td>
 								<td>10 mins for 30 day(s)</td>
 								<td>14</td>
-								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>バリュー</td>
@@ -74,7 +74,7 @@
 								<td>5,800 JPY</td>
 								<td>10 mins for 30 day(s)</td>
 								<td>30</td>
-								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>スタンダード　プロ</td>
@@ -82,7 +82,7 @@
 								<td>11,100 JPY</td>
 								<td>25 mins for 30 day(s)</td>
 								<td>30</td>
-								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>バリュー プロ</td>
@@ -90,7 +90,7 @@
 								<td>17,760 JPY</td>
 								<td>30 mins for 30 day(s)</td>
 								<td>60</td>
-								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>バリュープラス</td>
@@ -98,7 +98,7 @@
 								<td>9,700 JPY</td>
 								<td>25 min for 30 day(s)</td>
 								<td>60</td>
-								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+								<td><a href="" class="fa fa-edit"></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
 							</tr>
 							</tbody>
 							</table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
@@ -107,6 +107,32 @@
 						</div>
 			
 					</div>
+					
+					<!-- start delete modal -->
+					<div class="modal fade bs-delete-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+						<div class="modal-dialog modal-sm">
+						  <div class="modal-content">
+
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+							  </button>
+							  <h4 class="modal-title" id="myModalLabel">Delete Record</h4>
+							</div>
+							
+							
+							<div class="modal-body">
+								Are sure that you want to delete this record?
+							</div>
+							
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							  <button type="button" class="btn btn-danger">Delete</button>
+							</div>
+
+						  </div>
+						</div>
+					</div><!-- end of modal -->
+					
 				</div>
 			</div>
 		</div>

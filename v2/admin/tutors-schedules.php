@@ -59,56 +59,83 @@
                           <td class="sorting_1">July 25</td>
                           <td>abrugar.fatima</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Abrugar Fatima</a></td>
-                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 25</td>
                           <td>asparo.lea.joy</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Asparo Lea Joy</a></td>
-                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
                           <td>allysa.julienne</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Allysa Julienne</a></td>
-                            <td><a href="#"><span class="label label-warning">View Requests (5)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#"><span class="label label-warning">View Requests (5)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 24</td>
                           <td>ericca.gabriel</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Ericca Gabriel</a></td>
-                            <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
                           <td>andrew.trompeta</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Andrew Trompeta</a></td>
-							  <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+							  <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
                           <td>llacuna.lemon</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Lemon Llacuna</a></td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 23</td>
                           <td>renan.gallardo</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Renan Gallardo</a></td>
-                            <td><a href="#"><span class="label label-warning">View Requests (7)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#"><span class="label label-warning">View Requests (7)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
                           <td>fatima.rosario.abrugar</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Fatima Rosario Abrugar</a></td>
-                            <td><a href="#"><span class="label label-warning">View Requests (8)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                            <td><a href="#"><span class="label label-warning">View Requests (8)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 23</td>
                           <td>joan.may.amaro</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Joan May Amaro</a></td>
-                           <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                           <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
                           <td>arianne.anna.reyes</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Arianne Anna Reyes</a></td>
-                           <td><a href="#"><span class="label label-warning">View Requests (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" class="fa fa-trash"></a></td>
+                           <td><a href="#"><span class="label label-warning">View Requests (3)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr></tbody>
                     </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
                   </div>
                 </div>
+				
+				
+				<!-- start delete modal -->
+				<div class="modal fade bs-delete-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+					<div class="modal-dialog modal-sm">
+					  <div class="modal-content">
+
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+						  </button>
+						  <h4 class="modal-title" id="myModalLabel">Delete Record</h4>
+						</div>
+						
+						
+						<div class="modal-body">
+							Are sure that you want to delete this record?
+						</div>
+						
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-danger">Delete</button>
+						</div>
+
+					  </div>
+					</div>
+				</div><!-- end of modal -->
+				
 				
 				<!-- start modal -->
 				
