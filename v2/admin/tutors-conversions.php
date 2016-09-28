@@ -38,7 +38,7 @@
                     <div class="pull-right">
 						<form class="form-horizontal form-label-left input_mask">
 							<div class="form-group">
-								<label class="control-label col-sm-4">Gender </label>
+								<label class="control-label col-sm-4">Month: </label>
 								<div class="col-sm-8">
 									<select class="form-control" >
 										<option>January</option>
@@ -203,7 +203,7 @@
 								</tbody>
 							</table>
 							
-							
+							<p align="right"><b>TOTAL: </b> &#8369;900</p>
 		                </div>
 						
                         <div class="modal-footer">
