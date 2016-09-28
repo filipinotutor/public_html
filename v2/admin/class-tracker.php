@@ -206,7 +206,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 								<td>yogi.shuko</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Young Learners Series 2 | Lesson 1 - Lesson on Numbers</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>8:00-8:20</td>
@@ -215,7 +215,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
 								<td>tsutsui.hajime</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Young Learners Series 2 | Lesson 8 - Lesson on Preposition </a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>8:00-8:20</td>
@@ -224,7 +224,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
 								<td>watanabe.hyosuke</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Holidays and Events | Chinese New Year</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>9:00-9:20</td>
@@ -233,7 +233,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Otake Takanobu</a></td>
 								<td>otake.takanobu</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Young Learners Series 2 | Lesson 1 - Lesson on Numbers</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>9:00-9:20</td>
@@ -242,7 +242,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Miyake Takao</a></td>
 								<td>miyake.takao</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Grammar, Writing & Pronunciation | Pronunciation - Warm Ups</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>9:00-9:20</td>
@@ -251,7 +251,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Hata Toshiharu</a></td>
 								<td>hata.toshiharu</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Business Grammar | Lesson 14 - Defining A Process </a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>9:00-9:20</td>
@@ -260,7 +260,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Igarashi Hiroya</a></td>
 								<td>igarashi.hiroya</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Business Conversation | Lesson 6 - Various Business Conversation</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>10:20-11:00</td>
@@ -269,7 +269,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Shimoda Motoyuki</a></td>
 								<td>shimoda.motoyuki</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Young Learners Series 2 | Lesson 1 - Lesson on Numbers</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>10:20-11:00</td>
@@ -278,7 +278,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Yamashiro Takashi</a></td>
 								<td>yamashiro.takashi</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>Business Management | Managing Communications in a Globalized Business</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							<tr role="row" class="odd">
 								<td>10:20-11:00</td>
@@ -287,7 +287,7 @@
 								<td><a href="#"><span class="fa fa-info-circle"></span> Nakai Tsuruki</a></td>
 								<td>nakai.tsuruki</td>
 								<td><a href="#"><span class="fa fa-external-link"></span>ESL Advanced - Famouse Cities | Lesson 1 - The Beautiful City of Munich</a></td>
-								<td><a href="#"><span class="label label-danger">Reassign</span></a></td>
+								<td><a href="#" data-toggle="modal" data-target=".bs-assign-modal-md"><span class="label label-danger">Reassign</span></a></td>
 							</tr>
 							
 							
@@ -386,6 +386,47 @@
                   </div>
                 </div><!-- end of panel -->
 				
+				
+				<!-- start reassign modal -->
+				<div class="modal fade bs-assign-modal-md" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+					<div class="modal-dialog modal-md">
+					  <div class="modal-content">
+
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+						  </button>
+						  <h4 class="modal-title" id="myModalLabel">Reassign Student to another Tutor</h4>
+						</div>
+						
+						
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-sm-6">
+									<b>Current Tutor:</b><br />
+									Abrugar Fatima
+								</div>
+								<div class="col-sm-6">
+									<b>To:</b><br />
+									<div class="form-group">
+										<select class="form-control">
+											<option>Choose Tutor</option>
+											<option>Asparo Lea Joy</option>
+											<option>Gabriel Ericca</option>
+										</select>
+									</div>
+									(Available tutors for the student's schedule)
+								</div>
+							</div>
+						</div>
+						
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-success">Reassign</button>
+						</div>
+
+					  </div>
+					</div>
+				</div><!-- end of modal -->
 		
               </div>
 		
