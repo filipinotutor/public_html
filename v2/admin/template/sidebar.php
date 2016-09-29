@@ -12,7 +12,7 @@
 	  </div>
 	  <div class="profile_info">
 		<span>Welcome,</span>
-		<h2>Juan De La Cruz</h2>
+		<h2>Tsutsui Hajime</h2>
 		<span><b>Tutor ID:</b> F3A3211</span>
 	  </div>
 	</div>

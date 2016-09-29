@@ -57,18 +57,18 @@
 
                       <tr role="row" class="odd">
                           <td class="sorting_1">July 25</td>
-                          <td>abrugar.fatima</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Abrugar Fatima</a></td>
+                          <td>fatima.abrugar</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Fatima Abrugar</a></td>
                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 25</td>
                           <td>asparo.lea.joy</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Asparo Lea Joy</a></td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Lea Joy Asparo</a></td>
                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">July 24</td>
-                          <td>allysa.julienne</td>
-                          <td><a href="#"><span class="fa fa-info-circle"></span> Allysa Julienne</a></td>
+                          <td>julienne.allysa</td>
+                          <td><a href="#"><span class="fa fa-info-circle"></span> Julienne Allysa</a></td>
                             <td><a href="#"><span class="label label-warning">View Requests (5)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 24</td>
@@ -82,7 +82,7 @@
 							  <td><a href="#"><span class="label label-warning">View Requests (1)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">July 23</td>
-                          <td>llacuna.lemon</td>
+                          <td>lemon.llacuna</td>
                           <td><a href="#"><span class="fa fa-info-circle"></span> Lemon Llacuna</a></td>
                             <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View Requests (6)</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
