@@ -77,61 +77,61 @@
                           <td>6</td>
                           <td>&#8369;900</td>
                           <td><span class="label label-success">Paid</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Fatima Abrugar</a></td>
                            <td>25</td>
                           <td>&#8369;2,500</td>
                           <td><span class="label label-success">Paid</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Allysa Julienne Afidchao</a></td>
                            <td>35</td>
                           <td>&#8369;3,500</td>
                           <td><span class="label label-success">Paid</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Ericca Gabriel</a></td>
                            <td>12</td>
                           <td>&#8369;1,200</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Andrew Nel Trompeta</a></td>
                            <td>4</td>
                           <td>&#8369;400</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Lemon Llacuna</a></td>
                           <td>5</td>
                           <td>&#8369;500</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Renan Mari Gallardo</a></td>
                           <td>7</td>
                           <td>&#8369;700</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Joan May Amaro</a></td>
                            <td>45</td>
                           <td>&#8369;4,500</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="odd">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Arianne Anna Reyes</a></td>
 							<td>45</td>
                           <td>&#8369;4,500</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td><a href="#"><span class="fa fa-info-circle"></span> Juan DeLa Cruz</a></td>
                            <td>15</td>
                           <td>&#8369;1,500</td>
                           <td><span class="label label-warning">Pending</span></td>
-                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-conversion-modal-lg" class="fa fa-search"></a>&nbsp;&nbsp;<a href="" class="fa fa-gear" data-toggle="modal" data-target=".bs-paid-modal-sm" ></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr></tbody>
                     </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
                   </div>
@@ -239,8 +239,34 @@
 
 					  </div>
 					</div>
-				 </div><!-- end of modal -->
+				</div><!-- end of modal -->
+				
+				<!-- start paid modal -->
+				<div class="modal fade bs-paid-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+					<div class="modal-dialog modal-sm">
+					  <div class="modal-content">
 
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+						  </button>
+						  <h4 class="modal-title" id="myModalLabel">Update Status</h4>
+						</div>
+						
+						
+						<div class="modal-body">
+							Do you want to mark this record as paid?
+						</div>
+						
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-success">Mark as Paid</button>
+						</div>
+
+					  </div>
+					</div>
+				</div><!-- end of modal -->
+
+				
 				
               </div>
 

@@ -63,7 +63,7 @@
                           <td>airi.satou</td>
                           <td>airi.satou@gmail.com</td>
 						  <td>Bank Account is not yet ready</td>
-                          <td><a href="" class="fa fa-plus-square"></a>&nbsp;&nbsp;<a href=""  data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
+                          <td><a href="" data-toggle="modal" data-target=".bs-assign-modal-sm" class="fa fa-plus-square"></a>&nbsp;&nbsp;<a href="" data-toggle="modal" data-target=".bs-delete-modal-sm" class="fa fa-trash"></a></td>
                         </tr><tr role="row" class="even">
                           <td>Angelica Ramos</td>
                           <td>angelica.ramos</td>
@@ -117,7 +117,41 @@
 					  </div>
 					</div>
 				 </div><!-- end of modal -->
+				
+				
+				
+				<!-- start assignment modal -->
+				<div class="modal fade bs-assign-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+					<div class="modal-dialog modal-sm">
+					  <div class="modal-content">
 
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+						  </button>
+						  <h4 class="modal-title" id="myModalLabel">Assign To Supervisor</h4>
+						</div>
+						
+						
+						<div class="modal-body">
+							<b>Choose Supervisor:</b><br />
+							<select class="form-control">
+								<option>Choose Supervisor</option>
+								<option>Myleen De Leon</option>
+								<option>Joy Loarca</option>
+							</select>
+						</div>
+						
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-success">Approve & Assign</button>
+						</div>
+
+					  </div>
+					</div>
+				</div><!-- end of modal -->
+				 
+				 
+				 
 
               </div>
 
