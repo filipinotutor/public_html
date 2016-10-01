@@ -29,6 +29,14 @@ ul.special li {
 ul.special li a {
 	font-size: 15px;
 }
+
+
+#action_nav {
+	background: #eee;
+	padding-bottom: 5px;
+}
+
+
 /* End of CSS by mark */
 
 .left_col {

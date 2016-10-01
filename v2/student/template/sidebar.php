@@ -13,7 +13,9 @@
 	  <div class="profile_info">
 		<span>Welcome,</span>
 		<h2>Tsutsui Hajime</h2>
-		<span><b>Student ID:</b> F3A3211</span>
+		<br />
+		<p><b>Student ID:</b> F3A3211
+		<b>Credits Left:</b> 50</p>
 	  </div>
 	</div>
 	<!-- /menu profile quick info -->
@@ -31,16 +33,15 @@
 			  <li><a href="inbox.php">Mailbox</a></li>
 			</ul>
 		  </li>
+		  <li><a><i class="fa fa-book"></i> My Classes</a>
+		  <li><a><i class="fa fa-history"></i> Class History</a>
 		  <li><a><i class="fa fa-cart-plus"></i> My Credits</a>
+		 
 			<ul class="nav child_menu">
 
 			</ul>
 		  </li>
-		   <li><a><i class="fa fa-book"></i> Lessons & Materials <span class="fa fa-chevron-down"></span></a>
-			<ul class="nav child_menu">
-			  <li><a href="materials-all.php">All Materials</a></li>
-			</ul>
-		  </li>
+		   <li><a href="materials-all.php"><i class="fa fa-book"></i> Lessons & Materials </a></li>
 		   <li><a href="resources-students.php"><i class="fa fa-question"></i> Student Guide</a></li>
 	  </div>
 	 
