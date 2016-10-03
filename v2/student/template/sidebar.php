@@ -35,6 +35,7 @@
 		  </li>
 		  <li><a><i class="fa fa-book"></i> My Classes <span class="fa fa-chevron-down"></span></a>
 			<ul class="nav child_menu">
+				<li><a href="#">Book a Class</a></li>
 				<li><a href="#">Today's Class</a></li>
 				<li><a href="#">Class History</a></li>
 				<li><a href="#">Upcoming Classes</a></li>
