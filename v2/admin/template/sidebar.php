@@ -28,12 +28,7 @@
 		  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
 			<ul class="nav child_menu">
 			  <li><a href="index.php">Dashboard</a></li>
-			</ul>
-		  </li>
-		   <li><a><i class="fa fa-envelope"></i> Mailbox <span class="fa fa-chevron-down"></span></a>
-			<ul class="nav child_menu">
-			  <li><a href="compose.php">Compose</a></li>
-			  <li><a href="inbox.php">Inbox</a></li>
+			  <li><a href="inbox.php">Mailbox</a></li>
 			</ul>
 		  </li>
 		  <li><a><i class="fa fa-cart-plus"></i> Credits <span class="fa fa-chevron-down"></span></a>
