@@ -33,12 +33,20 @@
 			  <li><a href="inbox.php">Mailbox</a></li>
 			</ul>
 		  </li>
-		  <li><a><i class="fa fa-book"></i> My Classes</a>
-		  <li><a><i class="fa fa-history"></i> Class History</a>
-		  <li><a><i class="fa fa-cart-plus"></i> My Credits</a>
-		 
+		  <li><a><i class="fa fa-book"></i> My Classes <span class="fa fa-chevron-down"></span></a>
 			<ul class="nav child_menu">
+				<li><a href="#">Today's Class</a></li>
+				<li><a href="#">Class History</a></li>
+				<li><a href="#">Upcoming Classes</a></li>
+			</ul>
 
+		  
+		  </li>
+
+		  <li><a><i class="fa fa-cart-plus"></i> My Credits <span class="fa fa-chevron-down"></span></a>
+			 <ul class="nav child_menu">
+				<li><a href="#">Credits Summary</a></li>
+				<li><a href="#">Buy Credits</a></li>
 			</ul>
 		  </li>
 		   <li><a href="materials-all.php"><i class="fa fa-book"></i> Lessons & Materials </a></li>

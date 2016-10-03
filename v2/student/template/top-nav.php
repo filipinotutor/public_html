@@ -33,10 +33,28 @@
 		</nav>
 	</div>
 </div>
-<div id="action_nav">
-
-	<a href="book-classes.php" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Book Class</a>
-	<a href="book-classes.php" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Buy Credits</a>
-	
-	<br clear="all" />
+<div class="top_nav">
+	<div class="nav_menu">
+		<nav>
+			<ul class="nav navbar-nav navbar-left navbar-2">
+				<li class="">
+					<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" >
+						<span class=" fa fa-calendar"></span> TODAY'S CLASS
+						<span class=" fa fa-angle-down"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-usermenu">
+						<li><a href="#"><span class="fa fa-info-circle"></span> 11:20 - Tutor Aika</a></li>
+						<li><a href="#"><span class="fa fa-info-circle"></span> 11:20 - Tutor Aika</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="alert alert-warning alert-dismissible fade in pull-left" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+			</button>
+			You are running out of credits. To add, click the "buy credits" button.
+		</div>
+		<a href="book-classes.php" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Book Class</a>
+		<a href="book-classes.php" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Buy Credits</a>
+	</div>
 </div>
