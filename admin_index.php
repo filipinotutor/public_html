@@ -115,7 +115,7 @@
               <li><a><i class="fa fa-graduation-cap"></i> Tutors <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
                 <li><a href="tutors-new.php">Add New Tutor</a></li>
-                <li><a href="tutors-all.php">All Tutors</a></li>
+                <li><a href="#" ui-sref='tutors'>All Tutors</a></li>
                 <li><a href="tutors-pending.php">Pending Tutors</a></li>
                 <!-- <li><a href="tutors-schedules.php">Schedule Requests</a></li> -->
                 <!-- <li><a href="tutors-reports.php">Reports</a></li> -->
@@ -125,13 +125,19 @@
                <li><a><i class="fa fa-user-secret"></i> Supervisors <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
                 <li><a href="supervisors-new.php">Add New Supervisor</a></li>
-                <li><a href="supervisors-all.php">All Supervisors</a></li>
+                <li><a href="#" ui-sref="supervisors">All Supervisors</a></li>
                 
               </ul>
               </li>
                <li><a><i class="fa fa-user"></i> Applicants <span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
+               <ul class="nav child_menu">
                 <li><a href="applicants-all.php">All Applicants</a></li>
+              </ul>
+              </li>
+               <li><a><i class="fa fa-user-secret"></i> Admin <span class="fa fa-chevron-down"></span></a>
+              <ul class="nav child_menu">
+                <li><a href="supervisors-new.php">All Admin</a></li>
+                <li><a href="supervisors-all.php">Add Admin</a></li>
               </ul>
               </li>
             </ul>
