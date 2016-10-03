@@ -40,7 +40,7 @@ angular.module('filTutorApp')
 								'new_js/factories/api.js',
 								'new_js/services/session.js',
 								'new_js/factories/UserFac.js',
-								'new_js/services/sessions/UserSess.js',
+								'new_js/services/sessions/userSess.js',
 								'new_js/controllers/MenuCtrl.js',
 								'new_js/controllers/DashboardCtrl.js'
 							]);
