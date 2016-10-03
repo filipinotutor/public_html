@@ -22,12 +22,14 @@ class Database {
 		    $this->pw = "NdZVnxahGIhZ";
 		}
 
-		$mysql_connect = mysql_connect ("localhost", 
+		$mysql_connect = mysql_connect("localhost", 
                                           $this->user_name, 
                                            $this->pw); 
 
-		$mysql_db = mysql_select_db ($this->database); 
+		$mysql_db = mysql_select_db($this->database); 
 	}
 }
+
+
 
 ?>
