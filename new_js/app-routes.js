@@ -87,6 +87,37 @@ angular.module('filTutorApp')
 						}]
 					}
 				})
+				.state('tutors', {
+					parent: 'dashboard',
+					url: 'tutors',
+					templateUrl: 'new_pages/tutors/tutorlist.php',
+					controller: 'TutorCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/tutorSess.js',
+								'new_js/factories/TutorFac.js',
+								'new_js/controllers/TutorCtrl.js'
+							]);
+						}]
+					}
+				})
+
+				.state('supervisors', {
+					parent: 'dashboard',
+					url: 'supervisors',
+					templateUrl: 'new_pages/supervisors/supervisorlist.php',
+					controller: 'SupervisorCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/supervisorSess.js',
+								'new_js/factories/SupervisorFac.js',
+								'new_js/controllers/SupervisorCtrl.js'
+							]);
+						}]
+					}
+				})
 
 				.state('about', {
 					url: '/about',

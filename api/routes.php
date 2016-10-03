@@ -59,6 +59,18 @@
 
 							break;
 
+						case 'supervisor':
+							include('../controllers/supervisor.php');
+							$supervisor = new Supervisor();
+							$routes = array(
+									'/supervisor' => 'get'
+								);
+
+							$supervisor->$routes[$route]();
+							echo $supervisor->data;
+
+							break;
+
 						default:
 							# code...
 							break;
