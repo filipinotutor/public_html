@@ -35,23 +35,21 @@
 		  </li>
 		  <li><a><i class="fa fa-book"></i> My Classes <span class="fa fa-chevron-down"></span></a>
 			<ul class="nav child_menu">
-				<li><a href="#">Book a Class</a></li>
-				<li><a href="#">Today's Class</a></li>
-				<li><a href="#">Class History</a></li>
-				<li><a href="#">Upcoming Classes</a></li>
+				<li><a href="students-booking.php">Book a Class</a></li>
+				<li><a href="students-class-today.php">Today's Class</a></li>
+				<li><a href="students-class-history.php">Class History</a></li>
+				<li><a href="students-class-upcoming.php">Upcoming Classes</a></li>
 			</ul>
-
-		  
 		  </li>
 
 		  <li><a><i class="fa fa-cart-plus"></i> My Credits <span class="fa fa-chevron-down"></span></a>
 			 <ul class="nav child_menu">
-				<li><a href="#">Credits Summary</a></li>
-				<li><a href="#">Buy Credits</a></li>
+				<li><a href="students-credits.php">Credits Summary</a></li>
+				<li><a href="students-credits-buy.php">Buy Credits</a></li>
 			</ul>
 		  </li>
 		   <li><a href="materials-all.php"><i class="fa fa-book"></i> Lessons & Materials </a></li>
-		   <li><a href="resources-students.php"><i class="fa fa-question"></i> Student Guide</a></li>
+		   <li><a href="resources-students.php"><i class="fa fa-question-circle"></i> Student Guide</a></li>
 	  </div>
 	 
 
