@@ -1,9 +1,8 @@
 <div class="page-title">
   <div class="title_left">
-    <h3>Students</h3>
+    <h3>Tutors</h3>
   </div>
-  <div class="title_right">
-  </div>
+  <div class="title_right"></div>
 </div>
 
 <div class="row">
@@ -31,12 +30,12 @@
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Actions</th></tr>
           </thead>
 
-          <tbody ng-repeat="s in studentlist">
+          <tbody ng-repeat="t in tutorlist">
           	<tr role="row" class="odd">
-              <td class="sorting_1">{{ s.username }}</td>
-              <td>{{ s.first_name }} {{ s.last_name }}</td>
-              <td>{{ s.skype_id }}</td>
-              <td>{{ s.email }}</td>
+              <td class="sorting_1">{{ t.username }}</td>
+              <td>{{ t.first_name }} {{ t.last_name }}</td>
+              <td>{{ t.skype_id }}</td>
+              <td>{{ t.email }}</td>
               <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
             </tr>
            </tbody>

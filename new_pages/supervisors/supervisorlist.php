@@ -1,9 +1,8 @@
 <div class="page-title">
   <div class="title_left">
-    <h3>Students</h3>
+    <h3>Supervisor</h3>
   </div>
-  <div class="title_right">
-  </div>
+  <div class="title_right"></div>
 </div>
 
 <div class="row">
@@ -31,7 +30,7 @@
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Actions</th></tr>
           </thead>
 
-          <tbody ng-repeat="s in studentlist">
+          <tbody ng-repeat="s in supervisorlist">
           	<tr role="row" class="odd">
               <td class="sorting_1">{{ s.username }}</td>
               <td>{{ s.first_name }} {{ s.last_name }}</td>
