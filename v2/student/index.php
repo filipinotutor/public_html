@@ -21,39 +21,50 @@
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row tile_count">
-			<div class="col-sm-3 tile_stats_count">
+			<div class="col-sm-3 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Upcoming Classes</span>
               <div class="count">20</div>
 			  <small><a href="class-tracker.php"><u>View List</u></a></small>
             </div>
-			<div class="col-sm-3 tile_stats_count">
+			<div class="col-sm-3 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Today's Classes</span>
               <div class="count">50</div>
-			   <small><a href="class-tracker.php"><u>View List</u></a></small>
+				<small><a href="class-tracker.php"><u>View List</u></a></small>
             </div>
-			<div class="col-sm-3 tile_stats_count">
+			<div class="col-sm-3 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Credits</span>
 				<div class="count">440</div>
-				 <small>This Week</small>
+				<small><a href="class-tracker.php"><u>Credits Summary</u></a></small>
              </div>
-			<div class="col-sm-3 tile_stats_count">
+			<div class="col-sm-3 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-clock-o"></i> Available Tutors</span>
               <div class="count">123</div>
 			  <small><a href="class-tracker.php"><u>Book Now</u></a></small>
             </div>
           </div>
           <!-- /top tiles -->
-
+		
+		
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+				<a href="#"><img src="images/banner-choose tutor.jpg" alt="" class="img-responsive" /></a>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<a href="#"><img src="images/banner-student-guide.jpg" alt="" class="img-responsive" /></a>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<a href="#"><img src="images/banner-lesson.jpg" alt="" class="img-responsive" /></a>
+			</div>
+		</div>
          
-          <br />
+		<br />
 
-          <div class="row">
-
+		<div class="row"><!-- start of row -->
 
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
+              <div class="x_panel tile fixed_height_340">
                 <div class="x_title">
-                  <h2>New Students</h2>
+                  <h2>Today's Class</h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                     <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -61,44 +72,64 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-					<table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
+					<table id="datatable" class="table table-striped dataTable no-footer" role="grid" aria-describedby="datatable_info">
+					<thead>
+						<tr role="row">
+							<th class="sorting" style="width: 80px;">Date</th>
+							<th class="sorting" style="width: 80px;">Time</th>
+							<th class="sorting" style="width: 80px;">Tutor</th>
+							<th class="sorting" style="width: 80px;">Class Type</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>8:00-8:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td>ESL</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>9:00-9:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td>ESL</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>10:20-11:00</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td>Business</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>11:00-11:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Llacuna Lemon</a></td>
+					  <td>Business</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>13:00-13:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td>ESL</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>16:00-16:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td>Business</td>
+					</tr>
+					</tbody>
+					</table>
+					<a href="#" class="btn btn-sm btn-success">View All</a>
                 </div>
               </div>
             </div>
 
-             <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="x_panel tile fixed_height_340">
                 <div class="x_title">
-                  <h2>New Tutors</h2>
+                  <h2>Upcoming Classes</h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                     <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -106,192 +137,125 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-					<table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
+					<table id="datatable" class="table table-striped dataTable no-footer" role="grid" aria-describedby="datatable_info">
+					<thead>
+						<tr role="row">
+							<th class="sorting" style="width: 80px;">Date</th>
+							<th class="sorting" style="width: 80px;">Time</th>
+							<th class="sorting" style="width: 80px;">Tutor</th>
+							<th class="sorting" style="width: 80px;">Class Type</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>8:00-8:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td>ESL</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>9:00-9:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td>ESL</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>10:20-11:00</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td>Business</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>11:00-11:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Llacuna Lemon</a></td>
+					  <td>Business</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>13:00-13:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td>ESL</td>
+					</tr>
+					<tr role="row" class="odd">
+					  <td class="sorting_1">July 25</td>
+					  <td>16:00-16:20</td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td>Business</td>
+					</tr>
+					</tbody>
+					</table>
+					<a href="#" class="btn btn-sm btn-success">View All</a>
                 </div>
               </div>
             </div>
 
+		</div><!-- start of row -->
+		
+		<div class="row"><!-- start of row -->
 
-            
-
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
-              <div class="x_panel">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
-                  <h2>Inbox <small>Recent Emails</small></h2>
+                  <h2>Class History</h2>
                   <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a></li>
                   </ul>
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <div class="dashboard-widget-content">
-
-                    <ul class="list-unstyled timeline widget">
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-								<a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                          </h2>
-                            <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
-                            </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+					<table id="datatable" class="table table-striped dataTable no-footer" role="grid" aria-describedby="datatable_info">
+					  <thead>
+						<tr role="row">
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Date</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Time</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Tutor</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Material</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Attendance</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr role="row" class="odd">
+							<td>July 24</td>
+							<td>9:00-9:20</td>
+							<td>Fatima Abrugar</td>
+							<td><a href="#"><span class="fa fa-external-link"></span> Young Learners Series 2 | Lesson 1 - Lesson on Numbers</a></td>
+							<td><span class="label label-danger">Absent</span></td>
+						</tr>
+						<tr role="row" class="odd">
+							<td>July 24</td>
+							<td>10:00-10:20</td>
+							<td>Fatima Abrugar</td>
+							<td><a href="#"><span class="fa fa-external-link"></span> Holidays and Events | Chinese New Year</a></td>
+							<td><span class="label label-success">Present</span></td>
+						</tr>
+						<tr role="row" class="odd">
+							<td>July 23</td>
+							<td>12:00-12:20</td>
+							<td>Ericca Gabriel</td>
+							<td><a href="#"><span class="fa fa-external-link"></span> Business Grammar | Lesson 14 - Defining A Process</a></td>
+							<td><span class="label label-success">Present</span></td>
+						</tr>
+						<tr role="row" class="odd">
+							<td>July 23</td>
+							<td>16:00-16:20</td>
+							<td>Ericca Gabriel</td>
+							<td><a href="#"><span class="fa fa-external-link"></span> Business Grammar | Lesson 14 - Defining A Process</a></td>
+							<td><span class="label label-success">Present</span></td>
+						</tr>
+						</tbody>
+					</table>
+					<a href="#" class="btn btn-sm btn-success">View All</a>
                 </div>
               </div>
             </div>
-
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-
-
-
-              <div class="row">
-
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="x_panel tile fixed_height_320">
-                    <div class="x_title">
-                      <h2>Recent Bookings</h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-						<table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              
-              </div>
-            </div>
+	
+         
+		</div><!-- end of row -->
+		  
+		  
           </div>
         </div>
         <!-- /page content -->
