@@ -2,7 +2,8 @@
 
 angular.module('filTutorApp', [
 		'ui.router', 
-		'oc.lazyLoad'
+		'oc.lazyLoad',
+		'smart-table'
 	]);
 
 angular.module('filTutorApp')
@@ -91,6 +92,21 @@ angular.module('filTutorApp')
 					parent: 'dashboard',
 					url: 'tutors',
 					templateUrl: 'new_pages/tutors/tutorlist.php',
+					controller: 'TutorCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/tutorSess.js',
+								'new_js/factories/TutorFac.js',
+								'new_js/controllers/TutorCtrl.js'
+							]);
+						}]
+					}
+				})
+				.state('tutor_profile', {
+					parent: 'dashboard',
+					url: 'tutors/:tutorId',
+					templateUrl: 'new_pages/tutors/tutor_profile.php',
 					controller: 'TutorCtrl',
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
