@@ -424,7 +424,9 @@ body {
   display: block; }
 
 .page-title .title_left h3 {
-  margin: 9px 0; }
+  margin: 9px 0; 
+  padding-top: 20px;
+}
 
 .page-title .title_right {
   width: 55%;
