@@ -142,7 +142,6 @@
               </li>
             </ul>
             </div>
-
           </div>
           <!-- /sidebar menu -->
 
@@ -167,11 +166,19 @@
         </div>
 
         <!-- top navigation -->
-        
-          <div ui-view="top-nav"></div>
-          <?php 
-            // include('new_sections/top-nav.php');
-          ?>
+          
+          <div class="top_nav">
+            <div class="nav_menu">
+              <nav>
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+             
+                <div ui-view="top-nav"></div>
+             
+              </nav>
+            </div>
+          </div>
        
         <!-- top navigation -->
 
@@ -346,15 +353,11 @@
     </script>
     <!-- /gauge.js -->
 
-
     <script src="new_vendors/angular/angular.min.js"></script>
     <script src="new_vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="new_vendors/oclazyload/dist/ocLazyLoad.min.js"></script>
-    
+    <script src="new_vendors/Smart-Table/dist/smart-table.min.js"></script>
     <script src="new_js/app-routes.js"></script>
-    <script src="new_js/factories/api.js"></script>
-    <script src="new_js/services/session.js"></script>
-    <script src="new_js/controllers/MenuCtrl.js"></script>
 
   </body>
   </html>
