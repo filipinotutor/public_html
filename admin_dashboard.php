@@ -1,4 +1,4 @@
-<div ui-view>
+<div ui-view autoscroll='true'>
 	
 AKO SI DASHBOARD
 
