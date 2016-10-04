@@ -31,7 +31,14 @@ ul.special li a {
 }
 
 /* STUDENT */
-
+#bookings .thumbnail {
+	height: 280px;
+	font-weight: bold;
+	font-size: 17px;
+}
+#bookings .thumbnail img {
+	margin-bottom: 7px;
+}
 .tile_count .tile_stats_count {
 	margin-bottom: 5px;
     border-bottom: 0;
