@@ -3,19 +3,19 @@
 angular.module('filTutorApp')
 	.service('StudentSess', [ function(){
 		
-		var data = {};
+		var data = [];
 
-		function getUserData() {
+		function getStudentData() {
 			return data;
 		}
 
-		function storeUserData(obj) {
+		function storeStudentData(obj) {
 			data = obj;
 		}
 
 		return {
-			getUserData: getUserData,
-			storeUserData: storeUserData
+			getStudentData: getStudentData,
+			storeStudentData: storeStudentData
 		}
 
 	}]);
