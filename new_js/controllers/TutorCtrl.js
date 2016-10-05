@@ -46,22 +46,41 @@ angular.module('filTutorApp')
 
 			function initData() {
 
-				$scope.tutorlist = TutorSess.getTutorData();
+				var tutorUserName = $stateParams.userName;
+				$scope.isReady = false;
 
-				if($scope.tutorlist.length == 0) {
-					Tutor.get()
+
+				if(angular.isUndefined(tutorUserName)){
+					$scope.tutorlist = TutorSess.getTutorData();
+
+					if($scope.tutorlist.length == 0) {
+						Tutor.get()
+							.then(function(data){
+								var data = data.data;
+								TutorSess.storeTutorData(data[1]);		
+								$scope.tutorlist = data[1];					
+								$scope.isReady = true;
+								initList();
+							});
+					} else {
+						$scope.isReady = true;	
+						initList();
+					}
+				} else {
+
+					$scope.tutor = TutorSess.getTutorProf();
+					
+					// if($scope.tutor.length == 0) {
+					Tutor.getProfile(tutorUserName)
 						.then(function(data){
 							var data = data.data;
-							TutorSess.storeTutorData(data[1]);		
-							$scope.tutorlist = data[1];					
-							$scope.isDataReady = true;
-							initList();
+							TutorSess.storeTutorProf(data[1][0]);
+							$scope.tutor = TutorSess.getTutorProf();
 						});
-				} else {
-					$scope.isReady = true;	
-					initList();
+					// } else {
+					// 	$scope.isReady = true;
+					// }
 				}
-
 			}
 
 
@@ -88,8 +107,10 @@ angular.module('filTutorApp')
 			}
 
 
-
 			initData();
+
+
+
 		}
 
 	]);
