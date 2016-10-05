@@ -18,7 +18,7 @@
   </li>
 
   <li class="date-time">
-  	<p><img src="../../new_images/flag-japan.png" width="20px" /> {{ phTime | date:'hh:mm a' : 'GMT+9' }}<br /><span>July 29, 2016</p>
+  	<p><img src="../../new_images/flag-japan.png" width="20px" /> {{ phTime | date:'hh:mm a' : 'GMT+9' }}<br /><span> {{ phTime | date: 'mediumDate' : 'GMT+9' }}</p>
   </li>
   <li class="date-time">
   	<p><img src="../../new_images/flag-phil.png" width="20px" /> {{ phTime | date:'hh:mm a' }}<br /><span> {{ phTime | date: 'mediumDate' }}</p>
