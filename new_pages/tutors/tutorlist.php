@@ -42,14 +42,24 @@
               <td>{{ s.first_name }} {{ s.last_name }}</td>
               <td>{{ s.skype_id }}</td>
               <td>{{ s.email }}</td>
-              <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+              <td>
+              	 <a ui-sref="tutor_profile({ userName:s.username })"><span class="label label-warning">View / Edit</span>
+              	</a>
+              <!-- <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a> -->
+              </td>
             </tr>
            	<tr role="row" ng-show="$odd" class="even">
               <td class="sorting_1">  {{ s.username }}</td>
               <td>{{ s.first_name }} {{ s.last_name }}</td>
               <td>{{ s.skype_id }}</td>
               <td>{{ s.email }}</td>
-              <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+              <td>
+              <a ui-sref="tutor_profile({ userName:s.username })"><span class="label label-warning">View / Edit</span>
+              	</a>
+              <!-- 
+              	<a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span>
+              	</a> -->
+              </td>
             </tr>
            </tbody>
            <tfoot>
