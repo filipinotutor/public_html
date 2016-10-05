@@ -55,6 +55,6 @@
 			You are running out of credits. To add, click the "buy credits" button.
 		</div>
 		<a href="book-classes.php" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Book Class</a>
-		<a href="book-classes.php" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Buy Credits</a>
+		<a href="students-credits-buy.php" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Buy Credits</a>
 	</div>
 </div>
