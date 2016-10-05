@@ -9,84 +9,60 @@
 	if(Auth::guard()) {
 		
 		$req_method = $_SERVER['REQUEST_METHOD'];
+		
 		$request = explode('/', trim($_SERVER['PATH_INFO'],'/'));	
+		
 		$route = $_SERVER['PATH_INFO'];
-		$table = $request[0];
-		// $method = $request[1];
 
-		// $id = (array_key_exists(2, $request) == true) ? $request[2] : 0;
+		$id = (array_key_exists(2, $request) == true) ? $request[2] : 0;
+
+		$routes = array(
+					'/user' => 'get',
+					'/user/loggedin' => 'get_user_info',
+
+
+					'/student' => 'get',
+					'/student/getById/'.$id => 'getStudentProfile@'.$id,
+
+
+					'/tutor' => 'get_tutors',
+					'/tutor/getById/'.$id => 'getTutorProfile@'.$id,
+
+					
+					'/supervisor' => 'get',
+					'/supervisor/getById/'.$id => 'getSupProfile@'.$id,
+
+					
+					'/applicant' => 'get',
+
+
+					'/admin'	=> 'get',
+					'/admin/getById/'.$id => 'getAdminProfile@'.$id
+				);
+
+		if(strpos($routes[$route],"@") > 0){
+			$atIndex = strpos($routes[$route],"@");
+			$argument = substr($routes[$route], $atIndex + 1);
+
+			$call_func = substr($routes[$route], 0, $atIndex);
+		} else {
+			$call_func = $routes[$route];
+			$argument = '';
+		}
+
+		// user student tutor supervisor
+		$table = $request[0];
+		
 
 		switch ($req_method) {
 			case 'GET':
-					switch ($table) {
-						case 'user':
+					include('../controllers/'. $table.'.php');
 
-							include('../controllers/user.php');
-							$user = new User();
-							$routes = array(
-									'/user' => 'get',
-									'/user/loggedin' => 'get_user_info'
-								);
+					$model = new $table();
 
-							$user->$routes[$route]();
-							echo $user->data;
+					$model->$call_func($argument);
 
-							break;
-
-						case 'student':
-							include('../controllers/student.php');
-							$student = new Student();
-							$routes = array(
-									'/student' => 'get',
-									'/student/getAll' => 'getAllStudents'
-								);
-
-							$student->$routes[$route]();
-							echo $student->data;
-
-							break;
-						
-						case 'tutor':
-							include('../controllers/tutor.php');
-							$tutor = new Tutor();
-							$routes = array(
-									'/tutor' => 'get_tutors',
-									'/tutor/getAll' => 'getAllTutors'
-								);
-
-							$tutor->$routes[$route]();
-							echo $tutor->data;
-
-							break;
-
-						case 'supervisor':
-							include('../controllers/supervisor.php');
-							$supervisor = new Supervisor();
-							$routes = array(
-									'/supervisor' => 'get'
-								);
-
-							$supervisor->$routes[$route]();
-							echo $supervisor->data;
-
-							break;
-
-						default:
-							# code...
-							break;
-					}
-
-
-					// include('../controllers/'. $table.'.php');
-					// $user = new $table();
-
-					// if($id > 0) {
-					// 	$user->user_id = $id;
-					// }
-
-					// $user->$method();
-
-					// echo $user->data;
+					echo $model->data;
 			break;
 
 			case 'POST':

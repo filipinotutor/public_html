@@ -1,11 +1,51 @@
 <?php
 
 function apple(){
-	echo 'PPLEPEN<br/>';
+	echo '   PPLEPEN<br/>';
+}
+
+function one($id){
+	echo 'ONE: '. $id;
 }
 
 
-$request =  trim($_SERVER['PATH_INFO'],'/');	
+function two(){
+	echo 'TWO';
+}
+
+function three($id){
+	echo 'THREE: '. $id;
+}
+
+
+
+	$route = '/tutor/getById/123';
+	$id = 123;
+
+	$routes = array(
+		'/tutor' => 'two',
+		'/tutor/getById/'.$id => 'three@'.$id
+	);
+
+	if(strpos($routes[$route],"@") > 0){
+		$atIndex = strpos($routes[$route],"@");
+		$argument = substr($routes[$route], $atIndex + 1);
+		$call_func = substr($routes[$route], 0, $atIndex);
+	} else {
+		$argument = '';
+	}
+
+	$call_func($argument);
+
+
+
+// echo $argument;
+// echo '<br>'. $routes[$route];
+echo '<br>';
+// echo $call_func;
+echo '<br>';
+
+// $request =  trim($_SERVER['PATH_INFO'],'/');	
 
 // echo $request;
 
