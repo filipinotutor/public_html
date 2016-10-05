@@ -17,27 +17,42 @@
 		$id = (array_key_exists(2, $request) == true) ? $request[2] : 0;
 
 		$routes = array(
+			// User 
 					'/user' => 'get',
 					'/user/loggedin' => 'get_user_info',
-
-
+ 
+			// Student 
 					'/student' => 'get',
 					'/student/getById/'.$id => 'getStudentProfile@'.$id,
 
-
+			// Tutor
 					'/tutor' => 'get_tutors',
-					'/tutor/getById/'.$id => 'getTutorProfile@'.$id,
+					'/tutor/getByUserName/'.$id => 'getTutorProfile@'.$id,
 
-					
+			
+			// Supervisor
 					'/supervisor' => 'get',
 					'/supervisor/getById/'.$id => 'getSupProfile@'.$id,
+					'/supervisor/list' => 'getSupList',
 
-					
+
+			// Applicant
 					'/applicant' => 'get',
 
-
+			// Admin
 					'/admin'	=> 'get',
-					'/admin/getById/'.$id => 'getAdminProfile@'.$id
+					'/admin/getById/'.$id => 'getAdminProfile@'.$id,
+				
+			// Classhistory
+					'/classhistory' => 'get',
+					'/classhistory/tutor/'.$id => 'getTutorCHistory@'.$id,
+					'/classhistory/student/'.$id => 'getStudentCHistory@'.$id
+
+			// Conversions
+					'/conversion' => 'get',
+					'/conversion/tutor/'.$id => 'getTutorConversion@'.$id
+
+			
 				);
 
 		if(strpos($routes[$route],"@") > 0){
@@ -59,9 +74,7 @@
 					include('../controllers/'. $table.'.php');
 
 					$model = new $table();
-
 					$model->$call_func($argument);
-
 					echo $model->data;
 			break;
 
