@@ -105,7 +105,7 @@ angular.module('filTutorApp')
 				})
 				.state('tutor_profile', {
 					parent: 'dashboard',
-					url: 'tutors/:tutorId',
+					url: 'tutor/:userName',
 					templateUrl: 'new_pages/tutors/tutor_profile.php',
 					controller: 'TutorCtrl',
 					resolve: {
