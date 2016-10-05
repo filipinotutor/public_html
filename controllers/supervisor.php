@@ -46,4 +46,23 @@ class Supervisor extends Query {
 		$this->wantsJSON();
 	}
 
+	public function getSupList(){
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, s.nick_name , s.supervisorid as "supervisor_id" 
+				FROM users u
+				LEFT JOIN supervisors s 
+				ON u.user_id = s.supervisorid
+				WHERE u.access_level = 9 
+				ORDER BY u.user_id ';
+
+		$result = Query::run($sql);
+
+		if($result[0]['success']){
+			$this->data = $result;
+		} else {
+			$this->data = $result;
+		}
+		
+		$this->wantsJSON();
+	}
+
 }
