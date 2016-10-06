@@ -45,7 +45,9 @@ ul.special li a {
     padding-bottom: 10px;
     margin-top: 20px;
 }
-
+.pagination {
+	margin: 5px 0px;
+}
 .nav_menu .btn {
 	margin-top:10px;
 }
