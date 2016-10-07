@@ -22,7 +22,7 @@ class Database {
 		    $this->database = "filipino_tutor";
 		    $this->pw = "NdZVnxahGIhZ";
 		} else if($isDev) {
-			$this->user_name = "filipino_tutor";
+			$this->user_name = "filipino_devuser";
 		    $this->database = "filipino_devtutor";
 		    $this->pw = "NdZVnxahGIhZ";
 		} 
