@@ -5,17 +5,17 @@ angular.module('filTutorApp')
 		
 		var data = {};
 
-		function getUserData() {
+		function getSupData() {
 			return data;
 		}
 
-		function storeUserData(obj) {
+		function storeSupData(obj) {
 			data = obj;
 		}
 
 		return {
-			getUserData: getUserData,
-			storeUserData: storeUserData
+			getSupData: getSupData,
+			storeSupData: storeSupData
 		}
 
 	}]);
