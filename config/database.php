@@ -22,9 +22,9 @@ class Database {
 		    $this->database = "filipino_tutor";
 		    $this->pw = "NdZVnxahGIhZ";
 		} else if($isDev) {
-			$this->user_name = "filipino_devuser";
-		    $this->database = "filipino_devtutor";
-		    $this->pw = "NdZVnxahGIhZ";
+			$this->user_name = "filipino_dev";
+		    $this->database = "filipino_dev";
+		    $this->pw = "development";
 		} 
 
 		$mysql_connect = mysql_connect("localhost", 
