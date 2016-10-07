@@ -14,13 +14,18 @@ class Database {
 
 		$this->url = $_SERVER['HTTP_HOST'];
 
-		$isProd = preg_match("/\bfilipinotutor\b/", $this->url);
+		$isProd =  strpos($this->url,"https");
+		$isDev = strpos($this->url, "dev");
 
 		if($isProd) {
 		    $this->user_name = "filipino_tutor";
 		    $this->database = "filipino_tutor";
 		    $this->pw = "NdZVnxahGIhZ";
-		}
+		} else if($isDev) {
+			$this->user_name = "filipino_tutor";
+		    $this->database = "filipino_devtutor";
+		    $this->pw = "NdZVnxahGIhZ";
+		} 
 
 		$mysql_connect = mysql_connect("localhost", 
                                           $this->user_name, 
