@@ -23,7 +23,6 @@
  					'/user/deactivate' => 'deactivateAccount',
 					'/user/activate' => 'activateAccount',
 
-
 			// Student 
 					'/student' => '@get',
 					'/student/getByUserOrMail/'.$id => 'getStudentProfile@'.$id,
@@ -41,6 +40,7 @@
 
 			// Applicant
 					'/applicant' => '@get',
+					'/applicant/getAppDetails/'.$id => 'getAppDetails@'.$id,
 
 			// Admin
 					'/admin'	=> '@get',

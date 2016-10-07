@@ -182,6 +182,23 @@ angular.module('filTutorApp')
 					}
 				})
 
+				.state('applicants', {
+					parent: 'dashboard',
+					url: 'applicants',
+					templateUrl: 'new_pages/applicants/applicantlist.html',
+					controller: 'ApplicantCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/applicantSess.js',
+								'new_js/factories/ApplicantFac.js',
+								'new_js/controllers/ApplicantCtrl.js'
+							]);
+						}]
+					}
+				})
+
+
 				.state('about', {
 					url: '/about',
 					views: {
