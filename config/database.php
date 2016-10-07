@@ -14,8 +14,8 @@ class Database {
 
 		$this->url = $_SERVER['HTTP_HOST'];
 
-		$isProd =  strpos($this->url,"https") > 0 ? true : false;
-		$isDev = strpos($this->url, "dev") > 0 ? true :false ;
+		$isProd = ($_SERVER['SERVER_NAME'] == 'filipinotutor.com');
+		$isDev = ($_SERVER['SERVER_NAME'] == 'dev.filipinotutor.com');
 
 		if($isProd) {
 		    $this->user_name = "filipino_tutor";
