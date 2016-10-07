@@ -198,6 +198,22 @@ angular.module('filTutorApp')
 					}
 				})
 
+				.state('admins', {
+					parent: 'dashboard',
+					url: 'admins',
+					templateUrl: 'new_pages/admins/adminlist.html',
+					controller: 'AdminCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/adminSess.js',
+								'new_js/factories/AdminFac.js',
+								'new_js/controllers/AdminCtrl.js'
+							]);
+						}]
+					}
+				})
+
 
 				.state('about', {
 					url: '/about',
