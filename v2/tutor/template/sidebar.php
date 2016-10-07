@@ -33,7 +33,7 @@
 			  <li><a href="inbox.php">Mailbox</a></li>
 			</ul>
 		  </li>
-		  <li><a><i class="fa fa-book"></i> My Classes <span class="fa fa-chevron-down"></span></a>
+		  <li><a><i class="fa fa-clock-o"></i> My Classes <span class="fa fa-chevron-down"></span></a>
 			<ul class="nav child_menu">
 				<li><a href="tutors-schedule.php">Manage Schedule</a></li>
 				<li><a href="tutors-class-today.php">Today's Class</a></li>
@@ -42,7 +42,7 @@
 			</ul>
 		  </li>
 
-		  <li><a href="tutors-conversions-summary.php"><i class="fa fa-cart-plus"></i> Conversions </a></li>
+		  <li><a href="tutors-conversions-summary.php"><i class="fa fa-check-square"></i> Conversions </a></li>
 		   <li><a href="materials-all.php"><i class="fa fa-book"></i> Lessons & Materials </a></li>
 		   <li><a href="resources-tutors.php"><i class="fa fa-question-circle"></i> Tutors Guide</a></li>
 	  </div>
