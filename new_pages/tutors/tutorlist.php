@@ -30,20 +30,20 @@
         <table st-table="tutorListColl" st-safe-src="tutorlist" id="dataTable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
           <thead>
             <tr role="row">
-				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"  aria-label="Position: activate to sort column ascending" style="width: 190px;" st-sort="username" st-sort-default="true">Username</th>
+				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"  aria-label="Position: activate to sort column ascending" style="width: 190px;" st-sort="username">Username</th>
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 190px;" st-sort="first_name">Name</th>
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 100px;" st-sort="skype_id">Skype ID</th>
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 100px;" st-sort="email">Email</th>
 				<th tabindex="0" aria-controls="datatable" rowspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Actions</th></tr>
           </thead>
-          <tbody ng-repeat="s in tutorListColl">
+          <tbody ng-repeat="s in tutorListColl | orderBy: 'userName'">
           	<tr role="row" ng-show="$even" class="odd">
               <td class="sorting_1">  {{ s.username }}</td>
               <td>{{ s.first_name }} {{ s.last_name }}</td>
               <td>{{ s.skype_id }}</td>
               <td>{{ s.email }}</td>
               <td>
-              	 <a ui-sref="tutor_profile({ userName:s.username })"><span class="label label-warning">View / Edit</span>
+              	 <a ui-sref="tutor_profile({ userNameOrEmail:s.username })"><span class="label label-warning">View / Edit</span>
               	</a>
               <!-- <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a> -->
               </td>
@@ -54,7 +54,7 @@
               <td>{{ s.skype_id }}</td>
               <td>{{ s.email }}</td>
               <td>
-              <a ui-sref="tutor_profile({ userName:s.username })"><span class="label label-warning">View / Edit</span>
+               <a ui-sref="tutor_profile({ userNameOrEmail:s.username })"><span class="label label-warning">View / Edit</span>
               	</a>
               <!-- 
               	<a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span>

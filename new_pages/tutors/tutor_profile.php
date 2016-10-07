@@ -31,3 +31,6 @@ tutor.accnt_numb : {{ tutor.accnt_number }} <br><br>
 <!-- {{ tutor.tutor_type_id }} --> 
 tutor.tutor_type : {{ tutor.tutor_type }}  <br><br>
 
+<a class="btn btn-primary" ng-click="deactivate(tutor.user_id)" ng-show="tutor.deactivated == 0">Deactivate</a>
+<a class="btn btn-primary" ng-click="activate(tutor.user_id)" ng-show="tutor.deactivated == 1">Activate</a>
+
