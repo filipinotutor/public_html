@@ -14,7 +14,7 @@ angular.module('filTutorApp')
 		
 		Admin.getAdminSettings = function(){
 			return $http.get(endpoint + '/settings');
-		}
+		};
 
 		// Admin.post = function(userData){
 		// 	return $http({
