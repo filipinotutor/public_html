@@ -44,7 +44,7 @@
 
 			// Admin
 					'/admin'	=> '@get',
-					'/admin/adminsettings' => '@getAdminSettings',
+					'/admin/settings' => '@getAdminSettings',
 			
 			// Classhistory
 					'/classhistory' => '@get',
