@@ -7,6 +7,21 @@ angular.module('filTutorApp', [
 	]);
 
 angular.module('filTutorApp')
+	.run(['$rootScope', '$state', '$stateParams',
+			function($rootScope, $state, $stateParams){
+
+				$rootScope.$state = $state;
+				$rootScope.$stateParams = $stateParams;
+
+				$rootScope.$on('$stateChangeStart', function(){
+					document.body.scrollTop = document.documentElement.scrollTop = 0;
+				});
+			}
+
+	]);
+
+
+angular.module('filTutorApp')
 	.config([
 		'$stateProvider', 
 		'$urlRouterProvider',
@@ -88,6 +103,22 @@ angular.module('filTutorApp')
 						}]
 					}
 				})
+				.state('student_profile', {
+					parent: 'dashboard',
+					url: 'student/:userNameOrEmail',
+					templateUrl: 'new_pages/students/student_profile.html',
+					controller: 'StudentCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/studentSess.js',
+								'new_js/factories/StudentFac.js',
+								'new_js/controllers/StudentCtrl.js'
+							]);
+						}]
+					}
+				})
+
 				.state('tutors', {
 					parent: 'dashboard',
 					url: 'tutors',
@@ -98,6 +129,7 @@ angular.module('filTutorApp')
 							return $ocLazyLoad.load([
 								'new_js/services/sessions/tutorSess.js',
 								'new_js/factories/TutorFac.js',
+								'new_js/factories/UserFac.js',
 								'new_js/controllers/TutorCtrl.js'
 							]);
 						}]
@@ -105,7 +137,7 @@ angular.module('filTutorApp')
 				})
 				.state('tutor_profile', {
 					parent: 'dashboard',
-					url: 'tutor/:userName',
+					url: 'tutor/:userNameOrEmail',
 					templateUrl: 'new_pages/tutors/tutor_profile.php',
 					controller: 'TutorCtrl',
 					resolve: {
@@ -123,6 +155,21 @@ angular.module('filTutorApp')
 					parent: 'dashboard',
 					url: 'supervisors',
 					templateUrl: 'new_pages/supervisors/supervisorlist.php',
+					controller: 'SupervisorCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/supervisorSess.js',
+								'new_js/factories/SupervisorFac.js',
+								'new_js/controllers/SupervisorCtrl.js'
+							]);
+						}]
+					}
+				})
+				.state('supervisor_profile', {
+					parent: 'dashboard',
+					url: 'supervisor/:userNameOrEmail',
+					templateUrl: 'new_pages/supervisors/supervisor_profile.html',
 					controller: 'SupervisorCtrl',
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
