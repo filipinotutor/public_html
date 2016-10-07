@@ -4,7 +4,6 @@
 	
 
 	$method = $_SERVER['REQUEST_METHOD'];
-	$input = json_decode(file_get_contents('php://input'), true);
 
 	if(Auth::guard()) {
 		
@@ -17,72 +16,89 @@
 		$id = (array_key_exists(2, $request) == true) ? $request[2] : 0;
 
 		$routes = array(
+
 			// User 
-					'/user' => 'get',
-					'/user/loggedin' => 'get_user_info',
- 
+					'/user' => '@get',
+					'/user/loggedin' => '@get_user_info',
+ 					'/user/deactivate' => 'deactivateAccount',
+					'/user/activate' => 'activateAccount',
+
+
 			// Student 
-					'/student' => 'get',
-					'/student/getById/'.$id => 'getStudentProfile@'.$id,
+					'/student' => '@get',
+					'/student/getByUserOrMail/'.$id => 'getStudentProfile@'.$id,
 
 			// Tutor
-					'/tutor' => 'get_tutors',
-					'/tutor/getByUserName/'.$id => 'getTutorProfile@'.$id,
+					'/tutor' => '@get_tutors',
+					'/tutor/getByUserOrMail/'.$id => 'getTutorProfile@'.$id,
 
 			
 			// Supervisor
-					'/supervisor' => 'get',
-					'/supervisor/getById/'.$id => 'getSupProfile@'.$id,
-					'/supervisor/list' => 'getSupList',
+					'/supervisor' => '@get',
+					'/supervisor/getByUserOrMail/'.$id => 'getSupProfile@'.$id,
+					'/supervisor/list' => '@getSupList',
 
 
 			// Applicant
-					'/applicant' => 'get',
+					'/applicant' => '@get',
 
 			// Admin
-					'/admin'	=> 'get',
+					'/admin'	=> '@get',
 					'/admin/getById/'.$id => 'getAdminProfile@'.$id,
-				
+			
 			// Classhistory
-					'/classhistory' => 'get',
+					'/classhistory' => '@get',
 					'/classhistory/tutor/'.$id => 'getTutorCHistory@'.$id,
 					'/classhistory/student/'.$id => 'getStudentCHistory@'.$id,
 
 			// Conversions
-					'/conversion' => 'get',
+					'/conversion' => '@get',
 					'/conversion/tutor/'.$id => 'getTutorConversion@'.$id
 
 
 				);
 
-		if(strpos($routes[$route],"@") > 0){
-			$atIndex = strpos($routes[$route],"@");
-			$argument = substr($routes[$route], $atIndex + 1);
+		// @ -> get method without parameters
+		// method@id -> get method with parameters
+		// method -> post method with inputs
 
+		$atIndex = strpos($routes[$route] ,"@");
+
+		if($atIndex > 0){
+
+			$argument = substr($routes[$route], $atIndex + 1);
 			$call_func = substr($routes[$route], 0, $atIndex);
-		} else {
-			$call_func = $routes[$route];
+
+		} elseif($atIndex == "") {
+
+			$call_func = substr($routes[$route], 1);
 			$argument = '';
+
 		}
+
+		if($req_method == 'POST') {
+			$call_func = $routes[$route];
+			$argument = json_decode(file_get_contents('php://input'), true);
+		}
+
 
 		// user student tutor supervisor
 		$table = $request[0];
-		
 
 		switch ($req_method) {
 			case 'GET':
 					include('../controllers/'. $table.'.php');
-
 					$model = new $table();
 					$model->$call_func($argument);
+					
 					echo $model->data;
 			break;
 
 			case 'POST':
-				$user = new User();
-				$user->update();
-
-				echo 'kamote';
+					include('../controllers/'. $table.'.php');
+					$model = new $table();
+					$model->$call_func($argument);
+					echo $model->data;
 				break;
 
 			case 'PUT':
