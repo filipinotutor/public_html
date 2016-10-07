@@ -10,8 +10,8 @@ angular.module('filTutorApp')
 			return $http.get(endpoint + '/api/routes.php/supervisor');
 		};
 
-		Supervisor.getById = function(user_id){
-			return $http.get(endpoint + '/api/routes.php/supervisor/' + user_id);
+		Supervisor.getProfile = function(userOrMail){
+			return $http.get(endpoint + '/api/routes.php/supervisor/getByUserOrMail/' + userOrMail);
 		}
 
 		Supervisor.post = function(userData){

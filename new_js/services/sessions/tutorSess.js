@@ -4,29 +4,30 @@ angular.module('filTutorApp')
 	.service('TutorSess', [ function(){
 		
 		var data = [];
-		var tutorData = [];
+		data.tutorData = [];
+		data.tutorProf = null;
 
 		function getTutorData() {
-			return data;
+			return data.tutorData;
 		}
 
-		function getTutorProf(){
-			return tutorData;
-		}
+		// function getTutorProf(){
+		// 	return data.tutorData;
+		// }
 
 		function storeTutorData(obj) {
-			data = obj;
+			data.tutorData = obj;
 		}
 
-		function storeTutorProf(obj) {
-			tutorData = obj;
-		}
+		// function storeTutorProf(obj) {
+		// 	data.tutorProf = obj;
+		// }
 
 		return {
 			getTutorData: getTutorData,
-			storeTutorData: storeTutorData,
-			getTutorProf: getTutorProf,
-			storeTutorProf: storeTutorProf
+			storeTutorData: storeTutorData
+			// getTutorProf: getTutorProf,
+			// storeTutorProf: storeTutorProf
 		}
 
 	}]);

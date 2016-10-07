@@ -20,7 +20,7 @@ angular.module('filTutorApp')
 					// console.log('onmo:' + oneMo);
 
 					var registered_date = moment(value.creation_date).format('YYYY-MM-DD HH:mm:ss');
-					var oneMo = moment().add(30, 'days').format('YYYY-MM-DD HH:mm:ss');
+					var oneMo = moment().subtract(30, 'days').format('YYYY-MM-DD HH:mm:ss');
 					var isBefore = moment(registered_date).isBefore(oneMo);
 	
 					if(value.deactivated == 1) {
@@ -40,21 +40,42 @@ angular.module('filTutorApp')
 
 			function initData() {
 
-				$scope.studentlist = StudentSess.getStudentData();
+				var studUserOrMail = $stateParams.userNameOrEmail;
+				$scope.isReady = false;
 
-				if($scope.studentlist.length == 0) {
-					Student.get()
+				if(angular.isUndefined(studUserOrMail)){
+					$scope.studentlist = StudentSess.getStudentData();
+
+					if($scope.studentlist.length == 0) {
+						Student.get()
+							.then(function(data){
+								var data = data.data;
+
+								StudentSess.storeStudentData(data[1]);		
+								$scope.studentlist = data[1];					
+								$scope.isDataReady = true;
+								initList();
+							});
+					} else {
+						$scope.isReady = true;	
+						initList();
+					}
+				} else {
+					$scope.student = "";
+					
+					// if($scope.tutor.length == 0) {
+					Student.getProfile(studUserOrMail)
 						.then(function(data){
 							var data = data.data;
 
-							StudentSess.storeStudentData(data[1]);		
-							$scope.studentlist = data[1];					
-							$scope.isDataReady = true;
-							initList();
+							$scope.student = data[1][0];
+
+							console.log(JSON.stringify($scope.student));
+
 						});
-				} else {
-					$scope.isReady = true;	
-					initList();
+					// } else {
+					// 	$scope.isReady = true;
+					// }
 				}
 
 			}
@@ -68,7 +89,7 @@ angular.module('filTutorApp')
 			$scope.newlyRegister = function() {
 				initData();
 				initList();
-				$scope.studentlist = $scope.newlyreglist
+				$scope.studentlist = $scope.newlyreglist;
 			}
 
 			$scope.allStudent = function() {

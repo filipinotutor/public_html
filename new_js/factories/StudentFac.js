@@ -10,8 +10,8 @@ angular.module('filTutorApp')
 			return $http.get(endpoint + '/api/routes.php/student');
 		};
 
-		Student.getById = function(user_id){
-			return $http.get(endpoint + '/api/routes.php/student/' + user_id);
+		Student.getProfile = function(userOrMail){
+			return $http.get(endpoint + '/api/routes.php/student/getByUserOrMail/' + userOrMail);
 		}
 
 		Student.post = function(userData){

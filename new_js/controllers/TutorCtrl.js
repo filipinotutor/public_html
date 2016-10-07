@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.controller('TutorCtrl', ['$scope','$rootScope', '$stateParams', '$state', 'TutorSess', 'Tutor'
-		, function($scope, $rootScope, $stateParams, $state, TutorSess, Tutor){
+	.controller('TutorCtrl', ['$scope','$rootScope', '$stateParams', '$state', 'TutorSess', 'Tutor', 'User'
+		, function($scope, $rootScope, $stateParams, $state, TutorSess, Tutor, User){
 
 			$scope.isReady = false;
 			$scope.tutorlist = [];
@@ -21,9 +21,9 @@ angular.module('filTutorApp')
 					// console.log('onmo:' + oneMo);
 
 					var registered_date = moment(value.creation_date).format('YYYY-MM-DD HH:mm:ss');
-					var oneMo = moment().add(30, 'days').format('YYYY-MM-DD HH:mm:ss');
+					var oneMo = moment().subtract(30, 'days').format('YYYY-MM-DD HH:mm:ss');
 					var isBefore = moment(registered_date).isBefore(oneMo);
-	
+					
 					if(value.deactivated == 1) {
 						$scope.deacttutorlist.push(value);
 					}
@@ -46,11 +46,10 @@ angular.module('filTutorApp')
 
 			function initData() {
 
-				var tutorUserName = $stateParams.userName;
+				var tutorUserOrMail = $stateParams.userNameOrEmail;
 				$scope.isReady = false;
 
-
-				if(angular.isUndefined(tutorUserName)){
+				if(angular.isUndefined(tutorUserOrMail)){
 					$scope.tutorlist = TutorSess.getTutorData();
 
 					if($scope.tutorlist.length == 0) {
@@ -68,19 +67,39 @@ angular.module('filTutorApp')
 					}
 				} else {
 
-					$scope.tutor = TutorSess.getTutorProf();
+					$scope.tutor = "";
 					
 					// if($scope.tutor.length == 0) {
-					Tutor.getProfile(tutorUserName)
+					Tutor.getProfile(tutorUserOrMail)
 						.then(function(data){
 							var data = data.data;
-							TutorSess.storeTutorProf(data[1][0]);
-							$scope.tutor = TutorSess.getTutorProf();
+
+							$scope.tutor = data[1][0];
+
+							// TutorSess.storeTutorProf(data[1][0]);
+							// $scope.tutor = TutorSess.getTutorProf();
 						});
 					// } else {
 					// 	$scope.isReady = true;
 					// }
 				}
+			}
+
+			$scope.deactivate = function(tutor_id){
+
+				User.deactivate({user_id: tutor_id, deactivator_id: $rootScope.userData.user_id})
+					.then(function(data){
+						var data = data.data;
+						console.log(JSON.stringify(data));
+					});
+			}
+
+			$scope.activate = function(tutor_id){
+				User.activate({ user_id: tutor_id, deactivator_id: $rootScope.userData.user_id })
+					.then(function(data){
+						var data = data.data;
+						console.log(JSON.stringify(data));
+					});
 			}
 
 
