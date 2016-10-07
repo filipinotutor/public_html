@@ -17,7 +17,7 @@ class ClassHistory extends Query {
 		ON ch.student_id = u.user_id
 		';
 
-		$result = Query::run($sql);
+		$result = Query::select($sql);
 
 		if($result[0]['success']){
 			$this->data = $result;
@@ -37,7 +37,7 @@ class ClassHistory extends Query {
 				ON ch.student_id = u.user_id
 				WHERE ch.tutor_id = '.$tutor_id;
 
-		$result = Query::run($sql);
+		$result = Query::select($sql);
 
 		if($result[0]['success']){
 			$this->data = $result;
@@ -57,7 +57,7 @@ class ClassHistory extends Query {
 				ON ch.student_id = u.user_id
 				WHERE ch.student_id = '.$student_id;
 
-		$result = Query::run($sql);
+		$result = Query::select($sql);
 
 		if($result[0]['success']){
 			$this->data = $result;
