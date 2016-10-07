@@ -75,7 +75,8 @@ angular.module('filTutorApp')
 							var data = data.data;
 
 							$scope.tutor = data[1][0];
-
+							/* console.log(JSON.stringify($scope.tutor));
+							 */
 							// TutorSess.storeTutorProf(data[1][0]);
 							// $scope.tutor = TutorSess.getTutorProf();
 						});
