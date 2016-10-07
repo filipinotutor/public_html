@@ -44,7 +44,7 @@
 
 			// Admin
 					'/admin'	=> '@get',
-					'/admin/getById/'.$id => 'getAdminProfile@'.$id,
+					'/admin/adminsettings' => '@getAdminSettings',
 			
 			// Classhistory
 					'/classhistory' => '@get',
