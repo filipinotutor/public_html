@@ -11,55 +11,19 @@ angular.module('filTutorApp')
 		Admin.get = function(){
 			return $http.get(endpoint);
 		};
-
 		
-		Admin.deactivate = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/deactivate',
-				data: userData,
-				headers: headers
-			});
+		Admin.getAdminSettings = function(){
+			return $http.get(endpoint + '/settings');
 		}
 
-		Admin.activate = function(userData){
-			alert(JSON.stringify(userData));
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/activate',
-				data: userData,
-				headers: headers
-			});
-		}
-
-
-		Admin.post = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user',
-				data: userData,
-				headers: headers
-			});
-		}
-
-
-		Admin.update = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
-			});
-		}
-
-		Admin.destroy = function(user_id){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
-			});
-		}
+		// Admin.post = function(userData){
+		// 	return $http({
+		// 		method: 'POST',
+		// 		url: endpoint + '/user',
+		// 		data: userData,
+		// 		headers: headers
+		// 	});
+		// }
 
 		return Admin;
 
