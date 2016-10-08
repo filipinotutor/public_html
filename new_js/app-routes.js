@@ -53,8 +53,6 @@ angular.module('filTutorApp')
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
-								'new_js/factories/api.js',
-								'new_js/services/session.js',
 								'new_js/factories/UserFac.js',
 								'new_js/services/sessions/userSess.js',
 								'new_js/controllers/MenuCtrl.js',
