@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.controller('DashboardCtrl', ['$scope', '$rootScope', 'api', 'session', function($scope, $rootScope, api, session){
+	.controller('DashboardCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
 		
 		var vm = this;
 		// vm.isReady = false;
