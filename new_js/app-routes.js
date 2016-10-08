@@ -182,6 +182,39 @@ angular.module('filTutorApp')
 					}
 				})
 
+				.state('applicants', {
+					parent: 'dashboard',
+					url: 'applicants',
+					templateUrl: 'new_pages/applicants/applicantlist.html',
+					controller: 'ApplicantCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/applicantSess.js',
+								'new_js/factories/ApplicantFac.js',
+								'new_js/controllers/ApplicantCtrl.js'
+							]);
+						}]
+					}
+				})
+
+				.state('admins', {
+					parent: 'dashboard',
+					url: 'admins',
+					templateUrl: 'new_pages/admins/adminlist.html',
+					controller: 'AdminCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/adminSess.js',
+								'new_js/factories/AdminFac.js',
+								'new_js/controllers/AdminCtrl.js'
+							]);
+						}]
+					}
+				})
+
+
 				.state('about', {
 					url: '/about',
 					views: {
