@@ -134,11 +134,10 @@
                 <li><a ui-sref="applicants">All Applicants</a></li>
               </ul>
               </li>
-               <li><a><i class="fa fa-user-secret"></i> Admin <span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
-                <li><a ui-sref="admins">All Admin</a></li>
-                <li><a href="supervisors-all.php">System Settings</a></li>
-              </ul>
+               <li>
+                 <a ui-sref="admins">
+                  <i class="fa fa-user-secret"></i> Admin
+                 </a>
               </li>
             </ul>
             </div>

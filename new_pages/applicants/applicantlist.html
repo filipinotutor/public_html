@@ -32,15 +32,16 @@
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"  aria-label="Position: activate to sort column ascending" style="width: 190px;" st-sort="username" st-sort-default="true">Name</th>
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 190px;" st-sort="first_name">Email</th>
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 100px;" st-sort="skype_id">Contact</th>
+				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"  aria-label="Position: activate to sort column ascending" style="width: 90px;">Status</th>
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 100px;" st-sort="email">Date Applied</th>
 				<th tabindex="0" aria-controls="datatable" rowspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Actions</th></tr>
           </thead>
           <tbody ng-repeat="s in applicantListColl">
           	<tr role="row" ng-show="$even" class="odd">
-              
               <td> {{ s.first_name }} {{ s.last_name }}</td>
               <td> {{ s.email }} </td>
               <td> {{ s.mobile }} </td>
+              <td> {{ s.status }} </td>
               <td> {{ s.creation_date }} </td>
               <td>
               	<a ui-sref="student_profile({userNameOrEmail: s.username})"><span class="label label-warning">View / Edit</span></a>
@@ -48,10 +49,10 @@
               </td>
             </tr>
            	<tr role="row" ng-show="$odd" class="even">
-            
               <td> {{ s.first_name }} {{ s.last_name }} </td>
               <td> {{ s.email }} </td>
               <td> {{ s.mobile }} </td>
+              <td> {{ s.status }} </td>
               <td> {{ s.creation_date }} </td>
               <td>
               	<a ui-sref="student_profile({userNameOrEmail: s.username})"><span class="label label-warning">View / Edit</span></a>
