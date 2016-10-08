@@ -26,7 +26,8 @@
 										<b>Member Since:</b> {{ tutor.creation_date }}<br />
 										<b>Type: <span class="label label-xs label-success">{{ tutor.tutor_type }}</b><br /><br />
 										<a href="#" class="btn btn-xs btn-info">Edit Profile</a>
-										<a href="#" class="btn btn-xs btn-danger">Deactivate Account</a>
+										<a class="btn btn-xs btn-danger" ng-click="deactivate(tutor.user_id)" ng-show="tutor.deactivated == 0">Deactivate</a>
+										<a class="btn btn-xs btn-success" ng-click="activate(tutor.user_id)" ng-show="tutor.deactivated == 1">Activate</a>
 									</p>
 									
 								</div>
@@ -404,8 +405,7 @@
                 
 
 
-<a class="btn btn-primary" ng-click="deactivate(tutor.user_id)" ng-show="tutor.deactivated == 0">Deactivate</a>
-<a class="btn btn-primary" ng-click="activate(tutor.user_id)" ng-show="tutor.deactivated == 1">Activate</a>
+
 
 <!-- 
 tutor.user_id  : {{ tutor.user_id }} <br><br>
