@@ -10,12 +10,12 @@ angular.module('filTutorApp')
 	.run(['$rootScope', '$state', '$stateParams',
 			function($rootScope, $state, $stateParams){
 
-				$rootScope.$state = $state;
-				$rootScope.$stateParams = $stateParams;
+				// $rootScope.$state = $state;
+				// $rootScope.$stateParams = $stateParams;
 
-				$rootScope.$on('$stateChangeStart', function(){
-					document.body.scrollTop = document.documentElement.scrollTop = 0;
-				});
+				// $rootScope.$on('$stateChangeStart', function(){
+				// 	document.body.scrollTop = document.documentElement.scrollTop = 0;
+				// });
 			}
 
 	]);
@@ -53,6 +53,7 @@ angular.module('filTutorApp')
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
+								'new_js/services/sessions/constantSess.js',
 								'new_js/factories/UserFac.js',
 								'new_js/services/sessions/userSess.js',
 								'new_js/controllers/MenuCtrl.js',
@@ -136,7 +137,54 @@ angular.module('filTutorApp')
 				.state('tutor_profile', {
 					parent: 'dashboard',
 					url: 'tutor/:userNameOrEmail',
-					templateUrl: 'new_pages/tutors/tutor_profile.php',
+					views : {
+						'':  { 
+							templateUrl: 'new_pages/tutors/tutor_profile.php',
+							controller: 'TutorCtrl'
+						},
+						'acc_prof@tutor_profile': { 
+							templateUrl: 'new_pages/tutors/tutor_acc_profile.php' 
+						},
+						'sched_book@tutor_profile' : { 
+							templateUrl: 'new_pages/tutors/tutor_schedule.php' 
+						},
+						'class_history@tutor_profile' : { 
+							templateUrl: 'new_pages/tutors/tutor_class_history.php' 
+						},
+						'conversions@tutor_profile' : { 
+							templateUrl: 'new_pages/tutors/tutor_conversions.php' 
+						}
+					},
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/tutorSess.js',
+								'new_js/factories/TutorFac.js',
+								'new_js/controllers/TutorCtrl.js'
+							]);
+						}]
+					}
+					
+				})
+
+				.state('tutor_profile.sched_book', {
+					url: '/schedule_book',
+					templateUrl: 'new_pages/tutors/tutor_schedule.php',
+					controller: 'TutorCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/services/sessions/tutorSess.js',
+								'new_js/factories/TutorFac.js',
+								'new_js/controllers/TutorCtrl.js'
+							]);
+						}]
+					}
+				})
+
+				.state('tutor_profile.acc_profile', {
+					url: '/account/profile',
+					templateUrl: 'new_pages/tutors/tutor_acc_profile.php',
 					controller: 'TutorCtrl',
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
