@@ -50,31 +50,31 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">First Name </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.first_name }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.first_name" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Last Name </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.last_name }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.last_name" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Skype ID </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.skype_id }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.skype_id" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Mobile </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.phone }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.phone" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Birthday </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.birthday }}"  />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.birthday"  />
 													</div>
 												</div>
 												<div class="form-group">
@@ -89,25 +89,25 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Highest Educational Level </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.ed_level }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.ed_level" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">School/University </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.school }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.school" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Currently Attending </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.attending }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.attending" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Teaching Experience </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.teaching_exp }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.teaching_exp" />
 													</div>
 												</div>
 												<div class="form-group">
@@ -129,7 +129,7 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Username </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="text" class="form-control" disabled="disabled" value="{{ tutor.username }}" />
+														<input type="text" class="form-control" disabled="disabled" ng-model="tutor.username" />
 													</div>
 												</div>
 												<div class="form-group">
@@ -157,7 +157,7 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Email </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="email" class="form-control" disabled="disabled" value="{{ tutor.email }}" />
+														<input type="email" class="form-control" disabled="disabled" ng-model="tutor.email" />
 													</div>
 												</div>
 												<div class="form-group">
@@ -188,19 +188,19 @@
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Branch </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="password" class="form-control" disabled="disabled" value="{{ tutor.bank_branch }}" />
+														<input type="password" class="form-control" disabled="disabled" ng-model="tutor.bank_branch" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Account Name </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="email" class="form-control" disabled="disabled" value="{{ tutor.accnt_name }}" />
+														<input type="email" class="form-control" disabled="disabled" ng-model="tutor.accnt_name" />
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="control-label col-sm-3 col-xs-12">Account No. </label>
 													<div class="col-md-9 col-sm-9 col-xs-12">
-														<input type="email" class="form-control" disabled="disabled" value="{{ tutor.accnt_number }}" />
+														<input type="email" class="form-control" disabled="disabled" ng-model="tutor.accnt_number" />
 													</div>
 												</div>
 											</div>
