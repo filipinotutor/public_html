@@ -105,8 +105,25 @@ angular.module('filTutorApp')
 				.state('student_profile', {
 					parent: 'dashboard',
 					url: 'student/:userNameOrEmail',
-					templateUrl: 'new_pages/students/student_profile.html',
-					controller: 'StudentCtrl',
+					// templateUrl: 'new_pages/students/student_profile.php',
+					views: {
+						'': {
+							templateUrl: 'new_pages/students/student_profile.php',
+							controller: 'StudentCtrl'	
+						},
+						'acc_prof@student_profile': {
+							templateUrl: 'new_pages/students/stud_acc_profile.php'
+						},
+						'sched_book@student_profile': {
+							templateUrl: 'new_pages/students/stud_book_sched.php'
+						},
+						'class_history@student_profile': {
+							templateUrl: 'new_pages/students/stud_class_history.php'
+						},
+						'cred_purchases@student_profile': {
+							templateUrl: 'new_pages/students/stud_cred_purchase.php'
+						}
+					},
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
@@ -117,7 +134,6 @@ angular.module('filTutorApp')
 						}]
 					}
 				})
-
 				.state('tutors', {
 					parent: 'dashboard',
 					url: 'tutors',
