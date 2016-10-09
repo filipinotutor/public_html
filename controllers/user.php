@@ -97,16 +97,33 @@ class User extends Query{
 		$this->wantsJSON();
 	}
 
+	public function changePassword($input){
 
-	public function update(){
-		$sql = "UPDATE users SET first_name = 'KAMOTE' where user_id = 23";
-		$result = Query::select($sql);
+		$user_id = $input['user_id'];
+		$oldpw = md5($input['oldpw']);
+		$newpw = md5($input['newpw']);
 
-		if($result[0]['success']){
-			$this->data = $result;
+		$table = "users";
+		$where = ' user_id = '.$user_id.' AND password ="'. $oldpw .'" ';
+
+		$isFound = Query::search($table, $where);
+
+		if($isFound) {
+			$sql = 'UPDATE users SET password ="'. $newpw .'" WHERE user_id ='.$user_id;
+			
+			$res = Query::update($sql);
+
+			if($res['success']){
+				$this->data = $res;
+			} else {
+				$this->data = $res;
+			}
+
 		} else {
-			$this->data = $result;
+			$res = array('success' => false);
+			$this->data = $res;
 		}
+
 		
 		$this->wantsJSON();
 
