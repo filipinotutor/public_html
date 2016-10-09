@@ -22,6 +22,7 @@
 					'/user/loggedin' => '@get_user_info',
  					'/user/deactivate' => 'deactivateAccount',
 					'/user/activate' => 'activateAccount',
+					'/user/changepw' => 'changePassword',
 
 			// Student 
 					'/student' => '@get',
@@ -54,7 +55,6 @@
 			// Conversions
 					'/conversion' => '@get',
 					'/conversion/tutor/'.$id => 'getTutorConversion@'.$id
-
 
 				);
 
