@@ -40,6 +40,24 @@ class Query extends Database {
 		return $result;
 	}
 
+	function search($table, $where) {
+
+		$sql = 'SELECT COUNT(*) AS `search_results` FROM '. $table .' WHERE '.$where;
+		try {
+
+			$result = mysql_query($sql);
+			$row = mysql_fetch_object($result);
+
+			$result = $row->search_results;
+
+		} catch (Exception $e) {
+			$result =  array('success' => false, 'error' => mysql_error());
+		}
+
+		return $result;
+	}
+
+
 	 function save($sql) {
 		$result = mysql_query($sql);
 
