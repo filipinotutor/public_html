@@ -168,15 +168,20 @@ angular.module('filTutorApp')
 							templateUrl: 'new_pages/tutors/tutor_class_history.php' 
 						},
 						'conversions@tutor_profile' : { 
-							templateUrl: 'new_pages/tutors/tutor_conversions.php' 
+							templateUrl: 'new_pages/tutors/tutor_conversions.php',
+							controller: 'CHistoryCtrl'
 						}
 					},
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
+								
+								'new_js/controllers/TutorCtrl.js',
+								'new_js/controllers/CHistoryCtrl.js',
 								'new_js/services/sessions/tutorSess.js',
-								'new_js/factories/TutorFac.js',
-								'new_js/controllers/TutorCtrl.js'
+								'new_js/services/sessions/CHistorySess.js',
+								'new_js/factories/CHistoryFac.js',
+								'new_js/factories/TutorFac.js'
 							]);
 						}]
 					}
