@@ -4,6 +4,7 @@ angular.module('filTutorApp')
 	.service('CHistorySess', [ function(){
 		
 		var data = [];
+		var CHUserId = 0;
 
 		function getCHistoryData() {
 			return data;
@@ -13,9 +14,19 @@ angular.module('filTutorApp')
 			data = obj;
 		}
 
+		function getCHUserId() {
+			return CHUserId;
+		}
+
+		function storeCHUserId(user_id){
+			CHUserId = user_id;
+		}
+
 		return {
 			getCHistoryData: getCHistoryData,
-			storeCHistoryData: storeCHistoryData
+			storeCHistoryData: storeCHistoryData,
+			getCHUserId:  getCHUserId,
+			storeCHUserId: storeCHUserId
 		}
 
 	}]);
