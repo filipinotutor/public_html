@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.controller('TutorCtrl', ['$scope','$rootScope', '$stateParams', '$state', 'TutorSess', 'Tutor', 'User'
-		, function($scope, $rootScope, $stateParams, $state, TutorSess, Tutor, User){
+	.controller('TutorCtrl', ['$scope','$rootScope', '$stateParams', '$state', '$q', 'TutorSess', 'Tutor', 'User', 'CHistorySess'
+		, function($scope, $rootScope, $stateParams, $state, $q, TutorSess, Tutor, User, CHistorySess){
 
 			$scope.isReady = false;
 			$scope.tutorlist = [];
@@ -75,11 +75,14 @@ angular.module('filTutorApp')
 							var data = data.data;
 
 							$scope.tutor = data[1][0];
-							/* console.log(JSON.stringify($scope.tutor));
-							 */
+
+							CHistorySess.storeCHUserId($scope.tutor.tutor_id);
+
 							// TutorSess.storeTutorProf(data[1][0]);
 							// $scope.tutor = TutorSess.getTutorProf();
 						});
+
+
 					// } else {
 					// 	$scope.isReady = true;
 					// }
