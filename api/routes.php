@@ -53,11 +53,11 @@
 
 			// Conversions
 					'/conversion' => '@get',
-					'/conversion/tutor/'.$id => 'getTutorConversion@'.$id
+					'/conversion/tutor/'.$id => 'getTutorConversion@'.$id,
 
-
-
-
+			// Schedules
+					'/schedule' => '@get',
+					'/schedule/user/'.$id => 'getUserSchedule@'.$id,
 
 
 
