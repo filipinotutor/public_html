@@ -49,12 +49,17 @@
 			
 			// Classhistory
 					'/classhistory' => '@get',
-					'/classhistory/tutor/'.$id => 'getTutorCHistory@'.$id,
-					'/classhistory/student/'.$id => 'getStudentCHistory@'.$id,
+					'/classhistory/user/'.$id => 'getClassHistory@'.$id,
 
 			// Conversions
 					'/conversion' => '@get',
 					'/conversion/tutor/'.$id => 'getTutorConversion@'.$id
+
+
+
+
+
+
 
 				);
 
