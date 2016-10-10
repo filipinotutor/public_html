@@ -10,6 +10,11 @@ angular.module('filTutorApp')
 		CHistory.get = function(){
 			return $http.get(endpoint);
 		};
+
+		CHistory.getByUserId = function(user_id) {
+			return $http.get(endpoint + '/user/' + user_id);
+		}
+
 		
 		// Admin.post = function(userData){
 		// 	return $http({
