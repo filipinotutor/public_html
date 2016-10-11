@@ -252,19 +252,6 @@ angular.module('filTutorApp')
 					}
 				})
 
-
-				.state('about', {
-					url: '/about',
-					views: {
-						'': { templateUrl: 'partial-about.php' },
-						'columnOne@about' : { template: 'columnOne@about' },
-						'columnTwo@about' : { 
-							templateUrl: 'column2Table.php',
-							controller: 'col2Controller as col2Ctrl'
-						}
-					}
-				});
-
 				function loadJS(srcs, $q) {
 					return {
 						deps: ['$ocLazyLoad', '$q',
