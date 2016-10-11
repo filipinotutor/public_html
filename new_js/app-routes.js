@@ -145,6 +145,7 @@ angular.module('filTutorApp')
 								'new_js/services/sessions/tutorSess.js',
 								'new_js/factories/TutorFac.js',
 								'new_js/factories/UserFac.js',
+								'new_js/services/sessions/CHistorySess.js',
 								'new_js/controllers/TutorCtrl.js'
 							]);
 						}]
@@ -175,7 +176,6 @@ angular.module('filTutorApp')
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
-								
 								'new_js/controllers/TutorCtrl.js',
 								'new_js/controllers/CHistoryCtrl.js',
 								'new_js/services/sessions/tutorSess.js',
@@ -185,38 +185,9 @@ angular.module('filTutorApp')
 							]);
 						}]
 					}
-					
 				})
 
-				.state('tutor_profile.sched_book', {
-					url: '/schedule_book',
-					templateUrl: 'new_pages/tutors/tutor_schedule.php',
-					controller: 'TutorCtrl',
-					resolve: {
-						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
-							return $ocLazyLoad.load([
-								'new_js/services/sessions/tutorSess.js',
-								'new_js/factories/TutorFac.js',
-								'new_js/controllers/TutorCtrl.js'
-							]);
-						}]
-					}
-				})
-
-				.state('tutor_profile.acc_profile', {
-					url: '/account/profile',
-					templateUrl: 'new_pages/tutors/tutor_acc_profile.php',
-					controller: 'TutorCtrl',
-					resolve: {
-						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
-							return $ocLazyLoad.load([
-								'new_js/services/sessions/tutorSess.js',
-								'new_js/factories/TutorFac.js',
-								'new_js/controllers/TutorCtrl.js'
-							]);
-						}]
-					}
-				})
+				
 
 				.state('supervisors', {
 					parent: 'dashboard',
