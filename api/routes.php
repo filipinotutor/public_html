@@ -57,9 +57,7 @@
 
 			// Schedules
 					'/schedule' => '@get',
-					'/schedule/user/'.$id => 'getUserSchedule@'.$id,
-
-
+					'/schedule/user/'.$id => 'getUserSchedule@'.$id
 
 				);
 
