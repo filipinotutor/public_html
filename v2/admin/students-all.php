@@ -61,62 +61,62 @@
                           <td>Yogi Shuko</td>
                           <td>yogi.shuko</td>
                           <td>yogi.shuko@gmail.com</td>
-                          <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                          <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">tsutsui.hajime</td>
                           <td>Tsutsui Hajime</td>
                           <td>Tsutsui Hajime</td>
                           <td>tsutsui.hajime@gmail.com</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                          <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">watanabe.hyosuke</td>
                           <td>Watanabe Hyosuke</td>
                           <td>watanabe.hyosuke</td>
                           <td>watanabe.hyosuke@yahoo.com</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                            <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">otake.takanobu</td>
                           <td>Otake Takanobu</td>
                           <td>otake.takanobu</td>
                           <td>otake.takanobu@gmail.com</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                            <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">miyake.takao</td>
                           <td>Miyake Takao</td>
                           <td>miyake.takao</td>
                           <td>miyake.takao@hotmail.com</td>
-						   <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+						   <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">hata.toshiharu</td>
                           <td>Hata Toshiharu</td>
                           <td>hata.toshiharu</td>
                           <td>hata.toshiharu@mail.com</td>
-                             <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                             <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="odd">
                           <td class="sorting_1">igarashi.hiroya</td>
                           <td>Igarashi Hiroya</td>
                           <td>igarashi.hiroya</td>
                           <td>igarashi.hiroya@gmail.com</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                            <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">shimoda.motoyuki</td>
                           <td>Shimoda Motoyuki</td>
                           <td>shimoda.motoyuki</td>
                           <td>shimoda.motoyuki@yahoo.com</td>
-                            <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                            <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr>
 						<tr role="row" class="odd">
                           <td class="sorting_1">yamashiro.takashi</td>
                           <td>Yamashiro Takashi</td>
                           <td>yamashiro.takashi</td>
                           <td>yamashiro.takashi@hotmail.com</td>
-                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                           <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr><tr role="row" class="even">
                           <td class="sorting_1">nakai.tsuruki</td>
                           <td>Nakai Tsuruki</td>
                           <td>nakai.tsuruki</td>
                           <td>nakai.tsuruki@hotmail.com</td>
-                           <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a></td>
+                           <td><a href="student-profile.php" target="_BLANK"><span class="label label-warning">View / Edit</span></a></td>
                         </tr></tbody>
                     </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
                   </div>
