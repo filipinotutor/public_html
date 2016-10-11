@@ -24,22 +24,22 @@
 			<div class="col-sm-3 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Upcoming Classes</span>
               <div class="count">20</div>
-			  <small><a href="class-tracker.php"><u>View List</u></a></small>
+			  <small><a href="tutors-class-upcoming.php"><u>View List</u></a></small>
             </div>
 			<div class="col-sm-3 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Today's Classes</span>
-              <div class="count">50</div>
-				<small><a href="class-tracker.php"><u>View List</u></a></small>
+              <div class="count">4</div>
+				<small><a href="tutors-class-today.php"><u>View List</u></a></small>
             </div>
 			<div class="col-sm-3 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Credits</span>
-				<div class="count">440</div>
-				<small><a href="class-tracker.php"><u>Credits Summary</u></a></small>
+              <span class="count_top"><i class="fa fa-user"></i> Conversions</span>
+				<div class="count">40</div>
+				<small><a href="tutors-conversions-summary.php"><u>Conversions Summary</u></a></small>
              </div>
 			<div class="col-sm-3 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Available Tutors</span>
-              <div class="count">123</div>
-			  <small><a href="class-tracker.php"><u>Book Now</u></a></small>
+              <span class="count_top"><i class="fa fa-clock-o"></i> Open Schedules</span>
+              <div class="count">12</div>
+			  <small><a href="tutors-schedule.php"><u>Manage Schedule</u></a></small>
             </div>
           </div>
           <!-- /top tiles -->
@@ -47,13 +47,13 @@
 		
 		<div class="row">
 			<div class="col-sm-4 col-xs-12">
-				<a href="#"><img src="images/banner-choose tutor.jpg" alt="" class="img-responsive" /></a>
+				<a href="#"><img src="images/banner-knowjapan.jpg" alt="" class="img-responsive" /></a>
 			</div>
 			<div class="col-sm-4 col-xs-12">
-				<a href="#"><img src="images/banner-student-guide.jpg" alt="" class="img-responsive" /></a>
+				<a href="#"><img src="images/banner-newtutor.jpg" alt="" class="img-responsive" /></a>
 			</div>
 			<div class="col-sm-4 col-xs-12">
-				<a href="#"><img src="images/banner-lesson.jpg" alt="" class="img-responsive" /></a>
+				<a href="resources-tutors.php"><img src="images/banner-resources.jpg" alt="" class="img-responsive" /></a>
 			</div>
 		</div>
          
@@ -77,7 +77,7 @@
 						<tr role="row">
 							<th class="sorting" style="width: 80px;">Date</th>
 							<th class="sorting" style="width: 80px;">Time</th>
-							<th class="sorting" style="width: 80px;">Tutor</th>
+							<th class="sorting" style="width: 80px;">Student</th>
 							<th class="sorting" style="width: 80px;">Class Type</th>
 						</tr>
 					</thead>
@@ -86,37 +86,37 @@
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>8:00-8:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 					  <td>ESL</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>9:00-9:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
 					  <td>ESL</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>10:20-11:00</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 					  <td>Business</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>11:00-11:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Llacuna Lemon</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
 					  <td>Business</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>13:00-13:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
 					  <td>ESL</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>16:00-16:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 					  <td>Business</td>
 					</tr>
 					</tbody>
@@ -142,7 +142,7 @@
 						<tr role="row">
 							<th class="sorting" style="width: 80px;">Date</th>
 							<th class="sorting" style="width: 80px;">Time</th>
-							<th class="sorting" style="width: 80px;">Tutor</th>
+							<th class="sorting" style="width: 80px;">Student</th>
 							<th class="sorting" style="width: 80px;">Class Type</th>
 						</tr>
 					</thead>
@@ -151,37 +151,37 @@
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>8:00-8:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 					  <td>ESL</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>9:00-9:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
 					  <td>ESL</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>10:20-11:00</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 					  <td>Business</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>11:00-11:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Llacuna Lemon</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
 					  <td>Business</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>13:00-13:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Gabriel Ericca</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Tsutsui Hajime</a></td>
 					  <td>ESL</td>
 					</tr>
 					<tr role="row" class="odd">
 					  <td class="sorting_1">July 25</td>
 					  <td>16:00-16:20</td>
-					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Airi Satou</a></td>
+					  <td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Yogi Shuko</a></td>
 					  <td>Business</td>
 					</tr>
 					</tbody>
@@ -211,7 +211,7 @@
 						<tr role="row">
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Date</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Time</th>
-							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Tutor</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Student</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Material</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Attendance</th>
 						</tr>
@@ -220,28 +220,28 @@
 						<tr role="row" class="odd">
 							<td>July 24</td>
 							<td>9:00-9:20</td>
-							<td>Fatima Abrugar</td>
+							<td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Young Learners Series 2 | Lesson 1 - Lesson on Numbers</a></td>
 							<td><span class="label label-danger">Absent</span></td>
 						</tr>
 						<tr role="row" class="odd">
 							<td>July 24</td>
 							<td>10:00-10:20</td>
-							<td>Fatima Abrugar</td>
+							<td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Watanabe Hyosuke</a></td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Holidays and Events | Chinese New Year</a></td>
 							<td><span class="label label-success">Present</span></td>
 						</tr>
 						<tr role="row" class="odd">
 							<td>July 23</td>
 							<td>12:00-12:20</td>
-							<td>Ericca Gabriel</td>
+							<td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Miyake Takao</a></td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Business Grammar | Lesson 14 - Defining A Process</a></td>
 							<td><span class="label label-success">Present</span></td>
 						</tr>
 						<tr role="row" class="odd">
 							<td>July 23</td>
 							<td>16:00-16:20</td>
-							<td>Ericca Gabriel</td>
+							<td><a href="#" target="_BLANK"><span class="fa fa-info-circle"></span> Miyake Takao</a></td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Business Grammar | Lesson 14 - Defining A Process</a></td>
 							<td><span class="label label-success">Present</span></td>
 						</tr>
