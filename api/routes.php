@@ -49,7 +49,9 @@
 			// Admin
 					'/admin'	=> '@get',
 					'/admin/settings' => '@getAdminSettings',
-					
+					'/admin/add' => 'add',
+					'/admin/update' => 'update',
+
 			// Classhistory
 					'/classhistory' => '@get',
 					'/classhistory/user/'.$id => 'getClassHistory@'.$id,
