@@ -60,6 +60,19 @@ class User extends Query{
 		$this->wantsJSON();
 	}
 
+	public function add($input) {
+		$ins = Query::genInsertQuery($input);
+
+		$sql = 'INSERT INTO users ('.$ins['field'].') VALUES('.$ins['values'].');';
+
+		$result = Query::save($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
+
+
 	public function deactivateAccount($input){
 
 		$user_id = $input['user_id'];
