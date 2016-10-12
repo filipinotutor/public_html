@@ -1,15 +1,29 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.factory('Schedule', ['$http', function($http){
+	.factory('Schedule', ['$http', '$q' , function($http, $q){
 
 		var  Schedule = this;
 		var endpoint = '/api/routes.php/schedule';
 		var headers =  {'Content-Type' : 'application/x-www-form-urlencoded'};
 
+		var deferred = $q.defer();
 
 		Schedule.get = function(){
-			return $http.get(endpoint);
+			$http.get(endpoint)
+				.then(function(data){
+
+					var data = data.data;
+					
+					if(data[0].success) {
+						deferred.resolve(data[1]);
+					} else {
+						// Error
+						deferred.reject(data);
+					}
+				});
+
+			return deferred.promise;
 		};
 		
 		Schedule.getUserSchedule = function(user_id){
