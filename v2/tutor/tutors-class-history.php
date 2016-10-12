@@ -34,7 +34,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><a href="students-booking.php" class="btn btn-sm btn-info">Booked Classes</a></h2>
+                    <h2><a href="tutors-class-upcoming.php" class="btn btn-sm btn-info">Booked Classes</a></h2>
                     <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                       <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                       <span>June 30, 2016 - July 29, 2016</span> <b class="caret"></b>
