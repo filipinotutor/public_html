@@ -32,6 +32,19 @@ class Tutor extends Query {
 		$this->wantsJSON();
 	}
 
+	public function add($input){
+		$ins = Query::genInsertQuery($input);
+
+		$sql = 'INSERT INTO tutors ('.$ins['fields'].') VALUES('.$ins['values'].');';
+
+		$result = Query::save($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
+
+
 	public function getTutorProfile($userNameOrEmail) {
 		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, t.tutor_id, t.nick_name, t.phone, t.photo, t.audio, t.birthday, t.ed_level,
 			t.school, t.attending, t.teaching_exp, t.hobby, t.self_intro, t.bank_name, t.bank_branch, t.access, 
