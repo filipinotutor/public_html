@@ -1,15 +1,31 @@
 <?php
 
-include('../config/query.php');
+include('../config/database.php');
+
+// include('../config/query.php');
+
+// $d = new Database();
+// $pw = md5("12345");
+
+// $sql = 'UPDATE users SET password = "'.$pw.'" WHERE user_id =23 ';
 
 
-$d = new Database();
+// $res = mysql_query($sql);
 
-echo $d->user_name;
-echo '<br/>';
-echo $d->database;
-echo '<br/>';
-echo $d->pw;
+// echo json_encode($res);
+// echo mysql_error();
+// $table = "users";
+// $where = 'username = "adin" ';
+
+// $isFound = Query::search($table, $where);
+
+// echo $isFound;
+
+// echo $d->user_name;
+// echo '<br/>';
+// echo $d->database;
+// echo '<br/>';
+// echo $d->pw;
 // $sql = 'INSERT INTO deactivated_account(user_id, deactivator_id) valus(56,23)';
 
 // $q = new Query();
@@ -131,8 +147,11 @@ foreach ($array as $key => $value) {
 		$values = $values.$value.', ';
 		$field = $field.$key. ', ';
 	}
-}
+}	
 
+$a = 'asdf'."'";
+
+echo $a;
 	// echo 'INSERT INTO TABLE1('.$field.') VALUES('.$values.');';
 	// echo '<br/>';
 	// echo '<br/>';
