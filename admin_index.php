@@ -35,6 +35,9 @@
     <link href="new_vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="new_vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     
+
+    <link href="new_vendors/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" rel="stylesheet">
+
   </head>
 
   <body class="nav-md" ng-app="filTutorApp">
@@ -356,6 +359,8 @@
     <script src="new_vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="new_vendors/oclazyload/dist/ocLazyLoad.min.js"></script>
     <script src="new_vendors/Smart-Table/dist/smart-table.min.js"></script>
+    <script src="new_vendors/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+    <script src="new_vendors/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
     <script src="new_js/app-routes.js"></script>
 
   </body>

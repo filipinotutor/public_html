@@ -3,7 +3,8 @@
 angular.module('filTutorApp', [
 		'ui.router', 
 		'oc.lazyLoad',
-		'smart-table'
+		'smart-table',
+		'ui.bootstrap.datetimepicker'
 	]);
 
 angular.module('filTutorApp')
@@ -187,7 +188,20 @@ angular.module('filTutorApp')
 					}
 				})
 
-				
+				.state('book_sched', {
+					parent: 'dashboard',
+					url: 'book_schedule',
+					templateUrl: 'new_pages/tutors/book_schedule.php',
+					controller: 'BookSchedCtrl',
+					resolve: {
+							loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/factories/ScheduleFac.js',
+								'new_js/controllers/BookSchedCtrl.js'
+							]);
+						}]
+					}
+				})
 
 				.state('supervisors', {
 					parent: 'dashboard',

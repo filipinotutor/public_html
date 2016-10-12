@@ -27,6 +27,19 @@ class Supervisor extends Query {
 		$this->wantsJSON();
 	}
 
+	public function add($input) {
+		
+		$ins = Query::genInsertQuery($input);
+
+		$sql = 'INSERT INTO supervisors('.$ins['field'].') VALUES('.$ins['values'].');';
+
+		$result = Query::save($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
+
 	public function getSupProfile($userNameOrEmail){
 		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisorid, s.phone, s.photo, s.birthday, s.nick_name  
 				FROM users u

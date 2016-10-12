@@ -46,7 +46,7 @@
 			// Admin
 					'/admin'	=> '@get',
 					'/admin/settings' => '@getAdminSettings',
-			
+					
 			// Classhistory
 					'/classhistory' => '@get',
 					'/classhistory/user/'.$id => 'getClassHistory@'.$id,
@@ -57,7 +57,10 @@
 
 			// Schedules
 					'/schedule' => '@get',
-					'/schedule/user/'.$id => 'getUserSchedule@'.$id
+					'/schedule/user/'.$id => 'getUserSchedule@'.$id,
+					'/schedule/add' => 'add',
+					'/schedule/delete' => 'delete',
+					'/schedule/update' => 'update'
 
 				);
 
@@ -102,6 +105,8 @@
 					$model = new $table();
 					$model->$call_func($argument);
 					echo $model->data;
+					// echo json_encode($argument);
+
 				break;
 
 			case 'PUT':

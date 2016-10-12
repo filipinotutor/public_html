@@ -4,6 +4,59 @@ include('database.php');
 
 class Query extends Database {
 
+
+	function genInsertQuery($array) {
+
+		$values = '';
+		$field = '';
+
+		$last_key = end(array_keys($array));
+
+		foreach ($array as $key => $value) {
+
+			if($key == $last_key){
+				
+				if(isset($value)){
+					$values = $values."'".$value."'";
+					$field = $field.$key. ' ';
+				}
+
+			} else {
+
+				if(isset($value)){
+					$values = $values."'".$value."', ";
+					$field = $field.$key. ', ';
+				}
+
+			}
+		}
+
+		return array('fields' => $field, 'values' => $values);
+	}
+
+	function getUpdateQuery($array) {
+
+		$upd = '';
+
+		$last_key = end(array_keys($array));
+
+		foreach ($array as $key => $value) {
+
+			if($key == $last_key){
+				
+				$upd = $upd.$key." = '".$value."' ";
+
+			} else {
+
+				$upd = $upd.$key." = '".$value."', ";
+
+			}
+		}
+
+		return $upd;
+	}
+
+
 	 function select($sql) {
 		
 		$result = array(); // Data storage

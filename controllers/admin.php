@@ -22,8 +22,21 @@ class Admin extends Query {
 		$this->wantsJSON();
 	}
 
-	public function getAdminSettings(){
+	public function add($input) {
 		
+		$ins = Query::genInsertQuery($input);
+
+		$sql = 'INSERT INTO users('.$ins['field'].', access_level) VALUES('.$ins['values'].', 10);';
+
+		$result = Query::save($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
+
+	public function getAdminSettings(){
+
 		$sql = 'SELECT * FROM adminsettings';
 
 		$result = Query::select($sql);
