@@ -32,7 +32,7 @@
 				<small><a href="tutors-class-today.php"><u>View List</u></a></small>
             </div>
 			<div class="col-sm-3 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Conversions</span>
+              <span class="count_top"><i class="fa fa-check-square"></i> Conversions</span>
 				<div class="count">40</div>
 				<small><a href="tutors-conversions-summary.php"><u>Conversions Summary</u></a></small>
              </div>
