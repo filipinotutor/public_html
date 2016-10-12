@@ -31,12 +31,15 @@
 			// Tutor
 					'/tutor' => '@get_tutors',
 					'/tutor/getByUserOrMail/'.$id => 'getTutorProfile@'.$id,
-
+					'/tutor/add' => 'add',
+					'/tutor/update' => 'update',
 			
 			// Supervisor
 					'/supervisor' => '@get',
 					'/supervisor/getByUserOrMail/'.$id => 'getSupProfile@'.$id,
 					'/supervisor/list' => '@getSupList',
+					'/supervisor/add' => 'add',
+					'/supervisor/update' => 'update',
 
 
 			// Applicant
