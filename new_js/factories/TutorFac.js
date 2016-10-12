@@ -4,12 +4,11 @@ angular.module('filTutorApp')
 	.factory('Tutor', ['$http','$q' , function($http, $q){
 
 		var Tutor = this;
-		var endpoint = '';
+		var endpoint = '/api/routes.php/tutor';
 		var deferred = $q.defer();
 
-
 		Tutor.get = function(){
-			$http.get(endpoint + '/api/routes.php/tutor')
+			$http.get(endpoint )
 				.then(function(data){
 					deferred.resolve(data);
 				});
@@ -19,11 +18,11 @@ angular.module('filTutorApp')
 		};
 
 		Tutor.getProfile = function(userOrMail){
-			return $http.get(endpoint + '/api/routes.php/tutor/getByUserOrMail/' + userOrMail);
+			return $http.get(endpoint + '/getByUserOrMail/' + userOrMail);
 		}
 
 		Tutor.getProfile1 = function(userOrMail){
-			$http.get(endpoint + '/api/routes.php/tutor/getByUserOrMail/' + userOrMail)
+			$http.get(endpoint + '/getByUserOrMail/' + userOrMail)
 				.then(function(data){
 					deferred.resolve(data.data);
 				});
@@ -31,13 +30,10 @@ angular.module('filTutorApp')
 			return deferred.promise;
 		}
 
-		
-
-
-		Tutor.post = function(userData){
+		Tutor.add = function(userData){
 			return $http({
 				method: 'POST',
-				url: endpoint + '/api/routes.php/tutor',
+				url: endpoint + '/add',
 				data: userData,
 				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
 			});
@@ -46,20 +42,12 @@ angular.module('filTutorApp')
 		Tutor.update = function(userData){
 			return $http({
 				method: 'POST',
-				url: endpoint + '/api/routes.php/tutor',
+				url: endpoint + '/update',
 				data: userData,
 				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
 			});
 		}
 
-		Tutor.destroy = function(user_id){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/api/routes.php/tutor/',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
-			});
-		}
 
 		return Tutor;
 
