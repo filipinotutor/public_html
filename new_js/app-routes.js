@@ -198,7 +198,6 @@ angular.module('filTutorApp')
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
-								'new_js/directives/dropzone.js',
 								'new_js/services/sessions/constantSess.js',
 								'new_js/services/sessions/tutorSess.js',
 								'new_js/factories/SupervisorFac.js',
