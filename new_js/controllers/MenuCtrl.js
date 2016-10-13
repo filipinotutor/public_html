@@ -7,13 +7,7 @@ angular.module('filTutorApp')
 		'$timeout',
 		'UserSess', 
 		'User',
-		'ConstantSess', 
-		function($scope, $rootScope, $timeout, UserSess, User, ConstantSess){
-			
-			$rootScope.tutor_types = ConstantSess.getConstant('tutor_type');
-			$rootScope.teaching_exp = ConstantSess.getConstant('teaching_exp');
-			$rootScope.educ_level = ConstantSess.getConstant('educ_level');
-			$rootScope.banks = ConstantSess.getConstant('bank');
+		function($scope, $rootScope, $timeout, UserSess, User){
 			
 			var vm = this;
 			// vm.isReady = false;
