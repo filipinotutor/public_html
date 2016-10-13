@@ -4,7 +4,8 @@ angular.module('filTutorApp', [
 		'ui.router', 
 		'oc.lazyLoad',
 		'smart-table',
-		'ui.bootstrap.datetimepicker'
+		'ui.bootstrap.datetimepicker',
+		'ngFileUpload'
 	]);
 
 angular.module('filTutorApp')
@@ -54,8 +55,9 @@ angular.module('filTutorApp')
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
 							return $ocLazyLoad.load([
-								'new_js/services/sessions/constantSess.js',
+								
 								'new_js/factories/UserFac.js',
+								
 								'new_js/services/sessions/userSess.js',
 								'new_js/controllers/MenuCtrl.js',
 								'new_js/controllers/DashboardCtrl.js'
@@ -186,6 +188,27 @@ angular.module('filTutorApp')
 							]);
 						}]
 					}
+				})
+
+				.state('edit_tutor_profile', {
+					parent: 'dashboard',
+					url: 'tutor/:userNameOrEmail/edit/profile',
+					templateUrl: 'new_pages/tutors/edit_tutor_profile.php',
+					controller: 'EditTutorCtrl',
+					resolve: {
+						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+							return $ocLazyLoad.load([
+								'new_js/directives/dropzone.js',
+								'new_js/services/sessions/constantSess.js',
+								'new_js/services/sessions/tutorSess.js',
+								'new_js/factories/SupervisorFac.js',
+								'new_js/factories/TutorFac.js',
+								'new_js/factories/UserFac.js',
+								'new_js/controllers/EditTutorCtrl.js'
+							]);
+						}]
+					}
+
 				})
 
 				.state('book_sched', {
