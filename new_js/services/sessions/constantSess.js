@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.service('ConstantSess', [function(){
+	.service('ConstantSess', ['Supervisor', function(Supervisor){
 		
 		var data = [];
 		
@@ -22,7 +22,7 @@ angular.module('filTutorApp')
 			{ educ_id: 2, educ_level_desc: 'Highschool' },
 			{ educ_id: 3, educ_level_desc: 'College' },
 			{ educ_id: 4, educ_level_desc: 'Master' },
-			{ educ_id: 5, educ_level_desc: 'Doctor' }
+			{ educ_id: 5, educ_level_desc: 'Doctorate' }
 		];
 
 		data.bank = [
@@ -31,6 +31,9 @@ angular.module('filTutorApp')
 			{ bank_id: 3, bank_name: "ChinaBank" },
 			{ bank_id: 4, bank_name: "MetroBank" }
 		];
+
+		data.supervisor = [];
+
 
 		function getConstant(request){
 			var req_data = '';
@@ -48,13 +51,32 @@ angular.module('filTutorApp')
 				case 'bank':
 					req_data = data.bank;
 				break;
+				case 'supervisor':
+					req_data = data.supervisor;
+				break;
 			}
 
 			return req_data;
 		}
 
-		function storeConstant(obj) {
-			data = obj;
+		function storeConstant(constant_name, value) {
+			switch(constant_name){
+				case 'tutor_type':
+					data.tutor_type = value;
+				break;
+				case 'teaching_exp':
+					data.teaching_exp = value;
+				break;
+				case 'educ_level':
+					data.educ_level = value;
+				break;
+				case 'bank':
+					data.bank = value;
+				break;
+				case 'supervisor':
+					data.supervisor = value;
+				break;
+			}
 		}
 
 		return {
