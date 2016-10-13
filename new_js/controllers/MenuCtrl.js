@@ -13,14 +13,8 @@ angular.module('filTutorApp')
 			$rootScope.tutor_types = ConstantSess.getConstant('tutor_type');
 			$rootScope.teaching_exp = ConstantSess.getConstant('teaching_exp');
 			$rootScope.educ_level = ConstantSess.getConstant('educ_level');
-
+			$rootScope.banks = ConstantSess.getConstant('bank');
 			
-
-			angular.forEach($rootScope.tutor_types, function(val, key){
-
-			});
-
-
 			var vm = this;
 			// vm.isReady = false;
 			vm.userData = UserSess.getUserData();
