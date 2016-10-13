@@ -26,10 +26,10 @@ angular.module('filTutorApp')
 		];
 
 		data.bank = [
-			{ bank_id: 1, bank_desc: "BPI" },
-			{ bank_id: 2, bank_desc: "BDO" },
-			{ bank_id: 3, bank_desc: "ChinaBank" },
-			{ bank_id: 4, bank_desc: "Metro Bank" }
+			{ bank_id: 1, bank_name: "BPI" },
+			{ bank_id: 2, bank_name: "BDO" },
+			{ bank_id: 3, bank_name: "ChinaBank" },
+			{ bank_id: 4, bank_name: "MetroBank" }
 		];
 
 		function getConstant(request){
