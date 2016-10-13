@@ -34,8 +34,6 @@
     <link href="new_vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="new_vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="new_vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-    
-
     <link href="new_vendors/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" rel="stylesheet">
 
   </head>
@@ -361,6 +359,8 @@
     <script src="new_vendors/Smart-Table/dist/smart-table.min.js"></script>
     <script src="new_vendors/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
     <script src="new_vendors/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
+    <script src="new_vendors/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+    <script src="new_vendors/ng-file-upload/dist/ng-file-upload.min.js"></script>
     <script src="new_js/app-routes.js"></script>
 
   </body>
