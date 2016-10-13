@@ -25,6 +25,13 @@ angular.module('filTutorApp')
 			{ educ_id: 5, educ_level_desc: 'Doctor' }
 		];
 
+		data.bank = [
+			{ bank_id: 1, bank_desc: "BPI" },
+			{ bank_id: 2, bank_desc: "BDO" },
+			{ bank_id: 3, bank_desc: "ChinaBank" },
+			{ bank_id: 4, bank_desc: "Metro Bank" }
+		];
+
 		function getConstant(request){
 			var req_data = '';
 			
@@ -37,6 +44,9 @@ angular.module('filTutorApp')
 				break;
 				case 'educ_level':
 					req_data = data.educ_level;
+				break;
+				case 'bank':
+					req_data = data.bank;
 				break;
 			}
 
