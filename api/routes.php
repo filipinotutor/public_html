@@ -17,6 +17,9 @@
 
 		$routes = array(
 
+					'/uploadimage' => 'uploadimage',
+					'/uploadfile' => 'uploadFile',
+
 			// User 
 					'/user' => '@get',
 					'/user/loggedin' => '@get_user_info',
@@ -40,7 +43,6 @@
 					'/supervisor/list' => '@getSupList',
 					'/supervisor/add' => 'add',
 					'/supervisor/update' => 'update',
-
 
 			// Applicant
 					'/applicant' => '@get',
@@ -73,59 +75,105 @@
 		// method@id -> get method with parameters
 		// method -> post method with inputs
 
-		$atIndex = strpos($routes[$route] ,"@");
 
-		if($atIndex > 0){
+		if(!($routes[$route] == 'uploadimage' || $routes[$route] == 'uploadfile')) {
+			
+			$atIndex = strpos($routes[$route] ,"@");
 
-			$argument = substr($routes[$route], $atIndex + 1);
-			$call_func = substr($routes[$route], 0, $atIndex);
+			if($atIndex > 0){
 
-		} elseif($atIndex == "") {
+				$argument = substr($routes[$route], $atIndex + 1);
+				$call_func = substr($routes[$route], 0, $atIndex);
 
-			$call_func = substr($routes[$route], 1);
-			$argument = '';
+			} elseif($atIndex == "") {
 
+				$call_func = substr($routes[$route], 1);
+				$argument = '';
+
+			}
+
+			if($req_method == 'POST') {
+				$call_func = $routes[$route];
+				$argument = json_decode(file_get_contents('php://input'), true);
+			}
+
+			$table = $request[0];
+
+			switch ($req_method) {
+				case 'GET':
+						include('../controllers/'. $table.'.php');
+						$model = new $table();
+						$model->$call_func($argument);
+						
+						echo $model->data;
+				break;
+
+				case 'POST':
+						include('../controllers/'. $table.'.php');
+						$model = new $table();
+						$model->$call_func($argument);
+						echo $model->data;
+						// echo json_encode($argument);
+					break;
+
+				case 'PUT':
+						
+					break;
+
+				case 'DELETE':
+
+					break;
+				default:
+						  header('HTTP/1.1 405 Method Not Allowed');
+					      header('Allow: GET, POST, PUT, DELETE');
+					break;
+			} 
+
+		} else {
+			
+			if($routes[$route] == 'uploadimage') {
+
+				$ds = DIRECTORY_SEPARATOR;  //1
+ 
+				
+				 // separation of student , tutor, supervisor admin pictures
+				if (!empty($_FILES) && isset($_POST['user_id']) && isset($_POST['flag'])) {
+				     
+					$user_id = $_POST['user_id'];
+					$flag = $_POST['flag'];
+
+				    switch($flag) {
+				    	case 'student':
+				    		$dir = '../display_pictures/students';
+				    	break;
+				    	case 'tutor':
+					    	$dir = '../display_pictures/tutors';
+				    	break;
+				    	case 'supervisor':
+					    	$dir = '../display_pictures/supervisors';
+				    	break;
+				    }
+
+				    $tempFile = $_FILES['file']['tmp_name'];          //3             
+				     
+				    $temp = explode(".", $_FILES["file"]["name"]);
+
+					$newfilename = $user_id .'_'.round(microtime(true)) . '.' . end($temp);
+
+				    $targetPath = dirname( __FILE__ ) . $ds. $dir . $ds;  //4
+				     
+				    $targetFile =  $targetPath.$newfilename;  //5
+				 
+				    move_uploaded_file($tempFile,$targetFile); //6
+				     
+				}
+
+			} else {
+				// uploadfile
+			}
 		}
 
-		if($req_method == 'POST') {
-			$call_func = $routes[$route];
-			$argument = json_decode(file_get_contents('php://input'), true);
-		}
-
-
-		// user student tutor supervisor
-		$table = $request[0];
-
-		switch ($req_method) {
-			case 'GET':
-					include('../controllers/'. $table.'.php');
-					$model = new $table();
-					$model->$call_func($argument);
-					
-					echo $model->data;
-			break;
-
-			case 'POST':
-					include('../controllers/'. $table.'.php');
-					$model = new $table();
-					$model->$call_func($argument);
-					echo $model->data;
-					// echo json_encode($argument);
-
-				break;
-
-			case 'PUT':
-					
-				break;
-
-			case 'DELETE':
-
-				break;
-			default:
-					  header('HTTP/1.1 405 Method Not Allowed');
-				      header('Allow: GET, POST, PUT, DELETE');
-				break;
-		} 
+		
 	} else {
 		echo "kamote";
 	}
