@@ -77,7 +77,7 @@ angular.module('filTutorApp')
 							$scope.tutor = data[1][0];
 
 							CHistorySess.storeCHUserId($scope.tutor.tutor_id);
-
+							
 							// TutorSess.storeTutorProf(data[1][0]);
 							// $scope.tutor = TutorSess.getTutorProf();
 						});
@@ -94,7 +94,9 @@ angular.module('filTutorApp')
 				User.deactivate({user_id: tutor_id, deactivator_id: $rootScope.userData.user_id})
 					.then(function(data){
 						var data = data.data;
-						console.log(JSON.stringify(data));
+						if(data.success) {
+							$scope.tutor.deactivated = 1;
+						}
 					});
 			}
 
@@ -102,7 +104,9 @@ angular.module('filTutorApp')
 				User.activate({ user_id: tutor_id, deactivator_id: $rootScope.userData.user_id })
 					.then(function(data){
 						var data = data.data;
-						console.log(JSON.stringify(data));
+						if(data.success) {
+							$scope.tutor.deactivated = 0;
+						}
 					});
 			}
 
