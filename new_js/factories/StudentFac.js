@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.factory('Student', ['$http', function($http){
+	.factory('Student', ['$http', 'Upload', function($http, Upload){
 
 		var Student = this;
 		var endpoint = '';
@@ -39,6 +39,13 @@ angular.module('filTutorApp')
 				data: userData,
 				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
 			});
+		}
+
+		Student.uploadImage = function(file, stud_id) {
+			return Upload.upload({
+				      url: '/api/routes.php/uploadimage',
+				      data: { flag: 'student', user_id: stud_id, file: file }
+				 });
 		}
 
 		return Student;

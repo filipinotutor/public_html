@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('filTutorApp')
-	.factory('Tutor', ['$http','$q' , function($http, $q){
+	.factory('Tutor', ['$http','$q', 'Upload', function($http, $q, Upload){
 
 		var Tutor = this;
 		var endpoint = '/api/routes.php/tutor';
@@ -47,6 +47,14 @@ angular.module('filTutorApp')
 				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
 			});
 		}
+
+		Tutor.uploadImage = function(file, tutor_id) {
+			return Upload.upload({
+				      url: '/api/routes.php/uploadimage',
+				      data: { flag: 'tutor', user_id: tutor_id, file: file }
+				    });
+		}	
+
 
 
 		return Tutor;
