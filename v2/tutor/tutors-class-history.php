@@ -48,9 +48,9 @@
 						<tr role="row">
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 40px;">Date</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 40px;">Time</th>
-							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Student</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 80px;">Student</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Material</th>
-							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 100px;">Rating</th>
+							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 120px;">Tutor Rating</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Student Attendance</th>
 							<th class="sorting" tabindex="0" aria-controls="datatable" style="width: 50px;">Report</th>
 						</tr>
@@ -61,7 +61,18 @@
 							<td>9:00-9:20</td>
 							<td>Yogi Shuko</td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Young Learners Series 2 | Lesson 1 - Lesson on Numbers</a></td>
-							<td><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#">View Details</a> )</td>
+							<td>
+								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#" data-toggle="collapse" data-target="#12">View Details</a> )
+								<br clear="all" />
+								<div id="12" class="collapse out">
+									<br />Knowledgability: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Preparedness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Punctuality: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Patience: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Politeness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Considerateness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+								</div>
+							</td>
 							<td><span class="label label-danger">Absent</span></td>
 							<td><span class="label label-danger">Not Submitted</span></td>
 						</tr>
@@ -70,7 +81,18 @@
 							<td>10:00-10:20</td>
 							<td>Tsutsui Hajime</td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Holidays and Events | Chinese New Year</a></td>
-							<td><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#">View Details</a> )</td>
+							<td>
+								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#" data-toggle="collapse" data-target="#123">View Details</a> )
+								<br clear="all" />
+								<div id="123" class="collapse out">
+									<br />Knowledgability: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Preparedness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Punctuality: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Patience: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Politeness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Considerateness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+								</div>
+							</td>
 							<td><span class="label label-success">Present</span></td>
 							<td><span class="label label-success">Approved</span></td>
 						</tr>
@@ -79,7 +101,18 @@
 							<td>12:00-12:20</td>
 							<td>Watanabe Hyosuke</td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Business Grammar | Lesson 14 - Defining A Process</a></td>
-							<td><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#">View Details</a> )</td>
+							<td>
+								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#" data-toggle="collapse" data-target="#1234">View Details</a> )
+								<br clear="all" />
+								<div id="1234" class="collapse out">
+									<br />Knowledgability: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Preparedness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Punctuality: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Patience: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Politeness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Considerateness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+								</div>
+							</td>
 							<td><span class="label label-success">Present</span></td>
 							<td><span class="label label-success">Approved</span></td>
 						</tr>
@@ -88,7 +121,18 @@
 							<td>16:00-16:20</td>
 							<td>Otake Takanobu</td>
 							<td><a href="#"><span class="fa fa-external-link"></span> Business Grammar | Lesson 14 - Defining A Process</a></td>
-							<td><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span> ( <a href="#">View Details</a> )</td>
+							<td>
+								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span> ( <a href="#" data-toggle="collapse" data-target="#12345">View Details</a> )
+								<br clear="all" />
+								<div id="12345" class="collapse out">
+									<br />Knowledgability: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Preparedness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Punctuality: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Patience: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Politeness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+									<br />Considerateness: <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+								</div>
+							</td>
 							<td><span class="label label-success">Present</span></td>
 							<td><span class="label label-danger">Declined</span></td>
 						</tr>
