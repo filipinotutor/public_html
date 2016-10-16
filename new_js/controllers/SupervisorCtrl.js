@@ -1,11 +1,13 @@
 'use strict';
 
+var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'SupervisorSess', 'Supervisor', SupervisorCtrl];
+
 angular.module('filTutorApp')
-	.controller('SupervisorCtrl', ['$scope','$rootScope', '$stateParams', '$state', 'SupervisorSess', 'Supervisor'
-		, function($scope, $rootScope, $stateParams, $state, SupervisorSess, Supervisor){
+	.controller('SupervisorCtrl', $inject);
 
+		function($scope, $rootScope, $stateParams, $state, SupervisorSess, Supervisor){
+			
 			function initData() {
-
 				var supUserOrMail = $stateParams.userNameOrEmail;
 				$scope.isReady = false;
 
@@ -29,8 +31,7 @@ angular.module('filTutorApp')
 			}
 
 			initData();
-			
 		}
-	]);
+
 
 
