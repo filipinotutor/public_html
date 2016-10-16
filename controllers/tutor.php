@@ -44,6 +44,19 @@ class Tutor extends Query {
 		$this->wantsJSON();
 	}
 
+	public function update($input){
+
+		$tutor_id = $input['tutor_id'];
+		$in = Query::genUpdateQuery($input);
+
+		$sql = 'UPDATE tutors SET '. $in .' WHERE tutor_id ='.$tutor_id;
+
+		$result = Query::update($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
 
 	public function getTutorProfile($userNameOrEmail) {
 		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, t.tutor_id, t.nick_name, t.phone, t.photo, t.audio, t.birthday, t.ed_level,
