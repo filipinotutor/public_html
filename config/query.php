@@ -34,7 +34,7 @@ class Query extends Database {
 		return array('fields' => $field, 'values' => $values);
 	}
 
-	function getUpdateQuery($array) {
+	function genUpdateQuery($array) {
 
 		$upd = '';
 
