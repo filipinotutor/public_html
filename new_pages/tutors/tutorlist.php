@@ -14,7 +14,6 @@
 	        <a class="btn btn-sm btn-success" ng-click="newlyRegister()">New ({{ newRegCount }})</a>
 	        <a class="btn btn-sm btn-warning" ng-click="deactTutor()">Deactivated ({{ deactTutorCount }})</a>
 	        <a class="btn btn-sm btn-danger" ng-click="forApproval()">For Approval ({{ forAppListCount }})</a>
-	        
         </h2>
         <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
           <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
@@ -23,7 +22,6 @@
         <div class="clearfix"></div>
       </div>
       <div class="x_content">
-   
         <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="datatable_filter" class="dataTables_filter"><label>
         Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="datatable"></label></div></div></div><div class="row"><div class="col-sm-12">
 
@@ -36,23 +34,41 @@
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 100px;" st-sort="email">Email</th>
 				<th tabindex="0" aria-controls="datatable" rowspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Actions</th></tr>
           </thead>
-          <tbody ng-repeat="s in tutorListColl | orderBy: 'userName'">
-          	<tr role="row" ng-show="$even" class="odd">
-              <td class="sorting_1">  {{ s.username }}</td>
-              <td>{{ s.first_name }} {{ s.last_name }}</td>
-              <td>{{ s.skype_id }}</td>
-              <td>{{ s.email }}</td>
+          <tbody bindonce ng-repeat="s in tutorListColl | orderBy: 'userName'">
+          	<tr role="row" bo-show="$even" class="odd">
+              <td class="sorting_1">
+              	<span bo-bind="s.username"></span>
+              </td>
+              <td>
+              	<span bo-bind="s.first_name"></span>	
+              	<span bo-bind="s.last_name"></span>
+              </td>
+              <td>	
+              	<span bo-bind="s.skype_id"></span>	
+              </td>
+              <td>	
+              	<span bo-bind="s.email"></span>
+              </td>
               <td>
               	 <a ui-sref="tutor_profile({ userNameOrEmail:s.username })"><span class="label label-warning">View / Edit</span>
               	</a>
               <!-- <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="label label-warning">View / Edit</span></a> -->
               </td>
             </tr>
-           	<tr role="row" ng-show="$odd" class="even">
-              <td class="sorting_1">  {{ s.username }}</td>
-              <td>{{ s.first_name }} {{ s.last_name }}</td>
-              <td>{{ s.skype_id }}</td>
-              <td>{{ s.email }}</td>
+           	<tr role="row" bo-show="$odd" class="even">
+              <td class="sorting_1">
+              	<span bo-bind="s.username"></span>
+              </td>
+              <td>
+              	<span bo-bind="s.first_name"></span>	
+              	<span bo-bind="s.last_name"></span>
+              </td>
+              <td>	
+              	<span bo-bind="s.skype_id"></span>	
+              </td>
+              <td>	
+              	<span bo-bind="s.email"></span>
+              </td>
               <td>
                <a ui-sref="tutor_profile({ userNameOrEmail:s.username })"><span class="label label-warning">View / Edit</span>
               	</a>
