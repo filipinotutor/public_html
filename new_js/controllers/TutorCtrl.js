@@ -14,6 +14,7 @@ angular.module('filTutorApp')
 				$scope.forapplist = [];
 
 				angular.forEach($scope.tutorlist, function(value, key){
+					
 					// .format('YYYY-MM-DD HH:mm:ss')
 					// var oneMo = moment(registered_date).isBefore(moment(moment().add(30, 'days'));
 					// console.log('re: ' + registered_date);
@@ -42,22 +43,25 @@ angular.module('filTutorApp')
 				$scope.newRegCount = $scope.newlyreglist.length;
 				$scope.deactTutorCount = $scope.deacttutorlist.length;
 				$scope.forAppListCount = $scope.forapplist.length;
+				// $scope.tutorCount = 0;
+				// $scope.newRegCount = 0;
+				// $scope.deactTutorCount = 0;
+				// $scope.forAppListCount = 0;
 			}
 
 			function initData() {
 
 				var tutorUserOrMail = $stateParams.userNameOrEmail;
-				$scope.isReady = false;
-
+				
 				if(angular.isUndefined(tutorUserOrMail)){
+					
 					$scope.tutorlist = TutorSess.getTutorData();
-
-					if($scope.tutorlist.length == 0) {
+					
+					if(!$scope.tutorlist) {
 						Tutor.get()
 							.then(function(data){
-								var data = data.data;
-								TutorSess.storeTutorData(data[1]);		
-								$scope.tutorlist = data[1];					
+								TutorSess.storeTutorData(data);		
+								$scope.tutorlist = data;					
 								$scope.isReady = true;
 								initList();
 							});
@@ -65,27 +69,20 @@ angular.module('filTutorApp')
 						$scope.isReady = true;	
 						initList();
 					}
+
 				} else {
-
-					$scope.tutor = "";
-					
-					// if($scope.tutor.length == 0) {
-					Tutor.getProfile(tutorUserOrMail)
-						.then(function(data){
-							var data = data.data;
-
-							$scope.tutor = data[1][0];
-
-							CHistorySess.storeCHUserId($scope.tutor.tutor_id);
-							
-							// TutorSess.storeTutorProf(data[1][0]);
-							// $scope.tutor = TutorSess.getTutorProf();
-						});
-
-
-					// } else {
-					// 	$scope.isReady = true;
-					// }
+					$scope.tutor = TutorSess.getProfileData(tutorUserOrMail);
+					$scope.isReady = false;
+					if(!$scope.tutor) {
+						Tutor.getProfile(tutorUserOrMail)
+							.then(function(data){
+								$scope.tutor = data;
+								TutorSess.putProfileData(tutorUserOrMail, data);
+								$scope.isReady = true;	
+							});
+					} else {
+						$scope.isReady = true;
+					}
 				}
 			}
 
