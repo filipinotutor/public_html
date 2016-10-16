@@ -166,7 +166,7 @@
         </div>
 
         <!-- top navigation -->
-          
+
           <div class="top_nav">
             <div class="nav_menu">
               <nav>
@@ -361,6 +361,8 @@
     <script src="new_vendors/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
     <script src="new_vendors/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
     <script src="new_vendors/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script src="new_vendors/bindonce/bindonce.min.js"></script>
+    <script src="new_vendors/angular-cache/dist/angular-cache.min.js"></script>
     <script src="new_js/app-routes.js"></script>
 
   </body>
