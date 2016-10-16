@@ -22,6 +22,7 @@
 
 			// User 
 					'/user' => '@get',
+					'/user' => 'update',
 					'/user/loggedin' => '@get_user_info',
  					'/user/deactivate' => 'deactivateAccount',
 					'/user/activate' => 'activateAccount',
@@ -133,39 +134,61 @@
 			
 			if($routes[$route] == 'uploadimage') {
 
-				$ds = DIRECTORY_SEPARATOR;  //1
- 
-				
 				 // separation of student , tutor, supervisor admin pictures
 				if (!empty($_FILES) && isset($_POST['user_id']) && isset($_POST['flag'])) {
 				     
-					$user_id = $_POST['user_id'];
-					$flag = $_POST['flag'];
+					$ds = DIRECTORY_SEPARATOR;  //1
+ 
+					$img_types = array('jpeg', 'jpg', 'png');
 
-				    switch($flag) {
-				    	case 'student':
-				    		$dir = '../display_pictures/students';
-				    	break;
-				    	case 'tutor':
-					    	$dir = '../display_pictures/tutors';
-				    	break;
-				    	case 'supervisor':
-					    	$dir = '../display_pictures/supervisors';
-				    	break;
-				    }
+					$tempFile = $_FILES['file']['tmp_name'];          //3             
 
-				    $tempFile = $_FILES['file']['tmp_name'];          //3             
-				     
 				    $temp = explode(".", $_FILES["file"]["name"]);
 
-					$newfilename = $user_id .'_'.round(microtime(true)) . '.' . end($temp);
+				    $isSupportedImgFile = false;
 
-				    $targetPath = dirname( __FILE__ ) . $ds. $dir . $ds;  //4
-				     
-				    $targetFile =  $targetPath.$newfilename;  //5
-				 
-				    move_uploaded_file($tempFile,$targetFile); //6
-				     
+				    for($i = 0; $i < sizeof($img_types) - 1; $i++) {
+				    	if($temp == $img_types[$i]) {
+				    		$isSupportedImgFile = true;
+				    	}	
+				    }
+
+				    if($isSupportedImgFile) {
+						$newfilename = $user_id .'_'.round(microtime(true)) . '.' . end($temp);
+
+						$user_id = $_POST['user_id'];
+						$flag = $_POST['flag'];
+
+					    switch($flag) {
+					    	case 'student':
+					    		$dir = '../display_pictures/students';
+					    	break;
+					    	case 'tutor':
+						    	$dir = '../display_pictures/tutors';
+					    	break;
+					    	case 'supervisor':
+						    	$dir = '../display_pictures/supervisors';
+					    	break;
+					    }
+
+					    $targetPath = dirname( __FILE__ ) . $ds. $dir . $ds;  //4
+					     
+					    $targetFile =  $targetPath.$newfilename;  //5
+				    	
+				    	if(move_uploaded_file($tempFile,$targetFile)) {
+				    		$response = array('success' => true);
+				    		echo json_encode($response);
+				    	} else {
+							$response = array('success' => false, 'error' => 'Error occured');				    		
+				    	}
+
+				    } else {
+				    	$response = array('success' => false, 'error' => 'File not supported');
+				    }
+
+				    
+
+									     
 				}
 
 			} else {
