@@ -5,7 +5,9 @@ angular.module('filTutorApp', [
 		'oc.lazyLoad',
 		'smart-table',
 		'ui.bootstrap.datetimepicker',
-		'ngFileUpload'
+		'ngFileUpload',
+		'pasvaz.bindonce',
+		'angular-cache'
 	]);
 
 angular.module('filTutorApp')
@@ -32,7 +34,7 @@ angular.module('filTutorApp')
 			
 			// Showing loaded JS
 			$ocLazyLoadProvider.config({
-				debug: true
+				debug: false
 			});
 
 			$stateProvider
