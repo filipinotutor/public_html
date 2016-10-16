@@ -5,7 +5,7 @@ angular.module('filTutorApp')
 
 		var Supervisor = this;
 		var endpoint = '/api/routes.php/supervisor';
-		var deferred = $q.defer();
+	
 
 		Supervisor.get = function(){
 			return $http.get(endpoint);
@@ -16,6 +16,9 @@ angular.module('filTutorApp')
 		}
 
 		Supervisor.list = function() {
+
+			var deferred = $q.defer();
+			
 			$http.get(endpoint + '/list')
 				.then(function(data){
 					var data = data.data;
