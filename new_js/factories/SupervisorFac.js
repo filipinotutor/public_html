@@ -33,7 +33,20 @@ function Supervisor($http, $q, Upload){
 	};
 
 	Supervisor.getProfile = function(userOrMail){
-		return $http.get(endpoint + '/getByUserOrMail/' + userOrMail);
+		
+		$http.get(endpoint + '/getByUserOrMail/' + userOrMail)
+			.then(function(data){
+				var data = data.data;
+				if(data[0].success) {
+					deferred.resolve(data[1][0]);
+				} else {
+					deferred.reject('error');
+				}
+			}, function(err){
+				deferred.reject('error');
+			});
+
+		return deferred.promise;
 	}
 
 	Supervisor.list = function() {
