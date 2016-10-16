@@ -5,7 +5,7 @@ var $inject = ['$http','$q', 'Upload', Tutor];
 angular.module('filTutorApp')
 	.factory('Tutor', $inject);
 
-function User($http, $q, Upload){
+function Tutor($http, $q, Upload){
 
 	var Tutor = this;
 	var endpoint = '/api/routes.php/tutor';
