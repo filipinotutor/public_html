@@ -12,20 +12,15 @@ angular.module('filTutorApp')
 				if(angular.isUndefined(supUserOrMail)){
 					Supervisor.get()
 						.then(function(data){
-							var data = data.data;
-							
-							if(data[0].success){
-								$scope.supervisorlist = data[1];
-								SupervisorSess.storeSupData(data[1]);
-							}
 
+							SupervisorSess.storeSupData(data);
+						
 						});
 				} else {
 					Supervisor.getProfile(supUserOrMail)
 						.then(function(data){
-							var data = data.data;
 
-							$scope.supervisor = data[1][0];
+							$scope.supervisor = data;
 							
 						});
 				}
