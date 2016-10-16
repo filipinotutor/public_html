@@ -14,7 +14,22 @@ function Supervisor($http, $q, Upload){
 
 
 	Supervisor.get = function(){
-		return $http.get(endpoint);
+		
+		var deferred = $q.defer();
+
+		$http.get(endpoint)
+			.then(function(data){
+				var data = data.data;
+				if(data[0].success) {
+					deferred.resolve(data[1]);
+				} else {
+					deferred.reject('error');
+				}
+			}, function(err){
+				deferred.reject('error');
+			});
+
+		return deferred.promise;
 	};
 
 	Supervisor.getProfile = function(userOrMail){
