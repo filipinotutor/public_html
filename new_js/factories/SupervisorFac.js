@@ -1,68 +1,74 @@
 'use strict';
 
+var $inject = ['$http', '$q', 'Upload', Supervisor];
+
+
 angular.module('filTutorApp')
-	.factory('Supervisor', ['$http', '$q', 'Upload', function($http, $q, Upload){
+	.factory('Supervisor', $inject);
 
-		var Supervisor = this;
-		var endpoint = '/api/routes.php/supervisor';
-	
 
-		Supervisor.get = function(){
-			return $http.get(endpoint);
-		};
+function Supervisor($http, $q, Upload){
 
-		Supervisor.getProfile = function(userOrMail){
-			return $http.get(endpoint + '/getByUserOrMail/' + userOrMail);
-		}
+	var Supervisor = this;
+	var endpoint = '/api/routes.php/supervisor';
 
-		Supervisor.list = function() {
 
-			var deferred = $q.defer();
-			
-			$http.get(endpoint + '/list')
-				.then(function(data){
-					var data = data.data;
-					
-					if(data[0].success) {
-						deferred.resolve(data[1]);
-					} else {
-						deferred.reject(error);
-						consoe.log('error Supervisor List');
-					}
+	Supervisor.get = function(){
+		return $http.get(endpoint);
+	};
 
-				}, function(error){
+	Supervisor.getProfile = function(userOrMail){
+		return $http.get(endpoint + '/getByUserOrMail/' + userOrMail);
+	}
+
+	Supervisor.list = function() {
+
+		var deferred = $q.defer();
+		
+		$http.get(endpoint + '/list')
+			.then(function(data){
+				var data = data.data;
+				
+				if(data[0].success) {
+					deferred.resolve(data[1]);
+				} else {
 					deferred.reject(error);
-				});
+					consoe.log('error Supervisor List');
+				}
 
-			return deferred.promise;
-		}
-
-
-		Supervisor.add = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/add',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+			}, function(error){
+				deferred.reject(error);
 			});
-		}
 
-		Supervisor.update = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/update',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
-			});
-		}
+		return deferred.promise;
+	}
 
-		Supervisor.uploadImage = function(file, sup_id) {
-			return Upload.upload({
-				      url: '/api/routes.php/uploadimage',
-				      data: { flag: 'supervisor', user_id: sup_id, file: file }
-				 });
-		}	
 
-		return Supervisor;
+	Supervisor.add = function(userData){
+		return $http({
+			method: 'POST',
+			url: endpoint + '/add',
+			data: userData,
+			headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+		});
+	}
 
-	}]);
+	Supervisor.update = function(userData){
+		return $http({
+			method: 'POST',
+			url: endpoint + '/update',
+			data: userData,
+			headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+		});
+	}
+
+	Supervisor.uploadImage = function(file, sup_id) {
+		return Upload.upload({
+			      url: '/api/routes.php/uploadimage',
+			      data: { flag: 'supervisor', user_id: sup_id, file: file }
+			 });
+	}	
+
+	return Supervisor;
+
+}
