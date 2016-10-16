@@ -1,76 +1,106 @@
 'use strict';
 
+var $inject = ['$http', '$q', User];
+
 angular.module('filTutorApp')
-	.factory('User', ['$http', function($http){
+	.factory('User', $inject); 
 
-		var User = this;
-		var endpoint = '/api/routes.php';
-		var headers =  {'Content-Type' : 'application/x-www-form-urlencoded'};
+function User($http, $q) {
 
+	var User = this;
+	var endpoint = '/api/routes.php/user';
+	var headers =  {'Content-Type' : 'application/x-www-form-urlencoded'};
 
-		User.get = function(){
-			return $http.get(endpoint + '/user');
-		};
+	var fields = { 
+					'user_id': '',
+					'username': '',
+					'first_name': '', 
+					'last_name': '',
+					'email': '',
+					'skype_id': '',
+					'last_update_id': ''
+				 };
 
-		User.getLoggedInUser = function(){
-			return $http.get(endpoint + '/user/loggedin');
-		};
+	User.fields = function() {
 
-		User.deactivate = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/deactivate',
-				data: userData,
-				headers: headers
-			});
-		}
+		angular.forEach(fields, function(value, key){
+			fields[key] = '';
+		});
 
-		User.activate = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/activate',
-				data: userData,
-				headers: headers
-			});
-		}
+		return fields;
+	}
+	
+	User.get = function(){
+		return $http.get(endpoint);
+	};
 
-		User.changePw = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/changepw',
-				data: userData,
-				headers: headers
-			});
-		}
+	User.getLoggedInUser = function(){
+		return $http.get(endpoint + '/loggedin');
+	};
 
-		User.post = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user',
-				data: userData,
-				headers: headers
-			});
-		}
+	User.deactivate = function(userData){
+		return $http({
+			method: 'POST',
+			url: endpoint + '/deactivate',
+			data: userData,
+			headers: headers
+		});
+	}
 
+	User.activate = function(userData){
+		return $http({
+			method: 'POST',
+			url: endpoint + '/activate',
+			data: userData,
+			headers: headers
+		});
+	}
 
-		User.update = function(userData){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
-			});
-		}
+	User.changePw = function(userData){
+		return $http({
+			method: 'POST',
+			url: endpoint + '/changepw',
+			data: userData,
+			headers: headers
+		});
+	}
 
-		User.destroy = function(user_id){
-			return $http({
-				method: 'POST',
-				url: endpoint + '/user/',
-				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
-			});
-		}
+	User.update = function(userData){
+		
+		var deferred = $q.defer();
 
-		return User;
+		$http({
+			method: 'POST',
+			url: endpoint ,
+			data: userData,
+			headers: headers	
+		})
+		.then(function(data){
+			
+			var data = data.data;
 
-	}]);
+			if(data.success) {
+				deferred.resolve(data);
+			} else {
+				deferred.reject('error')
+			}
+
+		}, function(err){
+			deferred.reject('error' + JSON.stringify(err));
+		});
+	
+		return deferred.promise;
+	}
+
+	User.destroy = function(user_id){
+		return $http({
+			method: 'POST',
+			url: endpoint + '/user/',
+			data: userData,
+			headers: headers
+		});
+	}
+
+	return User;
+
+};
