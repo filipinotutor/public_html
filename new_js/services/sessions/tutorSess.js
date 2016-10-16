@@ -1,7 +1,11 @@
 'use strict';
 
+var $inject ['CacheFactory', 'Tutor', TutorSess];
+
 angular.module('filTutorApp')
-	.service('TutorSess', [ function(){
+	.service('TutorSess', $inject);
+
+	function TutorSess(){
 		
 		var data = [];
 		data.tutorData = [];
@@ -30,4 +34,4 @@ angular.module('filTutorApp')
 			// storeTutorProf: storeTutorProf
 		}
 
-	}]);
+	}
