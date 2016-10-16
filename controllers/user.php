@@ -72,6 +72,20 @@ class User extends Query{
 		$this->wantsJSON();
 	}
 
+	public function update($input) {
+		
+		$user_id = $input['user_id'];
+		$upd = Query::genUpdateQuery($input);
+		
+		$sql = 'UPDATE users SET ' . $upd . ' WHERE user_id='.$user_id;
+
+		$result = Query::save($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
+
 
 	public function deactivateAccount($input){
 
