@@ -1,7 +1,11 @@
 'use strict';
 
+var $inject = ['$http', '$q', CHistory];
+
 angular.module('filTutorApp')
-	.factory('CHistory', ['$http', '$q' , function($http, $q){
+	.factory('CHistory', $inject) 
+
+	function CHistory($http, $q){
 
 		var CHistory = this;
 		var endpoint = '/api/routes.php/classhistory';
@@ -17,10 +21,11 @@ angular.module('filTutorApp')
 					if(data[0].success) {
 						deferred.resolve(data[1]);
 					} else {
-						deferred.reject('error');
+						console.log('CHistory.get1: ' + JSON.stringify(data));
 					}
 
 				}, function(err){
+					console.log('CHistory.get2: ' + JSON.stringify(err));
 					deferred.reject('error');
 				});
 
@@ -38,10 +43,12 @@ angular.module('filTutorApp')
 					if(data[0].success) {
 						deferred.resolve(data[1]);
 					} else {
+						console.log('CHistory.getByUserId1: ' + JSON.stringify(data));
 						deferred.reject('error');
 					}
 
 				}, function(err){
+					console.log('CHistory.getByUserId2: ' + JSON.stringify(err));
 					deferred.reject('error');
 				});
 
@@ -51,4 +58,4 @@ angular.module('filTutorApp')
 
 		return CHistory;
 
-	}]);
+	}
