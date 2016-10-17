@@ -30,16 +30,26 @@
       <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
     </fieldset>
     <br>
-  </form>
-
+</form>
 
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="row">
-				<div class="col-sm-2">
-					<img src="{{ tutor.photo }}" class="img-responsive" />
+				<div class="col-md-6">
 					
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					 <form name="uploadForm">
+						<img ng-src="{{ tutor.photo }}" class="img-responsive" ng-if="!picFile1"/>
+						<img ng-if="picFile1" ngf-thumbnail="picFile1" class="thumb img-responsive"> 
+						<input type="file" ng-show="!picFile1" ngf-select ng-model="picFile1" name="file" accept="image/*" ngf-max-size="2MB"  ngf-change="validate($invalidFiles)"/>
+						<button ng-click="picFile1 = null" ng-show="picFile1">Remove</button>
+						<button ng-click="uploadPic(picFile1)" ng-if="picFile1 != null">Submit</button>
+					</form>
 				</div>
 				<div class="col-sm-6">
 					<h4>{{ tutor.first_name }} {{ tutor.last_name }} </h4>
@@ -90,9 +100,19 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Birthday </label>
-									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="text" class="form-control"  ng-model="tutor.birthday"  />
-									</div>
+									    <div class="col-md-9 col-sm-9 col-xs-12">
+									        <input type="text" class="form-control" data-ng-model="tutor.birthday"><span class="add-on"><i class="icon-calendar"></i></span>
+									    </div>
+									<!-- 
+
+									    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									        
+									        <datetimepicker data-ng-model="tutor.birthday"
+									                        data-datetimepicker-config="{ dropdownSelector: '.my-toggle-select', minView:'day' }"></datetimepicker>
+									    </ul>
+									    </div>
+
+									 -->
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Audio Presentation </label>
@@ -121,7 +141,10 @@
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Currently Attending </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="text" class="form-control" ng-model="tutor.attending" />
+										<div class="radio">
+											<label><input type="radio" name="attending" ng-model="tutor.attending" value="yes" ng-checked="(tutor.attending=='yes') ? 'checked': '' ">Yes</label>
+											<label><input type="radio" name="attending" ng-model="tutor.attending" value="no" ng-checked="(tutor.attending=='no') ? 'checked': '' ">No</label>
+										</div>
 									</div>
 								</div>
 								<div class="form-group">
@@ -136,13 +159,14 @@
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Self Introduction </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<textarea id="message" required="required" class="form-control" rows="3" >{{ tutor.self_intro }}</textarea>
+										<textarea id="message" required="required" class="form-control" rows="3" 
+										ng-model="tutor.self_intro"></textarea>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Hobbies </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<textarea id="message" required="required" class="form-control" rows="3" >{{ tutor.hobby }}</textarea>
+										<textarea id="message" required="required" class="form-control" rows="3" ng-model="tutor.hobby "></textarea>
 									</div>
 								</div>
 							</div>
@@ -152,7 +176,7 @@
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Username </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="text" class="form-control"  value="Juan" />
+										<input type="text" class="form-control" ng-model="tutor.username" />
 									</div>
 								</div>
 								<div class="form-group">
@@ -181,23 +205,23 @@
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Email </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="email" class="form-control"  value="johncross@gmail.com" />
+										<input type="text" class="form-control" ng-model="tutor.email"/>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Rate </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="email" class="form-control"  value="" />
+										<input type="text" class="form-control" ng-model="tutor.rate" />
 									</div>
 								</div>
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Trial Lesson </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
 										<select class="form-control" >
 											<option>Yes</option>
 										</select>
 									</div>
-								</div>
+								</div> -->
 								<br />
 								<h4>Bank Account</h4>
 								<hr />
@@ -206,26 +230,26 @@
 									<div class="col-md-9 col-sm-9 col-xs-12">
 										<select class="form-control" ng-model="tutor.bank_name">
 											<option ng-repeat="bank in banks" value="{{ bank.bank_name }}"
-											ng-selected="tutor.bank_name == bank.bank_name">{{ bank.bank_name }}</option>
+											ng-selected="tutor.bank_name == bank.bank_name" ng-bind="bank.bank_name"></option>
 										</select>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Branch </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="text" class="form-control"  value="Cavite" />
+										<input type="text" class="form-control" ng-model="tutor.bank_branch" />
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Account Name </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="email" class="form-control"  value="Juan Dela Cruz" />
+										<input type="text" class="form-control" ng-model="tutor.accnt_name" />
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Account No. </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<input type="email" class="form-control"  value="9309-9423-02" />
+										<input type="text" class="form-control"  ng-model="tutor.accnt_number" />
 									</div>
 								</div>
 							</div>
