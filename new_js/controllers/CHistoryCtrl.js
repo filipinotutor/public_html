@@ -1,36 +1,32 @@
 'use strict';
 
+var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$q', 'CHistory', 'CHistorySess', 'TutorSess', CHistoryCtrl];
+
 angular.module('filTutorApp')
-	.controller('CHistoryCtrl', ['$scope','$rootScope', '$stateParams', '$state', '$q', 'CHistory', 'CHistorySess'
-		, function($scope, $rootScope, $stateParams, $state, $q, CHistory, CHistorySess){
+	.controller('CHistoryCtrl', $inject);
 
-			$scope.isReady = false;
-			$scope.CHistorylist = [];
 
-			function initList() {
+function CHistoryCtrl($scope, $rootScope, $stateParams, $state, $q, CHistory, CHistorySess, TutorSess){
 
-				setTimeout(function() {
+	$scope.isReady = false;
+	$scope.CHistorylist = [];
 
-					var user_id = CHistorySess.getCHUserId();
+	function initList() {
 
-					CHistory.getByUserId(user_id)
-						.then(function(data){
-							
-							var data = data.data;
+		var userNameOrEmail = $stateParams.userNameOrEmail;
+		var tutor_id = TutorSess.getTutorId(userNameOrEmail);
 
-							$scope.chistorylist = data[1][0];
-							
+		CHistory.getByUserId(tutor_id)
+			.then(function(data){
 
-						});
+				$scope.chistorylist = data;
+				
+			});
+	}
 
-				}, 2000);
+	initList();
 
-			}
-
-			initList();
-
-		}
-	]);
+}
 
 
 	
