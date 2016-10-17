@@ -9,10 +9,10 @@ class Supervisor extends Query {
 	}
 
 	public function get(){
-		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisorid, s.phone, s.photo, s.birthday, s.nick_name  
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisor_id, s.phone, s.photo, s.birthday, s.nick_name  
 				FROM users u
 				LEFT JOIN supervisors s 
-				ON u.user_id = s.supervisorid
+				ON u.user_id = s.supervisor_id
 				WHERE u.access_level = 9
 				ORDER BY u.user_id ';
 
@@ -41,10 +41,10 @@ class Supervisor extends Query {
 	}
 
 	public function getSupProfile($userNameOrEmail){
-		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisorid, s.phone, s.photo, s.birthday, s.nick_name  
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisor_id, s.phone, s.photo, s.birthday, s.nick_name  
 				FROM users u
 				LEFT JOIN supervisors s 
-				ON u.user_id = s.supervisorid
+				ON u.user_id = s.supervisor_id
 				WHERE u.access_level = 9 AND u.username = "'.  $userNameOrEmail .'" OR u.email = "'. $userNameOrEmail .'"  
 				ORDER BY u.user_id ';
 
@@ -60,10 +60,10 @@ class Supervisor extends Query {
 	}
 
 	public function getSupList(){
-		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, s.nick_name , s.supervisorid as "supervisor_id" 
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, s.nick_name 
 				FROM users u
 				LEFT JOIN supervisors s 
-				ON u.user_id = s.supervisorid
+				ON u.user_id = s.supervisor_id
 				WHERE u.access_level = 9 
 				ORDER BY u.user_id ';
 
