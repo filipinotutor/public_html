@@ -7,9 +7,10 @@ angular.module('filTutorApp')
 		var endpoint = '/api/routes.php/schedule';
 		var headers =  {'Content-Type' : 'application/x-www-form-urlencoded'};
 
-		var deferred = $q.defer();
-
 		Schedule.get = function(){
+
+			var deferred = $q.defer();
+
 			$http.get(endpoint)
 				.then(function(data){
 
@@ -27,34 +28,96 @@ angular.module('filTutorApp')
 		};
 		
 		Schedule.getUserSchedule = function(user_id){
-			return $http.get(endpoint + '/user/' + user_id);
+			var deferred = $q.defer();
+
+			$http({
+				method: 'POST',
+				url: endpoint + '/user/'+ user_id,
+				data: userData,
+				headers: headers
+			}).then(function(data){
+				var data = data.data;
+
+				deferred.resolve(data);
+
+			}, function(err){
+				
+				console.log('Schedule.getUserSchedule: ' + JSON.stringify(err));
+				
+				deferred.reject('error');
+			});
+
+			return deferred.promise;
 		};
 
 		Schedule.add = function(userData){
-			return $http({
+			var deferred = $q.defer();
+
+			$http({
 				method: 'POST',
 				url: endpoint + '/add',
 				data: userData,
 				headers: headers
+			}).then(function(data){
+				var data = data.data;
+
+				deferred.resolve(data);
+
+			}, function(err){
+				
+				console.log('Schedule.add: ' + JSON.stringify(err));
+				
+				deferred.reject('error');
 			});
+
+			return deferred.promise;
 		}
 
 		Schedule.update = function(userData){
-			return $http({
+			var deferred = $q.defer();
+
+			$http({
 				method: 'POST',
 				url: endpoint + '/update',
 				data: userData,
 				headers: headers
+			}).then(function(data){
+				var data = data.data;
+
+				deferred.resolve(data);
+
+			}, function(err){
+				
+				console.log('Schedule.update: ' + JSON.stringify(err));
+				
+				deferred.reject('error');
 			});
+
+			return deferred.promise;
+
 		}
 
 		Schedule.delete = function(userData){
-			return $http({
+			var deferred = $q.defer();
+
+			$http({
 				method: 'POST',
 				url: endpoint + '/delete',
 				data: userData,
 				headers: headers
+			}).then(function(data){
+				var data = data.data;
+
+				deferred.resolve(data);
+
+			}, function(err){
+
+				console.log('Schedule.delete: ' + JSON.stringify(err));
+
+				deferred.reject('error');
 			});
+
+			return deferred.promise;
 		}
 
 
