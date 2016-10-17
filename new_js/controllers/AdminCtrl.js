@@ -1,25 +1,27 @@
 'use strict';
 
-angular.module('filTutorApp')
-	.controller('AdminCtrl', ['$scope','$rootScope', '$stateParams', '$state', 'AdminSess', 'Admin'
-		, function($scope, $rootScope, $stateParams, $state, AdminSess, Admin){
+var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'AdminSess', 'Admin', AdminCtrl];
 
-			$scope.isReady = false;
-			$scope.adminlist = [];
+	function AdminCtrl($scope, $rootScope, $stateParams, $state, AdminSess, Admin){
 
-			function initList() {
-				Admin.get()
-					.then(function(data){
-						var data = data.data;
+		$scope.isReady = false;
+		$scope.adminlist = [];
 
-						AdminSess.storeAdminData(data[1]);
+		function initList() {
+			Admin.get()
+				.then(function(data){
+					var data = data.data;
 
-						$scope.adminlist = data[1];
-				});
-			}
+					AdminSess.storeAdminData(data[1]);
 
-
-			initList();
-
+					$scope.adminlist = data[1];
+			});
 		}
-	]);
+
+		initList();
+
+	}
+
+
+angular.module('filTutorApp')
+	.controller('AdminCtrl', $inject); 

@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('filTutorApp')
-	.controller('StudentCtrl', ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', 'Student'
-		, function($scope, $rootScope, $stateParams, $state, StudentSess, Student){
+var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', 'Student', StudentCtrl];
+
+	function StudentCtrl($scope, $rootScope, $stateParams, $state, StudentSess, Student){
 
 			$scope.isReady = false;
 			$scope.studentlist = [];
@@ -100,6 +100,5 @@ angular.module('filTutorApp')
 			initData();
 		}
 
-	]);
-
-
+angular.module('filTutorApp')
+	.controller('StudentCtrl', $inject);

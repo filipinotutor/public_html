@@ -3,9 +3,7 @@
 
 var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$q', 'TutorSess', 'Tutor', 'User', 'CHistorySess', TutorCtrl];
 
-angular.module('filTutorApp')
-	.controller('TutorCtrl', $inject);
-	
+
 	function TutorCtrl($scope, $rootScope, $stateParams, $state, $q, TutorSess, Tutor, User, CHistorySess){
 
 		$scope.isReady = false;
@@ -141,3 +139,5 @@ angular.module('filTutorApp')
 
 
 
+angular.module('filTutorApp')
+	.controller('TutorCtrl', $inject);
