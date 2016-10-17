@@ -3,7 +3,7 @@
 var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'SupervisorSess', 'Supervisor', SupervisorCtrl];
 
 
-	function($scope, $rootScope, $stateParams, $state, SupervisorSess, Supervisor){
+	function SupervisorCtrl($scope, $rootScope, $stateParams, $state, SupervisorSess, Supervisor){
 		
 		function initData() {
 			var supUserOrMail = $stateParams.userNameOrEmail;
