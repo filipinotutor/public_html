@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('filTutorApp')
-	.factory('Student', ['$http', 'Upload', function($http, Upload){
+var $inject = ['$http', 'Upload', Student];
+
+ 	function Student($http, Upload){
 
 		var Student = this;
 		var endpoint = '';
@@ -50,4 +51,7 @@ angular.module('filTutorApp')
 
 		return Student;
 
-	}]);
+	}
+
+angular.module('filTutorApp')
+	.factory('Student', $inject);

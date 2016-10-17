@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('filTutorApp')
-	.factory('Admin', ['$http', function($http){
+var $inject = ['$http', Admin];
+
+	function Admin($http){
 
 		var Admin = this;
 		var endpoint = '/api/routes.php/admin';
@@ -16,15 +17,11 @@ angular.module('filTutorApp')
 			return $http.get(endpoint + '/settings');
 		};
 
-		// Admin.post = function(userData){
-		// 	return $http({
-		// 		method: 'POST',
-		// 		url: endpoint + '/user',
-		// 		data: userData,
-		// 		headers: headers
-		// 	});
-		// }
 
 		return Admin;
+	}
 
-	}]);
+
+
+angular.module('filTutorApp')
+	.factory('Admin', $inject);

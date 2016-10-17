@@ -2,9 +2,6 @@
 
 var $inject = ['$http', '$q', CHistory];
 
-angular.module('filTutorApp')
-	.factory('CHistory', $inject) 
-
 	function CHistory($http, $q){
 
 		var CHistory = this;
@@ -59,3 +56,6 @@ angular.module('filTutorApp')
 		return CHistory;
 
 	}
+
+angular.module('filTutorApp')
+	.factory('CHistory', $inject);

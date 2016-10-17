@@ -2,105 +2,105 @@
 
 var $inject = ['$http', '$q', User];
 
-angular.module('filTutorApp')
-	.factory('User', $inject); 
+	function User($http, $q) {
 
-function User($http, $q) {
+		var User = this;
+		var endpoint = '/api/routes.php/user';
+		var headers =  {'Content-Type' : 'application/x-www-form-urlencoded'};
 
-	var User = this;
-	var endpoint = '/api/routes.php/user';
-	var headers =  {'Content-Type' : 'application/x-www-form-urlencoded'};
+		var fields = { 
+						'user_id': '',
+						'username': '',
+						'first_name': '', 
+						'last_name': '',
+						'email': '',
+						'skype_id': '',
+						'last_update_id': ''
+					 };
 
-	var fields = { 
-					'user_id': '',
-					'username': '',
-					'first_name': '', 
-					'last_name': '',
-					'email': '',
-					'skype_id': '',
-					'last_update_id': ''
-				 };
+		User.fields = function() {
 
-	User.fields = function() {
+			angular.forEach(fields, function(value, key){
+				fields[key] = '';
+			});
 
-		angular.forEach(fields, function(value, key){
-			fields[key] = '';
-		});
-
-		return fields;
-	}
-	
-	User.get = function(){
-		return $http.get(endpoint);
-	};
-
-	User.getLoggedInUser = function(){
-		return $http.get(endpoint + '/loggedin');
-	};
-
-	User.deactivate = function(userData){
-		return $http({
-			method: 'POST',
-			url: endpoint + '/deactivate',
-			data: userData,
-			headers: headers
-		});
-	}
-
-	User.activate = function(userData){
-		return $http({
-			method: 'POST',
-			url: endpoint + '/activate',
-			data: userData,
-			headers: headers
-		});
-	}
-
-	User.changePw = function(userData){
-		return $http({
-			method: 'POST',
-			url: endpoint + '/changepw',
-			data: userData,
-			headers: headers
-		});
-	}
-
-	User.update = function(userData){
+			return fields;
+		}
 		
-		var deferred = $q.defer();
+		User.get = function(){
+			return $http.get(endpoint);
+		};
 
-		$http({
-			method: 'POST',
-			url: endpoint ,
-			data: userData,
-			headers: headers	
-		})
-		.then(function(data){
+		User.getLoggedInUser = function(){
+			return $http.get(endpoint + '/loggedin');
+		};
+
+		User.deactivate = function(userData){
+			return $http({
+				method: 'POST',
+				url: endpoint + '/deactivate',
+				data: userData,
+				headers: headers
+			});
+		}
+
+		User.activate = function(userData){
+			return $http({
+				method: 'POST',
+				url: endpoint + '/activate',
+				data: userData,
+				headers: headers
+			});
+		}
+
+		User.changePw = function(userData){
+			return $http({
+				method: 'POST',
+				url: endpoint + '/changepw',
+				data: userData,
+				headers: headers
+			});
+		}
+
+		User.update = function(userData){
 			
-			var data = data.data;
+			var deferred = $q.defer();
 
-			if(data.success) {
-				deferred.resolve(data);
-			} else {
-				deferred.reject('error')
-			}
+			$http({
+				method: 'POST',
+				url: endpoint ,
+				data: userData,
+				headers: headers	
+			})
+			.then(function(data){
+				
+				var data = data.data;
 
-		}, function(err){
-			deferred.reject('error' + JSON.stringify(err));
-		});
-	
-		return deferred.promise;
-	}
+				if(data.success) {
+					deferred.resolve(data);
+				} else {
+					deferred.reject('error')
+				}
 
-	User.destroy = function(user_id){
-		return $http({
-			method: 'POST',
-			url: endpoint + '/user/',
-			data: userData,
-			headers: headers
-		});
-	}
+			}, function(err){
+				deferred.reject('error' + JSON.stringify(err));
+			});
+		
+			return deferred.promise;
+		}
 
-	return User;
+		User.destroy = function(user_id){
+			return $http({
+				method: 'POST',
+				url: endpoint + '/user/',
+				data: userData,
+				headers: headers
+			});
+		}
 
-};
+		return User;
+
+	};
+
+angular.module('filTutorApp')
+	.factory('User', $inject);

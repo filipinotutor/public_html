@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('filTutorApp')
-	.factory('Applicant', ['$http', function($http){
+var $inject = ['$http', Applicant];
+
+	function Applicant($http){
 
 		var Applicant = this;
 		var endpoint = '/api/routes.php/applicant';
@@ -63,4 +64,7 @@ angular.module('filTutorApp')
 
 		return Applicant;
 
-	}]);
+	}
+
+angular.module('filTutorApp')
+	.factory('Applicant', $inject);
