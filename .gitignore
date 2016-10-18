@@ -5,7 +5,7 @@ supervisor/error_log
 student/error_log
 error_log
 materials
-audio
+audio/*
 jp
 resume
 WeeklyCalClass-booking-head.php
