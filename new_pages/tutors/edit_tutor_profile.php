@@ -6,14 +6,14 @@
   </div>
 </div>
 
- <form name="myForm">
+<!--  <form name="myForm">
     <fieldset>
       <legend>Upload on form submit</legend>
       Username:
       <input type="text" name="userName" ng-model="username" size="31" required>
       <i ng-show="myForm.userName.$error.required">*required</i>
       <br>Photo:
-      <input type="file" ngf-select ng-model="picFile" name="file"    
+      <input type="file" ngf-select ng-model="picFile1" name="file"    
              accept="image/*" ngf-max-size="2MB" required
              ngf-model-invalid="errorFile">
       <i ng-show="myForm.file.$error.required">*required</i><br>
@@ -22,7 +22,7 @@
       <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> 
       <button ng-click="picFile = null" ng-show="picFile">Remove</button>
       <br>
-      <button ng-click="uploadPic(picFile)">Submit</button>
+      <button ng-click="uploadPic(picFile1)">Submit</button>
       <span class="progress" ng-show="picFile.progress >= 0">
         <div style="width:{{picFile.progress}}%" ng-bind="picFile.progress + '%'"></div>
       </span>
@@ -30,25 +30,24 @@
       <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
     </fieldset>
     <br>
-</form>
+</form> -->
 
-<div class="row">
+<div class="row" ng-show="isReady">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="row">
 				<div class="col-md-6">
-					
-					
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-2">
 					 <form name="uploadForm">
-						<img ng-src="{{ tutor.photo }}" class="img-responsive" ng-if="!picFile1"/>
 						<img ng-if="picFile1" ngf-thumbnail="picFile1" class="thumb img-responsive"> 
-						<input type="file" ng-show="!picFile1" ngf-select ng-model="picFile1" name="file" accept="image/*" ngf-max-size="2MB"  ngf-change="validate($invalidFiles)"/>
-						<button ng-click="picFile1 = null" ng-show="picFile1">Remove</button>
-						<button ng-click="uploadPic(picFile1)" ng-if="picFile1 != null">Submit</button>
+						<div ng-show="!picFile1" ngf-select ng-model="picFile1" name="file" accept="image/*" ngf-max-size="2MB"  ngf-change="validate($invalidFiles)">
+							<img ng-src="{{ tutor.photo }}" class="img-responsive" ng-if="!picFile1"/>
+						</div>
+						<button ng-click="picFile1 = null" ng-show="picFile1">Cancel</button>
+						<button ng-click="uploadPic(picFile1)" ng-if="picFile1 != null">Save</button>
 					</form>
 				</div>
 				<div class="col-sm-6">
@@ -117,7 +116,19 @@
 								<div class="form-group">
 									<label class="control-label col-sm-3 col-xs-12">Audio Presentation </label>
 									<div class="col-md-9 col-sm-9 col-xs-12">
-										<audio src="../audio/tutors/tutor3460c83f1425f247b95e2a767e7b320f.mp3" controls="controls" ></audio>
+										<form name="uploadForm">
+											<audio ngf-src="tutor.audio" 
+											controls="controls" ></audio>
+
+											<div class="button" ngf-select ng-model="audioFile" name="file" 
+											ngf-pattern="'audio/*'" ngf-accept="'audio/*'" ngf-max-size="20MB" 
+											ngf-min-height="100" ngf-resize="{width: 100, height: 100}">
+											    Select
+											</div>
+											
+											<button ng-click="audioFile = null" ng-show="audioFile">Cancel</button>
+											<button ng-click="uploadAudio(audioFile)" ng-if="audioFile != null">Save</button>
+										</form>
 									</div>
 								</div>
 								<br />
@@ -198,7 +209,9 @@
 									<div class="col-md-9 col-sm-9 col-xs-12">
 										<select class="form-control" ng-model="tutor.supervisor_id">
 											<option ng-repeat="s in supervisors" value="{{ s.supervisor_id }}" 
-											ng-selected="s.supervisor_id == tutor.supervisor_id">{{ s.first_name }} {{ s.last_name }}</option>
+											ng-selected="s.user_id == tutor.supervisor_id">
+												{{ s.first_name }} {{ s.last_name }}
+											</option>
 										</select>
 									</div>
 								</div>
