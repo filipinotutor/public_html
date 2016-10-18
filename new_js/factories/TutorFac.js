@@ -112,10 +112,30 @@ var $inject = ['$http','$q', 'Upload', Tutor];
 
 		}
 
-		Tutor.uploadImage = function(file, tutor_id) {
+		Tutor.uploadImage = function(file, tutor_id, photo_path) {
+
 			return Upload.upload({
 				      url: '/api/routes.php/uploadimage',
-				      data: { flag: 'tutor', user_id: tutor_id, file: file }
+				      data: { 
+				      			flag: 'tutor', 
+				      			user_id: tutor_id, 
+				      			file: file,
+				      			photo_path: photo_path
+				      		}
+				    });
+		}	
+
+		Tutor.uploadAudio = function(file, tutor_id, audio_path) {
+
+			console.log('tutor: ' + tutor_id + 'audio_path: ' + audio_path);
+
+			return Upload.upload({
+				      url: '/api/routes.php/uploadaudio',
+				      data: { 
+				      			user_id: tutor_id, 
+				      			file: file,
+				      			audio_path: audio_path
+				      		}
 				    });
 		}	
 
