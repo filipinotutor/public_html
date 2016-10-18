@@ -18,6 +18,7 @@
 		$routes = array(
 
 					'/uploadimage' => 'uploadimage',
+					'/uploadaudio' => 'uploadaudio',
 					'/uploadfile' => 'uploadFile',
 
 			// User 
@@ -77,7 +78,7 @@
 		// method -> post method with inputs
 
 
-		if(!($routes[$route] == 'uploadimage' || $routes[$route] == 'uploadfile')) {
+		if(!($routes[$route] == 'uploadimage' || $routes[$route] == 'uploadfile' || $routes[$route] == 'uploadaudio')) {
 			
 			$atIndex = strpos($routes[$route] ,"@");
 
@@ -133,67 +134,20 @@
 		} else {
 			
 			if($routes[$route] == 'uploadimage') {
+				include('../controllers/image.php');
 
-				 // separation of student , tutor, supervisor admin pictures
-				if (!empty($_FILES) && isset($_POST['user_id']) && isset($_POST['flag'])) {
-				     
-					$ds = DIRECTORY_SEPARATOR;  //1
- 
-					$img_types = array('jpeg', 'jpg', 'png');
+				$img = new ImageHandler();
+				$img->uploadImage();
 
-					$tempFile = $_FILES['file']['tmp_name'];          //3             
+			} else if($routes[$route] == 'uploadaudio') {
+				include('../controllers/audio.php');
 
-				    $temp = explode(".", $_FILES["file"]["name"]);
+				$aud = new AudioHandler();
+				$aud->uploadAudio();
 
-				    $isSupportedImgFile = false;
-
-				    for($i = 0; $i < sizeof($img_types) - 1; $i++) {
-				    	if($temp == $img_types[$i]) {
-				    		$isSupportedImgFile = true;
-				    	}	
-				    }
-
-				    if($isSupportedImgFile) {
-						$newfilename = $user_id .'_'.round(microtime(true)) . '.' . end($temp);
-
-						$user_id = $_POST['user_id'];
-						$flag = $_POST['flag'];
-
-					    switch($flag) {
-					    	case 'student':
-					    		$dir = '../display_pictures/students';
-					    	break;
-					    	case 'tutor':
-						    	$dir = '../display_pictures/tutors';
-					    	break;
-					    	case 'supervisor':
-						    	$dir = '../display_pictures/supervisors';
-					    	break;
-					    }
-
-					    $targetPath = dirname( __FILE__ ) . $ds. $dir . $ds;  //4
-					     
-					    $targetFile =  $targetPath.$newfilename;  //5
-				    	
-				    	if(move_uploaded_file($tempFile,$targetFile)) {
-				    		$response = array('success' => true);
-				    		echo json_encode($response);
-				    	} else {
-							$response = array('success' => false, 'error' => 'Error occured');				    		
-				    	}
-
-				    } else {
-				    	$response = array('success' => false, 'error' => 'File not supported');
-				    }
-
-				    
-
-									     
-				}
-
-			} else {
-				// uploadfile
 			}
+			
+
 		}
 
 		
