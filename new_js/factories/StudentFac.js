@@ -1,11 +1,24 @@
 'use strict';
 
-var $inject = ['$http', 'Upload', Student];
+var $inject = ['$http', 'Upload', 'CacheFactory', Student];
 
- 	function Student($http, Upload){
+ 	function Student($http, Upload, CacheFactory){
 
 		var Student = this;
 		var endpoint = '';
+
+
+		var studentProfileCache = CacheFactory('studentProfileCache', {
+				maxAge: 60 * 60 * 1000, // 1 hour,
+				deleteOnExpire: 'aggressive',
+				storageMode: 'sessionStorage',
+				onExpire: function() {
+					Student.get()
+						.then(function(data){
+							profileCache.put('student_profiles', data);
+						});
+				}
+			});
 
 		Student.get = function(){
 			return $http.get(endpoint + '/api/routes.php/student');
