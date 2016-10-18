@@ -1,57 +1,64 @@
 'use strict';
 
-var $inject = ['$http', 'Upload', 'CacheFactory', Student];
+var $inject = ['$http', 'Upload', '$q' , Student];
 
- 	function Student($http, Upload, CacheFactory){
+ 	function Student($http, Upload, $q){
 
 		var Student = this;
-		var endpoint = '';
-
-
-		var studentProfileCache = CacheFactory('studentProfileCache', {
-				maxAge: 60 * 60 * 1000, // 1 hour,
-				deleteOnExpire: 'aggressive',
-				storageMode: 'sessionStorage',
-				onExpire: function() {
-					Student.get()
-						.then(function(data){
-							profileCache.put('student_profiles', data);
-						});
-				}
-			});
+		var endpoint = '/api/routes.php/student';
+		var header = {'Content-Type' : 'application/x-www-form-urlencoded'};
 
 		Student.get = function(){
-			return $http.get(endpoint + '/api/routes.php/student');
+			return $http.get(endpoint);
 		};
 
 		Student.getProfile = function(userOrMail){
-			return $http.get(endpoint + '/api/routes.php/student/getByUserOrMail/' + userOrMail);
+
+			var dfr = $q.defer();
+
+			$http.get(endpoint + '/getByUserOrMail/' + userOrMail)
+				.then(function(data){
+					var data = data.data;
+
+					if(data[0].success){
+						dfr.resolve(data[1][0]);
+					} else {
+						console.log('Error' + JSON.stringify(data));
+						dfr.reject('Error');
+					}
+
+				}, function(err){
+					console.log('Error' + JSON.stringify(err));
+					dfr.reject('Error');
+				});
+
+			return dfr.promise;
 		}
 
 		Student.post = function(userData){
 			return $http({
 				method: 'POST',
-				url: endpoint + '/api/routes.php/student',
+				url: endpoint, 
 				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+				headers: header
 			});
 		}
 
 		Student.update = function(userData){
 			return $http({
 				method: 'POST',
-				url: endpoint + '/api/routes.php/student',
+				url: endpoint, 
 				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+				headers: header
 			});
 		}
 
 		Student.destroy = function(user_id){
 			return $http({
 				method: 'POST',
-				url: endpoint + '/api/routes.php/student/',
+				url: endpoint, 
 				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+				headers: header	
 			});
 		}
 
