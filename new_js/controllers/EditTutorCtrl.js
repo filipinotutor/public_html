@@ -14,19 +14,71 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 		var tutorUserOrMail = $stateParams.userNameOrEmail;
 
 		$scope.uploadPic = function(file) {
-			Tutor.uploadImage(file, 123)
+
+			Tutor.uploadImage(file, $scope.tutor.tutor_id, $scope.tutor.photo)
 				.then(function (response) {
 			      $timeout(function () {
+			        
+			        var new_path = response.data.new_path;
 			        file.result = response.data;
+			        $scope.tutor.photo = new_path;
+			        TutorSess.putProfileData($scope.tutor.tutor_id, $scope.tutor);
+			        $scope.picFile1 = null;
+			        // $scope.uploadCancel = false;
+			        // $scope.uploadSave = false;
+
+			        // console.log(JSON.stringify(response.data.new_path));
+			        // console.log(JSON.stringify('TUTOR: ' + $scope.tutor));
+
 			      });
 			    }, function (response) {
-			    	console.log('error: x' + JSON.stringify(response));
 			      if (response.status > 0)
 			        $scope.errorMsg = response.status + ': ' + response.data;
 			    }, function (evt) {
-			    	console.log(JSON.stringify(evt));
+
 			      // Math.min is to fix IE which reports 200% sometimes
 			      file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+
+			      console.log(JSON.stringify(evt));
+
+			      // console.log('percentage: ' + file.progress);
+
+			    });
+		}
+
+		$scope.uploadAudio = function(file) {
+
+			Tutor.uploadAudio(file, $scope.tutor.tutor_id, $scope.tutor.audio)
+				.then(function (response) {
+			      $timeout(function () {
+			        
+			        var new_path = response.data.new_path;
+			        $scope.tutor.audio = new_path;
+			        TutorSess.putProfileData($scope.tutor.tutor_id, $scope.tutor);
+
+			        // file.result = response.data;
+			        // $scope.picFile1 = null;
+			        // $scope.uploadCancel = false;
+			        // $scope.uploadSave = false;
+			        // console.log(JSON.stringify(response.data.new_path));
+			        // console.log(JSON.stringify('TUTOR: ' + $scope.tutor));
+
+			      });
+			    }, function (response) {
+			      if (response.status > 0)
+			        $scope.errorMsg = response.status + ': ' + response.data;
+
+			    	console.log(JSON.stringify(response));
+
+			    }, function (evt) {
+
+			      // Math.min is to fix IE which reports 200% sometimes
+			      file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+
+			      console.log(JSON.stringify(evt));
+
+			      // console.log('percentage: ' + file.progress);
+
 			    });
 		}
 
@@ -69,7 +121,6 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 
 			$scope.tutor = TutorSess.getProfileData(tutorUserOrMail);
 
-
 			if(!$scope.tutor) {
 				Tutor.getProfile(tutorUserOrMail)
 					.then(function(data){
@@ -82,9 +133,6 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 				$scope.tutor.birthday = moment().format('MMM DD YYYY');
 				$scope.isReady = true;	
 			}
-
-
-
 		}
 
 		$scope.deactivate = function(tutor_id){
@@ -121,14 +169,14 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 			angular.forEach(user_fields, function(value, key){
 				if(!(value == '')) {
 					userData[key] = value;
-					// hasUserData = true;
+					hasUserData = true;
 				}
 			});
 
 			angular.forEach(tutor_fields, function(value, key){
 				if(!(value == '')) {
 					tutorData[key] = value;
-					// hasTutorData = true;
+					hasTutorData = true;
 				}
 			});
 
