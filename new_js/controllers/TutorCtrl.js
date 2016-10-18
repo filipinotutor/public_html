@@ -79,6 +79,7 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$q', 'TutorSess
 					Tutor.getProfile(tutorUserOrMail)
 						.then(function(data){
 							$scope.tutor = data;
+
 							TutorSess.putProfileData(tutorUserOrMail, data);
 							$scope.isReady = true;	
 						});
@@ -98,6 +99,11 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$q', 'TutorSess
 					}
 				});
 		}
+
+		$scope.edit = function() {
+			$scope.tutor.disable = false;
+		}
+
 
 		$scope.activate = function(tutor_id){
 			User.activate({ user_id: tutor_id, deactivator_id: $rootScope.userData.user_id })
