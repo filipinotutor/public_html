@@ -13,14 +13,14 @@ angular.module('filTutorApp')
 
 			var profileCache = CacheFactory('profileCache', {
 				maxAge: 60 * 60 * 1000, // 1 hour,
-				deleteOnExpire: 'aggressive',
-				storageMode: 'sessionStorage',
-				onExpire: function() {
-					Tutor.get()
-						.then(function(data){
-							profileCache.put('tutor_profiles', data);
-						});
-				}
+				// deleteOnExpire: 'aggressive',
+				storageMode: 'sessionStorage'
+				// onExpire: function() {
+					// Tutor.get()
+					// 	.then(function(data){
+					// 		profileCache.put('tutor_profiles', data);
+					// 	});
+				// }
 			});
 
 			function getTutorData() {
