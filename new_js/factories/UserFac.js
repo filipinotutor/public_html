@@ -14,6 +14,7 @@ var $inject = ['$http', '$q', User];
 						'first_name': '', 
 						'last_name': '',
 						'email': '',
+						'gender': '',
 						'skype_id': '',
 						'last_update_id': ''
 					 };
@@ -68,7 +69,7 @@ var $inject = ['$http', '$q', User];
 
 			$http({
 				method: 'POST',
-				url: endpoint ,
+				url: endpoint + '/update',
 				data: userData,
 				headers: headers	
 			})
@@ -79,6 +80,7 @@ var $inject = ['$http', '$q', User];
 				if(data.success) {
 					deferred.resolve(data);
 				} else {
+					console.log('UserFac.update: ' + JSON.stringify(data));
 					deferred.reject('error')
 				}
 
