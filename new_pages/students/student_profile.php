@@ -12,15 +12,15 @@
 						<img src="{{ student.photo }}" class="img-responsive" />
 					</div>
 					<div class="col-sm-6">
-						<h4>Tsutsui Hajime</h4>
+						<h4>{{ student.first_name }} {{ student.last_name }}</h4>
 						<p>
 							<b>Student ID:</b> {{ student.user_id }}<br />
 							<b>Member Since:</b> {{ student.creation_date }}<br />
-							<b>Credits:</b>-- NEED DATA --<br /><br />
-							<a href="#" class="btn btn-xs btn-info">Edit Profile</a>
+							<b>ESL Credits:</b> {{ esl_credit }}<br />
+							<b>Business Credits:</b> {{ b_credit }}<br /><br />
+							<a ng-click="edit()" class="btn btn-xs btn-info">Edit Profile</a>
 							<a href="#" class="btn btn-xs btn-danger">Deactivate Account</a>
 						</p>
-						
 					</div>
 				</div>
 				<div class="x_content">
@@ -48,25 +48,8 @@
 					</div>
 				</div>
 
+				<a ng-hide="student.disable" ng-click="saveEdit()" class="btn btn-success">Save</a>
+
 		</div>
 	</div>
 </div>
-<!--
-user_id : {{ student.user_id }} <br/>
-username : {{ student.username }} <br/>
-first_name  : {{ student.first_name }} <br/>
-last_name   : {{ student.last_name }} <br/>
-email  : {{ student.email }} <br/>
-gender   : {{ student.gender }} <br/>
-skype_id   : {{ student.skype_id }} <br/>
- <!-- {{ student.access_level }} -->
- <!-- {{ student.creation_date }} -->
- <!-- {{ student.last_login }} -->
- <!--
-nick_name  : {{ student.nick_name }} <br/>
-phone  : {{ student.phone }} <br/>
-photo  : {{ student.photo }} <br/>
-birthday  : {{ student.birthday }} <br/>
-viewed  : {{ student.viewed }} <br/>
-deactivated : <!-- {{ student.deactivated }} -->
-
