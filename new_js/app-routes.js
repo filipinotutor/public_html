@@ -102,6 +102,7 @@ angular.module('filTutorApp')
 							return $ocLazyLoad.load([
 								'new_js/services/sessions/studentSess.js',
 								'new_js/factories/StudentFac.js',
+								'new_js/factories/StudentCreditFac.js',
 								'new_js/controllers/StudentCtrl.js'
 							]);
 						}]
@@ -130,12 +131,25 @@ angular.module('filTutorApp')
 						}
 					},
 					resolve: {
-						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
+						loadModule: ['$ocLazyLoad', '$injector', function($ocLazyLoad, $injector){
 							return $ocLazyLoad.load([
 								'new_js/services/sessions/studentSess.js',
 								'new_js/factories/StudentFac.js',
+								'new_js/factories/StudentCreditFac.js',
 								'new_js/controllers/StudentCtrl.js'
-							]);
+							]).then(function(){
+								var studSess = $injector.get('StudentSess');
+								var stud = $injector.get('Student');
+								var students = studSess.getStudentData();
+
+								if(!students){
+									stud.get()
+										.then(function(data){
+											studSess.storeStudentData(data);
+										});
+								}
+
+							});
 						}]
 					}
 				})
