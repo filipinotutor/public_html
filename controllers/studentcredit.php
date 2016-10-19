@@ -1,48 +1,61 @@
-<?php 
+<?php
 
-require('user.php');
+class StudentCredit extends Query {
 
-class StudentCredits {
+	var $data = array();
 
-	public function get_credits($user_id = null){
-		$user = new User;
-		if($user_id == null) {
-			$user_id = $user->get_user_id();
+	var $table = 'studentcredits';
+
+	public function wantsJSON() {
+		$this->data = json_encode($this->data);
+	}
+
+	public function get(){
+		$sql = 'SELECT * FROM '.$this->table;
+
+		$result = Query::select($sql);
+
+		if($result[0]['success']){
+			$this->data = $result;
+		} else {
+			$this->data = $result;
 		}
 		
-		$sql = 'SELECT credit_value FROM studentcredits WHERE student_id = '.$user_id.' AND status = 1 AND expiration > NOW()';
-		$res = mysql_query($sql);
-
-		return mysql_result($res, 0, "credit_value");
+		$this->wantsJSON();
 	}
 
-	public function update_credit_incr($user_id, $inc_value){
-		$curr_credits = $this->get_credits($user_id);
-		$sql = 'UPDATE studentcredits SET credit_value ='.$curr_credits + $inc_value.' WHERE student_id = '. $user_id;
+	public function getStudentCredit($student_id) {
 
-		$res = mysql_query($sql);
+		$sql = 'SELECT * FROM studentcredits WHERE student_id ='. $student_id . ' AND expiration > now() ';
 
-		if($res) {
-			return true;
-		} else {
-			return false;
-		}
+		$result = Query::select($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
 	}
 
-	public function update_credit_decr($user_id, $decr_value){
-		$curr_credits = $this->get_credits($user_id);
-		$sql = 'UPDATE studentcredits SET credit_value ='.$curr_credits + $decr_value.' WHERE student_id = '. $user_id;
+	// public function add($input) {
 
-		$res = mysql_query($sql);
+	// 	$qValues = Query::genInsertQuery($input);
 
-		if($res) {
-			return true;
-		} else {
-			return false;
-		}
+	// 	$sql = 'INSERT INTO schedules_1('.$qValues['fields'].') VALUES('.$qValues['values'].'); ';
 
-	}
-	
+	// 	$result = Query::save($sql);
+
+	// 	$this->data = $result;
+
+	// 	$this->wantsJSON();
+	// }
+
+	// public function update($input) {
+		
+	// 	$schedule_id = $input['schedule_id'];
+	// 	$schedule_datetime = $input['schedule_datetime'];
+	// 	$user_id = $input['user_id'];
+	// 	$tutor_id = $input['tutor_id'];
+	// 	$status = $input['status'];
+		
+	// }
+
 }
-
-
