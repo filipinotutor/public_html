@@ -7,7 +7,8 @@ angular.module('filTutorApp')
 		
 		data.tutor_type = [
 			{ tutor_type_id: 1, tutor_type: 'BE', tutor_type_desc: 'Business English' },
-			{ tutor_type_id: 2, tutor_type: 'ESL', tutor_type_desc: 'English as Secondary Language' }
+			{ tutor_type_id: 2, tutor_type: 'ESL', tutor_type_desc: 'English as Secondary Language' },
+			{ tutor_type_id: 3, tutor_type: 'Both', tutor_type_desc: 'Both' }
 		];
 
 		data.teaching_exp = [
