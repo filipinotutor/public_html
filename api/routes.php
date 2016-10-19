@@ -23,7 +23,7 @@
 
 			// User 
 					'/user' => '@get',
-					'/user' => 'update',
+					'/user/update' => 'update',
 					'/user/loggedin' => '@get_user_info',
  					'/user/deactivate' => 'deactivateAccount',
 					'/user/activate' => 'activateAccount',
@@ -31,8 +31,9 @@
 
 			// Student 
 					'/student' => '@get',
+					'/student/update' => 'update',
 					'/student/getByUserOrMail/'.$id => 'getStudentProfile@'.$id,
-
+					
 			// Tutor
 					'/tutor' => '@get_tutors',
 					'/tutor/getByUserOrMail/'.$id => 'getTutorProfile@'.$id,
@@ -69,9 +70,15 @@
 					'/schedule/user/'.$id => 'getUserSchedule@'.$id,
 					'/schedule/add' => 'add',
 					'/schedule/delete' => 'delete',
-					'/schedule/update' => 'update'
+					'/schedule/update' => 'update',
+
+			// StudentCredits 
+					'/studentcredit' => '@get',
+					'/studentcredit/update' => 'update',
+					'/studentcredit/student/'.$id => 'getStudentCredit@'.$id
 
 				);
+
 
 		// @ -> get method without parameters
 		// method@id -> get method with parameters
