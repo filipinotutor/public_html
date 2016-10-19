@@ -4,7 +4,7 @@ class Schedule extends Query {
 
 	var $data = array();
 
-	var $table = 'schedules_1';
+	var $table = 'schedules';
 
 	public function wantsJSON() {
 		$this->data = json_encode($this->data);
