@@ -14,18 +14,20 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'SupervisorSess'
 					.then(function(data){
 
 						SupervisorSess.storeSupData(data);
-					
+						
+						$scope.supervisorlist = data;
+
+
 					});
 			} else {
 				Supervisor.getProfile(supUserOrMail)
 					.then(function(data){
 
 						$scope.supervisor = data;
-						
 					});
 			}
 
-			
+		
 		}
 
 		initData();

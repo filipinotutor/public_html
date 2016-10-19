@@ -16,6 +16,7 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 				.then(function(data){
 					var data = data.data;
 					if(data[0].success) {
+
 						deferred.resolve(data[1]);
 					} else {
 						deferred.reject('error');
@@ -28,6 +29,8 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 		};
 
 		Supervisor.getProfile = function(userOrMail){
+			
+			var deferred = $q.defer();
 			
 			$http.get(endpoint + '/getByUserOrMail/' + userOrMail)
 				.then(function(data){

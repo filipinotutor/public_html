@@ -259,7 +259,7 @@ angular.module('filTutorApp')
 				.state('supervisor_profile', {
 					parent: 'dashboard',
 					url: 'supervisor/:userNameOrEmail',
-					templateUrl: 'new_pages/supervisors/supervisor_profile.html',
+					templateUrl: 'new_pages/supervisors/supervisor_profile.php',
 					controller: 'SupervisorCtrl',
 					resolve: {
 						loadModule: ['$ocLazyLoad', function($ocLazyLoad){
