@@ -20,7 +20,7 @@
       
         <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="datatable"></label></div></div></div><div class="row"><div class="col-sm-12">
 
-        <table id="datatable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
+        <table st-table="supListColl" st-safe-src="supervisorlist" id="dataTable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
           <thead>
             <tr role="row">
 				<th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 100px;">Username</th>
@@ -30,7 +30,7 @@
 				<th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Actions</th></tr>
           </thead>
 
-          <tbody ng-repeat="s in supervisorlist">
+          <tbody ng-repeat="s in supListColl">
           	<tr role="row" ng-show="$even"  class="odd">
               <td class="sorting_1">{{ s.username }}</td>
               <td>{{ s.first_name }} {{ s.last_name }}</td>
