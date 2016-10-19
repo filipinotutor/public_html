@@ -1,11 +1,15 @@
 'use strict';
 
-var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', 'Student', StudentCtrl];
+var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', 
+			   'User', 'Student', '$location', 'StudentCredit', StudentCtrl];
 
-	function StudentCtrl($scope, $rootScope, $stateParams, $state, StudentSess, Student){
+	function StudentCtrl($scope, $rootScope, $stateParams, $state, StudentSess, 
+						 User, Student, $location, StudentCredit){
 
 			$scope.isReady = false;
 			$scope.studentlist = [];
+
+			var studUserOrMail = $stateParams.userNameOrEmail;
 
 			function initList() {
 				
@@ -13,11 +17,6 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', '
 				$scope.deactstudlist = [];
 
 				angular.forEach($scope.studentlist, function(value, key){
-					// .format('YYYY-MM-DD HH:mm:ss')
-					// var oneMo = moment(registered_date).isBefore(moment(moment().add(30, 'days'));
-					// console.log('re: ' + registered_date);
-					// console.log('30D: ' + moment().add(30, 'days'));
-					// console.log('onmo:' + oneMo);
 
 					var registered_date = moment(value.creation_date).format('YYYY-MM-DD HH:mm:ss');
 					var oneMo = moment().subtract(30, 'days').format('YYYY-MM-DD HH:mm:ss');
@@ -39,45 +38,70 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', '
 			}
 
 			function initData() {
-
-				var studUserOrMail = $stateParams.userNameOrEmail;
+				
 				$scope.isReady = false;
 
 				if(angular.isUndefined(studUserOrMail)){
+
 					$scope.studentlist = StudentSess.getStudentData();
 
-					if($scope.studentlist.length == 0) {
+					if(!$scope.studentlist) {
 						Student.get()
 							.then(function(data){
-								var data = data.data;
 
-								StudentSess.storeStudentData(data[1]);		
-								$scope.studentlist = data[1];					
+								$scope.studentlist = data;		
+
+								StudentSess.storeStudentData(data);
+
 								$scope.isDataReady = true;
 								initList();
+
 							});
 					} else {
 						$scope.isReady = true;	
 						initList();
 					}
 				} else {
-					$scope.student = "";
-					
-					// if($scope.tutor.length == 0) {
-					Student.getProfile(studUserOrMail)
+
+					$scope.student = StudentSess.getProfileData(studUserOrMail);
+					var stud_id = StudentSess.getStudentId(studUserOrMail);
+
+					if(!$scope.student) {
+						Student.getProfile(studUserOrMail)
+							.then(function(data){
+								$scope.student = data;
+								$scope.student.disable = true;
+							});
+					} else {
+						$scope.student.disable = true;
+						$scope.isReady = true;	
+					}
+
+					StudentCredit.getById(stud_id)
 						.then(function(data){
-							var data = data.data;
 
-							$scope.student = data[1][0];
+							$scope.esl_credit = 0;
+							$scope.b_credit = 0;
 
-							console.log(JSON.stringify($scope.student));
+							angular.forEach(data, function(value, key){
+								if(value.credit_type_id == 1){
+									$scope.esl_credit = $scope.esl_credit + parseInt(value.credit_value);
+								} else {
+									$scope.b_credit = $scope.b_credit + parseInt(value.credit_value);
+								}							
+							});
 
+						}, function(err){
+							console.log('StudentCredit.getById: ' + JSON.stringify(err));
 						});
-					// } else {
-					// 	$scope.isReady = true;
-					// }
-				}
 
+				}
+			}
+
+			$scope.edit = function() {
+
+				$scope.student.disable = false;
+				
 			}
 
 			$scope.deactStudent = function() {
@@ -94,7 +118,117 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', '
 
 			$scope.allStudent = function() {
 				initData();
-			}			
+			}				
+
+			$scope.saveEdit = function() {
+				
+				var copy = StudentSess.getProfileData(studUserOrMail)
+				var user_fields = User.fields();
+				var stud_fields = Student.fields();
+				var userData = {};
+				var studData = {};
+				var hasUserData = false;
+				var hasStudData = false;
+				var isUpdated = false;
+
+				angular.forEach($scope.student, function(value, key) {
+					if(!(value == copy[key])){
+						if(!angular.isUndefined(user_fields[key])){
+							user_fields[key] = value;
+						} else if(!angular.isUndefined(stud_fields[key])){
+							stud_fields[key] = value;
+						}
+					}
+				});
+
+				angular.forEach(user_fields, function(value, key){
+					if(!(value == '')) {
+						userData[key] = value;
+						hasUserData = true;
+					}
+				});
+
+				angular.forEach(stud_fields, function(value, key){
+					if(!(value == '')) {
+						studData[key] = value;
+						hasStudData = true;
+					}
+				});
+
+				console.log('A1: ' + JSON.stringify(userData));
+				console.log('A1: ' + JSON.stringify(studData));
+				// console.log('A1: ' + JSON.stringify(userData));
+
+				if(hasUserData && hasStudData) {
+					var curr_login_id = $rootScope.userData.user_id;
+					var curr_datetime = moment().format('YYYY-MM-DD HH:mm:ss');
+
+					userData.user_id = $scope.student.user_id;
+					userData.last_update_id = curr_login_id;
+					userData.last_update = curr_datetime;
+					
+					tutorData.student_id = $scope.student.student_id;
+					tutorData.last_update_id = curr_login_id
+					tutorData.last_update = curr_datetime;
+
+					$q.all([User.update(userData), Tutor.update(tutorData)])
+						.then(function(data){
+
+							var user = data[0].success;
+							var student = data[1].success;
+
+							StudentSess.putProfileData($scope.student.student_id, $scope.student);
+							isUpdated = true;
+
+							if(user && student) {
+								alert('DATA SAVED');
+								$location.path('student/'+$scope.student.username);
+							}
+
+						}, function(err){
+							console.log('err: ' + JSON.stringify(err));
+						});
+
+				} else if(hasUserData) {
+
+					userData.user_id = $scope.student.user_id;
+					userData.last_update_id = $rootScope.userData.user_id;
+					userData.last_update = moment().format('YYYY-MM-DD HH:mm:ss');
+
+					User.update(userData)
+						.then(function(data){
+							
+							StudentSess.putProfileData($scope.student.student_id, $scope.student);
+							isUpdated = true;
+							$scope.student.disable = true;
+
+							$location.path('student/'+$scope.student.username);
+							alert('DATA SAVED');
+
+						}, function(err){	
+							console.log(JSON.stringify(err));
+						});
+
+				} else if(hasStudData) {
+					studData.student_id = $scope.student.student_id;
+					studData.last_update_id = $rootScope.userData.user_id;
+					studData.last_update = moment().format('YYYY-MM-DD HH:mm:ss');
+
+					Student.update(studData)
+						.then(function(data){
+
+							StudentSess.putProfileData($scope.student.student_id, $scope.student);
+							isUpdated = true;
+							$location.path('student/'+$scope.student.username);
+							alert('DATA SAVED');
+
+						}, function(err){	
+							console.log(JSON.stringify(err));
+						});
+				}
+
+
+			}
 
 
 			initData();
