@@ -165,7 +165,6 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 				}
 			});
 
-
 			angular.forEach(user_fields, function(value, key){
 				if(!(value == '')) {
 					userData[key] = value;
@@ -204,10 +203,11 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 
 						TutorSess.putProfileData($scope.tutor.tutor_id, $scope.tutor);
 						isUpdated = true;
-						$location.path('tutor/'+$scope.tutor.username+'/edit/profile');
 
-
-						alert('DATA SAVED');
+						if(user && tutor) {
+							alert('DATA SAVED');
+							$location.path('tutor/'+$scope.tutor.username+'/edit/profile');
+						}
 
 					}, function(err){
 						console.log('err: ' + JSON.stringify(err));
