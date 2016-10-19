@@ -10,7 +10,7 @@ class Student extends Query {
 	}
 
 	public function get(){
-		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.student_id, s.nick_name, s.phone, s.photo, s.birthday, s.viewed,
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.student_id, s.nick_name, s.phone, s.photo, s.birthday, s.viewed, s.last_update, s.last_update_id ,
 			CASE WHEN da.id > 0 THEN 1 ELSE 0 END AS "deactivated"
 			FROM users u 
 			INNER JOIN students s 
@@ -31,8 +31,23 @@ class Student extends Query {
 		$this->wantsJSON();
 	}
 
+	public function update($input){
+		$student_id = $input['student_id'];
+
+		$in = Query::genUpdateQuery($input);
+
+		$sql = 'UPDATE students SET '.$in.' WHERE student_id ='.$student_id;
+
+		$result = Query::save($sql);
+
+		$this->data = $result;
+		// $this->data = $sql;
+		
+		$this->wantsJSON();
+	}
+
 	public function getStudentProfile($userNameOrEmail) {
-		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.student_id, s.nick_name, s.phone, s.photo, s.birthday, s.viewed,
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.student_id, s.nick_name, s.phone, s.photo, s.birthday, s.viewed, s.last_update, s.last_update_id ,
 				CASE WHEN da.id > 0 THEN 1 ELSE 0 END AS "deactivated"
 				FROM users u 
 				INNER JOIN students s 
