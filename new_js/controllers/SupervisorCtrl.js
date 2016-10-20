@@ -10,21 +10,35 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'SupervisorSess'
 			$scope.isReady = false;
 
 			if(angular.isUndefined(supUserOrMail)){
-				Supervisor.get()
-					.then(function(data){
 
-						SupervisorSess.storeSupData(data);
-						
-						$scope.supervisorlist = data;
+				$scope.supervisorlist = SupervisorSess.getSupData();
 
+				if(!$scope.supervisorlist){
+					Supervisor.get()
+						.then(function(data){
 
-					});
+							SupervisorSess.storeSupData(data);
+							$scope.supervisorlist = data;
+							$scope.isReady = true;
+						});
+				} else {
+					$scope.isReady = true;
+				}
+
 			} else {
-				Supervisor.getProfile(supUserOrMail)
-					.then(function(data){
 
-						$scope.supervisor = data;
-					});
+				$scope.supervisor = SupervisorSess.getProfileData(supUserOrMail);
+
+				if(!$scope.supervisor) {
+					Supervisor.getProfile(supUserOrMail)
+						.then(function(data){
+							$scope.supervisor = data;
+						});
+				} else {
+					$scope.isReady = true;
+				}
+
+				
 			}
 
 		
