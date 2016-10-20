@@ -98,7 +98,31 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 				      url: '/api/routes.php/uploadimage',
 				      data: { flag: 'supervisor', user_id: sup_id, file: file }
 				 });
-		}	
+		}
+
+		Supervisor.getAssignedTutors = function(sup_id) {
+
+			var deferred = $q.defer();
+			
+			$http.get(endpoint + '/assignedtutor/' + sup_id)
+				.then(function(data){
+					var data = data.data;
+					
+					if(data[0].success) {
+						deferred.resolve(data[1]);
+					} else {
+						console.log('Supervisor.getAssignedTutor' + JSON.stringify(data));
+						deferred.reject(error);
+					}
+
+				}, function(err){
+					console.log('Supervisor.getAssignedTutor' + JSON.stringify(err));
+					deferred.reject('Error');
+				});
+
+			return deferred.promise;
+		}
+
 
 		return Supervisor;
 

@@ -28,15 +28,24 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'SupervisorSess'
 			} else {
 
 				$scope.supervisor = SupervisorSess.getProfileData(supUserOrMail);
-
+				
 				if(!$scope.supervisor) {
 					Supervisor.getProfile(supUserOrMail)
 						.then(function(data){
 							$scope.supervisor = data;
+							SupervisorSess.putProfileData($scope.supervisor.supervisor_id, data);
 						});
 				} else {
 					$scope.isReady = true;
 				}
+							
+
+				// Supervisor.getAssignedTutors($scope.supervisor.supervisor_id)
+				// 	.then(function(data){
+
+				// 		$scope.tutorlist = 
+					
+				// 	});
 
 				
 			}
