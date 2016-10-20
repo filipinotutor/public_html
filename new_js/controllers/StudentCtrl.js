@@ -120,6 +120,31 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess',
 				initData();
 			}				
 
+			$scope.deactivate = function(student_id, deactivate_status){
+					
+				var userData = {
+					user_id: student_id,
+					deactivator_id: $rootScope.userData.user_id
+				}
+
+				if(deactivate_status == 0) {
+					User.deactivate(userData)
+						.then(function(data){
+
+							// console.log('D1: ' + JSON.stringify(data));
+							$scope.student.deactivated = 1;
+						});
+				} else {
+					User.activate(userData)
+						.then(function(data){
+
+							// console.log('D2: ' + JSON.stringify(data));
+							$scope.student.deactivated = 0;
+
+						});
+				}
+			}
+
 			$scope.saveEdit = function() {
 				
 				var copy = StudentSess.getProfileData(studUserOrMail)
@@ -155,8 +180,8 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess',
 					}
 				});
 
-				console.log('A1: ' + JSON.stringify(userData));
-				console.log('A1: ' + JSON.stringify(studData));
+				// console.log('A1: ' + JSON.stringify(userData));
+				// console.log('A1: ' + JSON.stringify(studData));
 				// console.log('A1: ' + JSON.stringify(userData));
 
 				if(hasUserData && hasStudData) {
@@ -226,6 +251,8 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess',
 							console.log(JSON.stringify(err));
 						});
 				}
+
+				$scope.student.disable = true;
 
 
 			}
