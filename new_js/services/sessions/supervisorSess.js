@@ -15,7 +15,8 @@ angular.module('filTutorApp')
 		function getSupData() {
 
 			data.supData = supCache.get('sup_profiles');
-			return data;
+
+			return data.supData;
 		}
 
 		function storeSupData(obj) {
