@@ -115,7 +115,7 @@ var $inject = ['$http', 'Upload', '$q', 'StudentSess', Student];
 				      url: '/api/routes.php/uploadimage',
 				      data: { 
 				      			flag: 'student', 
-				      			user_id: tutor_id, 
+				      			user_id: student_id, 
 				      			file: file,
 				      			photo_path: photo_path
 				      		}
@@ -131,12 +131,18 @@ var $inject = ['$http', 'Upload', '$q', 'StudentSess', Student];
 			});
 		}
 
-		Student.uploadImage = function(file, stud_id) {
+		Student.uploadImage = function(file, student_id, photo_path) {
+
 			return Upload.upload({
 				      url: '/api/routes.php/uploadimage',
-				      data: { flag: 'student', user_id: stud_id, file: file }
-				 });
-		}
+				      data: { 
+				      			flag: 'student', 
+				      			user_id: student_id, 
+				      			file: file,
+				      			photo_path: photo_path
+				      		}
+				    });
+		}	
 
 		return Student;
 
