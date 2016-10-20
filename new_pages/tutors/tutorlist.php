@@ -92,7 +92,7 @@
       </div>
     </div><!-- end of panel -->
 	
-	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+	<!-- <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
 
@@ -391,7 +391,9 @@
 
           </div>
         </div>
-    </div><!-- end of modal -->
+    </div> -->
+
+    <!-- end of modal -->
 
 
   </div>
