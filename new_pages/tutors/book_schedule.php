@@ -6,9 +6,12 @@
                 class="icon-calendar"></i></span>
         </div>
     </a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><!-- 
         <datetimepicker data-ng-model="date"
-                        data-datetimepicker-config="{ dropdownSelector: '.my-toggle-select' }"></datetimepicker>
+                        data-datetimepicker-config="{ dropdownSelector: '.my-toggle-select', minuteStep: 30, minView:'hour' }"></datetimepicker> -->
+    	
+        <datetimepicker data-ng-model="date"
+                        data-datetimepicker-config="{ dropdownSelector: '.my-toggle-select', minView:'day' }"></datetimepicker>
     </ul>
 </div>
 
