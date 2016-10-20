@@ -19,9 +19,11 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 
 						deferred.resolve(data[1]);
 					} else {
+						console.log('Supervisor.get1 ' + JSON.stringify(data))
 						deferred.reject('error');
 					}
 				}, function(err){
+					console.log('Supervisor.get2 ' + JSON.stringify(err))
 					deferred.reject('error');
 				});
 
@@ -38,9 +40,11 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 					if(data[0].success) {
 						deferred.resolve(data[1][0]);
 					} else {
+						console.log('Supervisor.getProfile1 ' + JSON.stringify(data))
 						deferred.reject('error');
 					}
 				}, function(err){
+					console.log('Supervisor.getProfile2 ' + JSON.stringify(err))
 					deferred.reject('error');
 				});
 
@@ -58,12 +62,13 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 					if(data[0].success) {
 						deferred.resolve(data[1]);
 					} else {
+						console.log('Supervisor.list1' + JSON.stringify(data));
 						deferred.reject(error);
-						consoe.log('error Supervisor List');
 					}
 
-				}, function(error){
-					deferred.reject(error);
+				}, function(err){
+					console.log('Supervisor.list2' + JSON.stringify(err));
+					deferred.reject('Error');
 				});
 
 			return deferred.promise;
