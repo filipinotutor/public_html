@@ -1,9 +1,9 @@
 'use strict';
 
-var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess', 
+var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$timeout', 'StudentSess', 
 			   'User', 'Student', '$location', 'StudentCredit', StudentCtrl];
 
-	function StudentCtrl($scope, $rootScope, $stateParams, $state, StudentSess, 
+	function StudentCtrl($scope, $rootScope, $stateParams, $state, $timeout, StudentSess, 
 						 User, Student, $location, StudentCredit){
 
 			$scope.isReady = false;
@@ -50,7 +50,7 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess',
 							.then(function(data){
 
 								$scope.studentlist = data;		
-
+								
 								StudentSess.storeStudentData(data);
 
 								$scope.isDataReady = true;
@@ -256,6 +256,38 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', 'StudentSess',
 
 
 			}
+
+
+			$scope.uploadPic = function(file) {
+
+				Student.uploadImage(file, $scope.student.student_id, $scope.student.photo)
+					.then(function (response) {
+				      $timeout(function () {
+				        
+				        var new_path = response.data.new_path;
+				        file.result = response.data;
+				        $scope.student.photo = new_path;
+				        StudentSess.putProfileData($scope.student.student_id, $scope.student);
+				        $scope.picFile1 = null;
+
+				        console.log('RES: ' + JSON.stringify(response.data));
+
+				      });
+				    }, function (response) {
+				      if (response.status > 0)
+				        $scope.errorMsg = response.status + ': ' + response.data;
+				    }, function (evt) {
+
+				      // Math.min is to fix IE which reports 200% sometimes
+				      file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+
+				      console.log(JSON.stringify(evt));
+
+				      // console.log('percentage: ' + file.progress);
+
+				    });
+			}
+
 
 
 			initData();
