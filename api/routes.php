@@ -46,6 +46,7 @@
 					'/supervisor/list' => '@getSupList',
 					'/supervisor/add' => 'add',
 					'/supervisor/update' => 'update',
+					'/supervisor/assignedtutor/'.$id => 'getAssignedTutors@'.$id,
 
 			// Applicant
 					'/applicant' => '@get',
