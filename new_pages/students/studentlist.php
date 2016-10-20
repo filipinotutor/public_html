@@ -82,7 +82,7 @@
             </div>
 			
 			
-            <div class="modal-body">
+           <!--  <div class="modal-body">
 				<div class="row">
 					<div class="col-sm-2">
 						<img src="./images/profilepic.jpg" class="img-responsive" />
@@ -361,7 +361,7 @@
 					  </div>
 					</div>
 				</div>
-            </div>
+            </div> -->
 			
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
