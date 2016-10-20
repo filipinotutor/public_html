@@ -121,7 +121,7 @@ var $inject =  ['$scope', '$rootScope', '$stateParams', '$state', '$q', 'TutorSe
 
 			$scope.tutor = TutorSess.getProfileData(tutorUserOrMail);
 
-			if(!$scope.tutor.length) {
+			if(!$scope.tutor) {
 				Tutor.getProfile(tutorUserOrMail)
 					.then(function(data){
 						$scope.tutor = data;
