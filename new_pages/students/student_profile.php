@@ -18,8 +18,9 @@
 							<b>Member Since:</b> {{ student.creation_date }}<br />
 							<b>ESL Credits:</b> {{ esl_credit }}<br />
 							<b>Business Credits:</b> {{ b_credit }}<br /><br />
-							<a ng-click="edit()" class="btn btn-xs btn-info">Edit Profile</a>
-							<a href="#" class="btn btn-xs btn-danger">Deactivate Account</a>
+							<a ng-click="edit()" ng-if="student.disable" class="btn btn-xs btn-info">Edit Profile</a>
+							<a ng-click="deactivate(student.student_id, student.deactivated)" ng-show="student.deactivated == 0" class="btn btn-xs btn-danger">Deactivate Account</a>
+							<a ng-click="deactivate(student.student_id, student.deactivated)" ng-show="student.deactivated == 1" class="btn btn-xs btn-info">Activate</a>
 						</p>
 					</div>
 				</div>
