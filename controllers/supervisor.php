@@ -78,4 +78,19 @@ class Supervisor extends Query {
 		$this->wantsJSON();
 	}
 
+	public function getAssignedTutors($supervisor_id) {
+
+		$sql = 'SELECT u.user_id, u.first_name, u.last_name, t.tutor_id, t.nick_name, t.supervisor_id 
+				FROM tutors t
+				LEFT JOIN users u
+				ON t.tutor_id = u.user_id
+				WHERE t.supervisor_id = '.$supervisor_id;
+
+		$result = Query::select($sql);
+
+		$this->data = $result;
+		$this->wantsJSON();
+
+	}
+
 }
