@@ -70,7 +70,7 @@
 									</div>
 									
 									<br>
-									<h4>Bank Account</h4>
+									<!-- <h4>Bank Account</h4>
 									<hr>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Bank Name </label>
@@ -83,21 +83,21 @@
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Branch </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="password" class="form-control" disabled="disabled" value="-- NEED VALUE --">
+											<input type="password" class="form-control" disabled="disabled" value="asdf">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Account Name </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="email" class="form-control" disabled="disabled" value="-- NEED VALUE --">
+											<input type="email" class="form-control" disabled="disabled" value="asdf">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Account No. </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="email" class="form-control" disabled="disabled" value="-- NEED VALUE --">
+											<input type="email" class="form-control" disabled="disabled" value="asdf">
 										</div>
-									</div>
+									</div> -->
 								</div>
 								<div class="col-sm-6">
 									<h4>Account Information</h4>
