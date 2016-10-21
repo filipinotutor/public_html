@@ -40,11 +40,28 @@ class Supervisor extends Query {
 		$this->wantsJSON();
 	}
 
+	public function update($input){
+
+		$supervisor_id = $input['supervisor_id'];
+		$in = Query::genUpdateQuery($input);
+
+		$sql = 'UPDATE supervisors SET '. $in .' WHERE supervisor_id ='.$supervisor_id;
+
+		$result = Query::update($sql);
+
+		$this->data = $result;
+
+		$this->wantsJSON();
+	}
+
 	public function getSupProfile($userNameOrEmail){
-		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisor_id, s.phone, s.photo, s.birthday, s.nick_name  
+		$sql = 'SELECT u.user_id, u.username, u.first_name, u.last_name, u.email, u.tmp_mail, u.gender, u.skype_id, u.access_level, u.creation_date, u.last_login, s.supervisor_id, s.phone, s.photo, s.birthday, s.nick_name ,
+				CASE WHEN da.id > 0 THEN 1 ELSE 0 END AS "deactivated" 
 				FROM users u
 				LEFT JOIN supervisors s 
 				ON u.user_id = s.supervisor_id
+				LEFT JOIN deactivated_account da
+				ON s.supervisor_id = da.user_id
 				WHERE u.access_level = 9 AND u.username = "'.  $userNameOrEmail .'" OR u.email = "'. $userNameOrEmail .'"  
 				ORDER BY u.user_id ';
 
