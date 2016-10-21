@@ -96,6 +96,7 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$q', 'TutorSess
 					var data = data.data;
 					if(data.success) {
 						$scope.tutor.deactivated = 1;
+						TutorSess.putProfileData($scope.tutor.tutor_id, $scope.tutor);
 					}
 				});
 		}
@@ -111,6 +112,7 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$q', 'TutorSess
 					var data = data.data;
 					if(data.success) {
 						$scope.tutor.deactivated = 0;
+						TutorSess.putProfileData($scope.tutor.tutor_id, $scope.tutor);
 					}
 				});
 		}

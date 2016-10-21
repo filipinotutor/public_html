@@ -133,6 +133,7 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$timeout', 'Stu
 
 							// console.log('D1: ' + JSON.stringify(data));
 							$scope.student.deactivated = 1;
+							StudentSess.putProfileData($scope.student.student_id, $scope.student);
 						});
 				} else {
 					User.activate(userData)
@@ -140,6 +141,7 @@ var $inject = ['$scope','$rootScope', '$stateParams', '$state', '$timeout', 'Stu
 
 							// console.log('D2: ' + JSON.stringify(data));
 							$scope.student.deactivated = 0;
+							StudentSess.putProfileData($scope.student.student_id, $scope.student);
 
 						});
 				}
