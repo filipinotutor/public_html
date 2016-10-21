@@ -48,10 +48,12 @@ var $inject = ['$http','$q', 'Upload', Tutor];
 					if(data[0].success) {
 						deferred.resolve(data[1]);
 					} else {
-						deferred.reject('error');
+						console.log('Tutor.get: ' + JSON.stringify(data));
+						deferred.reject('Error');
 					}
 				}, function(err){
-					deferred.reject('error');
+					console.log('Tutor.get: ' + JSON.stringify(err));
+					deferred.reject('Error');
 				});
 
 			return deferred.promise;
@@ -67,22 +69,42 @@ var $inject = ['$http','$q', 'Upload', Tutor];
 					if(data[0].success){
 						deferred.resolve(data[1][0]);
 					} else {
-						deferred.reject('error');
+						console.log('Tutor.getProfile: ' + JSON.stringify(data));
+						deferred.reject('Error');
 					}
 				}, function(err){	
-					deferred.reject('error');
+					console.log('Tutor.getProfile: ' + JSON.stringify(err));
+					deferred.reject('Error');
 				});
 
 			return deferred.promise;
 		}
 
-		Tutor.add = function(userData){
-			return $http({
+		Tutor.add = function(tutorData){
+			var deferred = $q.defer();
+
+			$http({
 				method: 'POST',
 				url: endpoint + '/add',
-				data: userData,
-				headers: header
+				data: tutorData,
+				headers: headers	
+			}).then(function(data){
+
+				var data = data.data;
+
+				if(data.success) {
+					deferred.resolve(data);
+				} else {
+					console.log('Tutor.add: ' + JSON.stringify(data));					
+					deferred.reject('Error');
+				}
+
+			}, function(err){
+				console.log('Tutor.add: ' + JSON.stringify(err));
+				deferred.reject('Error');
 			});
+
+			return deferred.promise;
 		}
 
 		Tutor.update = function(userData){
@@ -101,11 +123,13 @@ var $inject = ['$http','$q', 'Upload', Tutor];
 				if(data.success) {
 					deferred.resolve(data);
 				} else {
-					deferred.reject('error');
+					console.log('Tutor.update: ' + JSON.stringify(data));					
+					deferred.reject('Error');
 				}
 
 			}, function(err){
-				deferred.reject('error' + JSON.stringify(err));
+				console.log('Tutor.update: ' + JSON.stringify(err));
+				deferred.reject('Error');
 			});
 
 			return deferred.promise;
@@ -126,8 +150,6 @@ var $inject = ['$http','$q', 'Upload', Tutor];
 		}	
 
 		Tutor.uploadAudio = function(file, tutor_id, audio_path) {
-
-			console.log('tutor: ' + tutor_id + 'audio_path: ' + audio_path);
 
 			return Upload.upload({
 				      url: '/api/routes.php/uploadaudio',
