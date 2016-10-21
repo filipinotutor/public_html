@@ -125,11 +125,17 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 			return dfr.promise;
 		}
 
-		Supervisor.uploadImage = function(file, sup_id) {
+		Supervisor.uploadImage = function(file, supervisor_id, photo_path) {
+
 			return Upload.upload({
 				      url: '/api/routes.php/uploadimage',
-				      data: { flag: 'supervisor', user_id: sup_id, file: file }
-				 });
+				      data: { 
+				      			flag: 'supervisor', 
+				      			user_id: supervisor_id, 
+				      			file: file,
+				      			photo_path: photo_path
+				      		}
+				    });
 		}
 
 		Supervisor.getAssignedTutors = function(sup_id) {
