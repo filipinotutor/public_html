@@ -6,7 +6,23 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 
 		var Supervisor = this;
 		var endpoint = '/api/routes.php/supervisor';
+		var header = {'Content-Type' : 'application/x-www-form-urlencoded'};				
 
+		var fields = {
+						'supervisor_id': '',
+						'phone': '',
+						'photo': '',
+						'birthday': '',
+						'nick_name': '',
+						'last_update_id': ''	
+					};
+
+		Supervisor.fields = function() {
+			angular.forEach(fields, function(val, key){
+				fields[key] = '';
+			});
+			return fields;
+		}
 
 		Supervisor.get = function(){
 			
@@ -80,17 +96,33 @@ var $inject = ['$http', '$q', 'Upload', Supervisor];
 				method: 'POST',
 				url: endpoint + '/add',
 				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+				headers: header		
 			});
 		}
 
 		Supervisor.update = function(userData){
-			return $http({
+				
+			var dfr = $q.defer();
+
+			$http({
 				method: 'POST',
 				url: endpoint + '/update',
 				data: userData,
-				headers: {'Content-Type' : 'application/x-www-form-urlencoded'}		
+				headers: header		
+			}).then(function(data){
+				var data = data.data;
+
+				if(data.success){
+					dfr.resolve(data);
+				} else {
+					console.log('Supervisor.update: ' + JSON.stringify(data));
+					dfr.reject('Error');
+				}
+			}, function(err){
+				console.log('Supervisor.update: ' + JSON.stringify(err));
 			});
+			
+			return dfr.promise;
 		}
 
 		Supervisor.uploadImage = function(file, sup_id) {
