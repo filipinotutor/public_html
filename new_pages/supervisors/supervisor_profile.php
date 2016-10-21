@@ -11,15 +11,23 @@
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-sm-2">
-						<img src="{{ supervisor.photo }}" class="img-responsive">
+						<form name="uploadForm">
+							<img ng-if="picFile" ngf-thumbnail="picFile" class="thumb img-responsive"> 
+							<div ng-show="!picFile" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB"  ngf-change="validate($invalidFiles)">
+								<img ng-src="{{ supervisor.photo }}" class="img-responsive" ng-if="!picFile"/>
+							</div>
+							<button ng-click="picFile = null" ng-show="picFile">Cancel</button>
+							<button ng-click="uploadPic(picFile)" ng-if="picFile != null">Save</button>
+						</form>
 					</div>
 					<div class="col-sm-6">
 						<h4>{{ supervisor.first_name }} {{ supervisor.last_name }}</h4>
 						<p>
 							<b>Supervisor ID:</b> {{ supervisor.user_id }}<br>
 							<b>Member Since:</b> {{ supervisor.creation_date }}<br><br>
-							<a href="#" class="btn btn-xs btn-info">Edit Profile</a>
-							<a href="#" class="btn btn-xs btn-danger">Deactivate Account</a>
+							<a ng-click="editProfile()" ng-show="supervisor.disable" class="btn btn-xs btn-info">Edit Profile</a>
+							<a ng-click="deactivate(supervisor.supervisor_id, supervisor.deactivated)" ng-show="supervisor.deactivated == 0" class="btn btn-xs btn-danger">Deactivate Account</a>
+							<a ng-click="deactivate(supervisor.supervisor_id, supervisor.deactivated)" ng-show="supervisor.deactivated == 1" class="btn btn-xs btn-info">Activate Account</a>
 						</p>
 						
 					</div>
@@ -41,31 +49,31 @@
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">First Name </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="text" class="form-control" disabled="disabled" ng-model="supervisor.first_name">
+											<input type="text" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.first_name">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Last Name </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="text" class="form-control" disabled="disabled" ng-model="supervisor.last_name">
+											<input type="text" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.last_name">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Skype ID </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="text" class="form-control" disabled="disabled" ng-model="supervisor.skype_id">
+											<input type="text" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.skype_id">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Mobile </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="text" class="form-control" disabled="disabled" ng-model="supervisor.phone">
+											<input type="text" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.phone">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Birthday </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="text" class="form-control" disabled="disabled" ng-model="supervisor.birthday">
+											<input type="text" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.birthday">
 										</div>
 									</div>
 									
@@ -75,7 +83,7 @@
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Bank Name </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<select class="form-control" disabled="disabled">
+											<select class="form-control" ng-disabled="supervisor.disable">
 												<option>Bank of the Philippine Islands</option>
 											</select>
 										</div>
@@ -83,19 +91,19 @@
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Branch </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="password" class="form-control" disabled="disabled" value="asdf">
+											<input type="password" class="form-control" ng-disabled="supervisor.disable" value="asdf">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Account Name </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="email" class="form-control" disabled="disabled" value="asdf">
+											<input type="email" class="form-control" ng-disabled="supervisor.disable" value="asdf">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Account No. </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="email" class="form-control" disabled="disabled" value="asdf">
+											<input type="email" class="form-control" ng-disabled="supervisor.disable" value="asdf">
 										</div>
 									</div> -->
 								</div>
@@ -105,20 +113,20 @@
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Username </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="text" class="form-control" disabled="disabled" ng-model="supervisor.username">
+											<input type="text" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.username">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Password </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="password" class="form-control" disabled="disabled" ng-model="supervisor.username">
+											<input type="password" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.username">
 										</div>
 									</div>
 									
 									<div class="form-group">
 										<label class="control-label col-sm-3 col-xs-12">Email </label>
 										<div class="col-md-9 col-sm-9 col-xs-12">
-											<input type="email" class="form-control" disabled="disabled" ng-model="supervisor.email">
+											<input type="email" class="form-control" ng-disabled="supervisor.disable" ng-model="supervisor.email">
 										</div>
 									</div>
 
@@ -221,6 +229,7 @@
 					  </div>
 					</div>
 				</div>
+				<a ng-click="saveEdit()" ng-hide="supervisor.disable" class="btn btn-lg btn-success">Save</a>
 			</div>
 		</div>
 	</div>
